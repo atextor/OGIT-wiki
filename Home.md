@@ -1,3 +1,3 @@
 Welcome to the graphIT-ontology wiki!
 
-Basic Concepts
+[Basic Concepts](https://github.com/arago/graphIT-ontology/wiki/Basic-Concepts)
