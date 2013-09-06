@@ -6,7 +6,7 @@ The goal of the OGIT Ontology Framework is to build an open semantic representat
 
 The best way to describe the meta model is to see it as a 5 layer onion to describe the data spaces within OGIT:
 
-![The layers of the meta model](https://github.com/arago/graphIT-ontology/Wiki/imgs/Onion.png)
+![The layers of the meta model](https://github.com/arago/graphIT-ontology/blob/master/Wiki/imgs/Onion.png)
 
 ### 1. SGO - Semantic Graph Ontology
 
@@ -29,4 +29,3 @@ Each well defined node type can have a number of attributes that have proven use
 The Free attribute space in every node is used by applications, users and organizations to add data structured according to their own needs, concepts and ideas. Data stored here uses the mechanisms of the Open Graph of IT for storage and the clients of the Open Graph of IT as tools, but does not count on any cross user reuse or platform wide distribution of effect, e.g. marketability. This section is also the source for best practices which might move up the chain into the SNBA section. As users use the same or similar attributes in the SNFA sections they will move into the SNBA section to become published and discussed in a platform wide distribution.
 
 ## The Ontology layers in details
-
