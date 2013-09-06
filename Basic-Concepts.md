@@ -105,6 +105,10 @@ Examples for NTOs are
 
 ### SNRA, SNBA, SNFA - Specific Node Attributes 
 
-Each of these attribute sections describes attributes available or used with a well defined note type (SGO:NTO). The SNRA are always included and will be syntax checked by the open graph of IT access methodologies. The SNBA should be used and syntax checking for these is default but can be turned off and the SNFA are free and their definition can be included freely by the user. 
+Each of these attribute sections describes attributes available or used with a well defined note type (_SGO:NTO_).  
+
+The SNRA are always included and will be syntax checked by the open graph of IT access methodologies.  
+
+The SNBA should be used and syntax checking for these is default but can be turned off and the SNFA are free and their definition can be included freely by the user. 
 
 The NTO Tech Contact has to provide means to include specific free attributes in a local instance of the whole ontology without touching the SGO, NTO, SNRA sections and without having to modify the SNBA section. 
