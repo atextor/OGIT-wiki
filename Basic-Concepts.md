@@ -39,6 +39,7 @@ The SGO is unique structure with represents the top level of semantic behind the
 ______ | Global Knowledge | Factual Knowledge | Actionable Knowledge|Situational Knowledge
 ------ | --------------- | --------------- | --------------- | --------------- | 
 Description | long lasting meta definitions | actual state of the world | possible activities and decisions | current state of the model
+Examples | the ontology itself, governing policies | actual IT, contracts | commands, reactions to regul. demands | monitoring data, events, KPIs
 Volatility | extremely low | low | high | very high
 Validity | virtually infinite | long | virtually infinite | verly low
-Correctness | 
+Correctness | high | low | high | very high
