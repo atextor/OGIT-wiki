@@ -36,19 +36,19 @@ The Free attribute space in every node is used by applications, users and organi
 
 ### SGO - Semantic Graph Ontology
 
-The SGO is a unique structure with represents the top level of semantic behind the Open Graph of IT. In this highest level of data structure the entities and actions connecting these entities are described. The SGO is maintained by the SGO Ontology Board. Because the entities are representing knowledge they will be categorized as knowledge classes. There are 4 categories of entities in the SGO, which differ in terms of validity, volatility and level of correctnes.
+The SGO is a unique structure with represents the top level of semantic behind the Open Graph of IT. In this highest level of data structure the entities and actions connecting these entities are described. The SGO is maintained by the _SGO Ontology Board_. Because the entities are representing knowledge they will be categorized as knowledge classes. There are 4 categories of entities in the SGO, which differ in terms of validity, volatility and level of correctnes.
 
 ______ | Global Knowledge | Factual Knowledge | Actionable Knowledge|Situational Knowledge
 ------ | --------------- | --------------- | --------------- | --------------- | 
-Description | long lasting meta definitions | actual state of the world | possible activities and decisions | current state of the model
-Examples | the ontology itself, governing policies | actual IT provisioned, contracts | commands, reactions to regul. demands | monitoring data, events, KPIs
-Volatility | extremely low | low | high | very high
-Validity | virtually infinite | long | virtually infinite | verly low
-Correctness | high | low | high | very high
+_Description_ | long lasting meta definitions | actual state of the world | possible activities and decisions | current state of the model
+_Examples_ | the ontology itself, governing policies | actual IT provisioned, contracts | commands, reactions to regul. demands | monitoring data, events, KPIs
+_Volatility_ | extremely low | low | high | very high
+_Validity_ | virtually infinite | long | virtually infinite | verly low
+_Correctness_ | high | low | high | very high
 
-The ontology definition is stored in the global knowledge part itself, following a "build yourself" approach in terms of data, structure and platform. While the top layers "BigBang" and "Global, Factual, Actionable, Situational knowlege" are fixed, the further hierarchy constructed below these must follow these simple principles:
+The ontology definition is stored in the global knowledge part itself, following a "build yourself" approach in terms of data, structure and platform. While the top layers _'BigBang'_ and _'Global, Factual, Actionable, Situational knowlege'_ are fixed, the further hierarchy constructed below these must follow these simple principles:
 
-a. Any child type must posses any categorizing "attribute/action" the parent type has.  
+a. Any child type must posses any categorizing 'attribute/action' the parent type has.  
 
 b. An instance of a child type must be a valid instance of any parent type.  
 
@@ -64,22 +64,22 @@ There are two kinds of data stored on the SGO level:
 
 Describes the kind of data that is stored under this category.
 
-[Entity record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Entity-Record-Definion)_
+_[Entity record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Entity-Record-Definion)_
 
 *Verbs*
 
 Describes the type of _connection*_ and which other entities can be connected by it. 
 
-[Verb record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Verb-Record-Definition)
+_[Verb record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Verb-Record-Definition)_
 
-**Examples **
+**Examples**
 
 _Entities:_  
 1.	`Fruit`  
 2.	`Plant`  
 3.	`Ingredient`  
 
-Verbs of Fruit:  
+_Verbs of Fruit:_  
 1.	`grown on`:     `Fruit` -> `Plant`  
 2.	`contains`:   	`Fruit` -> `Ingredient`  
 3.	`contains`:	`Plant` -> `Ingredient`  
@@ -95,6 +95,13 @@ For each entity there is a sub ontology defining the different kinds of the same
 _NTO is for the subject matter experts and can go into greater detail._
 
 Subject matter experts can chose to describe the NTO level as typology trees or as sub ontologies themselves. The NTO is a typology behind an entity defined on the SGO level but it includes links to the attributes required, recommended or includable in the specifically defined type. This can follow an OO or single declaration approach. 
+
+Examples for NTOs are
+
+* arago's MARS model (IT model)
+* arago's KI (_Knowledge Items_ definition)
+* arago's MAID (Monitoring Interface definitions)
+* arago's Issues 
 
 ### SNRA, SNBA, SNFA - Specific Node Attributes 
 
