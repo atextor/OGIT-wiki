@@ -8,7 +8,7 @@ The best way to describe the meta model is to see it as a 5 layer onion to descr
 
 !['Onion like' Meta model](/Wiki/imgs/Onion.png)
 .
-https://github.com/arago/graphIT-ontology/raw/master/Wiki/imgs/Onion.jpg
+https://raw.github.com/arago/graphIT-ontology/master/Wiki/imgs/Onion.jpg
 
 ### 1. SGO - Semantic Graph Ontology
 
