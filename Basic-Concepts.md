@@ -36,5 +36,9 @@ The Free attribute space in every node is used by applications, users and organi
 
 The SGO is unique structure with represents the top level of semantic behind the Open Graph of IT. In this highest level of data structure the entities and actions connecting these entities are described. The SGO is maintained by the SGO Ontology Board. Because the entities are representing knowledge they will be categorized as knowledge classes. There are 4 categories of entities in the SGO, which differ in terms of validity, volatility and level of correctnes.
 
-| GlobalKnowledge | Factual Knowledge | Actionable Knowledge|Situational Knowledge
+______ | Global Knowledge | Factual Knowledge | Actionable Knowledge|Situational Knowledge
 ------ | --------------- | --------------- | --------------- | --------------- | 
+Description | long lasting meta definitions | actual state of the world | possible activities and decisions | current state of the model
+Volatility | extremely low | low | high | very high
+Validity | virtually infinite | long | virtually infinite | verly low
+Correctness | 
