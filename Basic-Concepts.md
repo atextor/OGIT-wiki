@@ -1,6 +1,6 @@
 ## Introduction
 
-The goal of the OGIT (Open Graph of IT) Ontology Framework is to build an open semantic representation of all IT and it's interactions with business process and people for providing a foundation for computational evaluation. The resulting knowledge graph allows to interconnect various IT Systems in the IT Operations and IT Management space. While previous approaches required too much details and did not allow any ambiguity and incorrectness, OGIT allows varying levels of details, accepts incorrectness and supports different classes of data to allow proper handling from a computational perspective. The ontology structure is designed for providing a common, best practice approach, thought giving great flexibility and extensibility for every implementor.  
+The goal of the OGIT (Open Graph of IT) Ontology Framework is to build an open semantic representation of all IT and it's interactions with business process and people for providing a foundation for computational evaluation. The resulting knowledge graph allows to interconnect various IT Systems in the IT Operations and IT Management space. While previous approaches like the [IBM Common Data Model (CDM)](https://www.ibm.com/developerworks/mydeveloperworks/groups/service/html/communityview?communityUuid=e1effee6-69a2-4c91-90aa-347f79d0030e) required too much details and did not allow any ambiguity and incorrectness, OGIT allows varying levels of details, accepts incorrectness and supports different classes of data to allow proper handling from a computational perspective. The ontology structure is designed for providing a common, best practice approach, thought giving great flexibility and extensibility for every implementor.  
 
 ## The meta model
 
@@ -99,7 +99,7 @@ Subject matter experts can chose to describe the NTO level as typology trees or 
 Examples for NTOs are
 
 * arago's MARS model (IT model)
-* arago's KI (_Knowledge Items_ definition)
+* arago's KI (Knowledge Items definition)
 * arago's MAID (Monitoring Interface definitions)
 * arago's Issues 
 
