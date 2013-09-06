@@ -6,7 +6,7 @@ The goal of the OGIT Ontology Framework is to build an open semantic representat
 
 The best way to describe the meta model is to see it as a 5 layer onion to describe the data spaces within OGIT:
 
-!['Onion like' Meta model](/Wiki/imgs/Onion.png)
+!['Onion like' Meta model](Wiki/imgs/Onion.png)
 .
 https://raw.github.com/arago/graphIT-ontology/master/Wiki/imgs/Onion.jpg
 
