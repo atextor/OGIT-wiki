@@ -18,7 +18,7 @@ This level describes the sub ontology for a specific node type, which is represe
 
 ### 3. SNRA - Specific Node Required Attribute
 
-Each node well defined by SGO and NTO ontologies will have a set of attributes that is specific to this unique type of node. The SNRA defines the minimal required attribute set. The Open Graph of IT can handle any data following the SGO and NT typology, but the tools attached will only work properly if the SNRA definition is followed.
+Each node well defined by SGO and NTO ontologies will have a set of attributes that is specific to this unique type of node. The SNRA defines the minimal required attribute set. The _Open Graph of IT_ can handle any data following the SGO and NT typology, but the tools attached will only work properly if the SNRA definition is followed.
 
 ### 4. SNBA - Specific Node Best Practice Attributes
 
@@ -26,7 +26,7 @@ Each well defined node type can have a number of attributes that have proven use
 
 ### 5. SNFA - Specific Node Free Attributes 
 
-The Free attribute space in every node is used by applications, users and organizations to add data structured according to their own needs, concepts and ideas. Data stored here uses the mechanisms of the Open Graph of IT for storage and the clients of the Open Graph of IT as tools, but does not count on any cross user reuse or platform wide distribution of effect, e.g. marketability. This section is also the source for best practices which might move up the chain into the SNBA section. As users use the same or similar attributes in the SNFA sections they will move into the SNBA section to become published and discussed in a platform wide distribution.
+The Free attribute space in every node is used by applications, users and organizations to add data structured according to their own needs, concepts and ideas. Data stored here uses the mechanisms of the _Open Graph of IT_ for storage and the clients of the _Open Graph of IT_ as tools, but does not count on any cross user reuse or platform wide distribution of effect, e.g. marketability. This section is also the source for best practices which might move up the chain into the SNBA section. As users use the same or similar attributes in the SNFA sections they will move into the SNBA section to become published and discussed in a platform wide distribution.
 
 ![OGIT Structure](https://github.com/arago/graphIT-ontology/raw/master/Wiki/imgs/OGIT_Structure.png)
 
