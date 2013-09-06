@@ -60,17 +60,30 @@ The boundary where SGO ends and the NTOs starts also determines the responsobili
 
 There are two kinds of data stored on the SGO level:
 
-1. Entities
+*Entities*
 
 Describes the kind of data that is stored under this category.
 
-Entity record definition
+[Entity record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Entity-Record-Definion)_
 
-2. Verbs
+*Verbs*
 
 Describes the type of _connection*_ and which other entities can be connected by it. 
 
-Verb record definition
+[Verb record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Verb-Record-Definition)
+
+**Examples **
+
+_Entities:_  
+1.	`Fruit`  
+2.	`Plant`  
+3.	`Ingredient`  
+
+Verbs of Fruit:  
+1.	`grown on`:     `Fruit` -> `Plant`  
+2.	`contains`:   	`Fruit` -> `Ingredient`  
+3.	`contains`:	`Plant` -> `Ingredient`  
+
 
 _*_ _Connections_
 
