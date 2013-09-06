@@ -84,11 +84,20 @@ Verbs of Fruit:
 2.	`contains`:   	`Fruit` -> `Ingredient`  
 3.	`contains`:	`Plant` -> `Ingredient`  
 
-
 _*_ _Connections_
 
 _We do not use the term connection on purpose, because we want to ensure that new users coming from a relational approach should not be tempted to simply transfer their table model into semantic networks, but should know that a connection between two entities is something one entity does to or with another. Facebook calls these connections actions. We do not call it actions, because we have actionable knowledge and want to avoid misunderstandings._ 
 
 ### NTO - Node Type Ontologies
 
+For each entity there is a sub ontology defining the different kinds of the same entity. The differentiation between SGO and NTO is made to allow subject matter experts to deal with NTO definitions while strategic experts deal with the definition of the big picture. 
 
+_NTO is for the subject matter experts and can go into greater detail._
+
+Subject matter experts can chose to describe the NTO level as typology trees or as sub ontologies themselves. The NTO is a typology behind an entity defined on the SGO level but it includes links to the attributes required, recommended or includable in the specifically defined type. This can follow an OO or single declaration approach. 
+
+### SNRA, SNBA, SNFA - Specific Node Attributes 
+
+Each of these attribute sections describes attributes available or used with a well defined note type (SGO:NTO). The SNRA are always included and will be syntax checked by the open graph of IT access methodologies. The SNBA should be used and syntax checking for these is default but can be turned off and the SNFA are free and their definition can be included freely by the user. 
+
+The NTO Tech Contact has to provide means to include specific free attributes in a local instance of the whole ontology without touching the SGO, NTO, SNRA sections and without having to modify the SNBA section. 
