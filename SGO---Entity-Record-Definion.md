@@ -13,6 +13,6 @@ Element | Definition
 `Modify User` | The ID of the user-entity who modified this entity
 `Admin Contact` | The ID of the user-entity who maintains this entity on the SGO level
 `Tech Contact` | The ID of the user-entity who maintains this entity on the NTO level
-`History` | A list of DATE, ID, DESCRIPTION showing changes made when, by who and a description of the changes made. This is a list of  graph links to inactive versions 
-`Verb Entity List` | A list of VERB ENTITY describing which verbs can be performed from this entity to another entity. 
+`History` | A list of `DATE`, `ID`, `DESCRIPTION` showing changes made when, by who and a description of the changes made. This is a list of  graph links to inactive versions 
+`Verb Entity List` | A list of `VERB ENTITY` describing which verbs can be performed from this entity to another entity. 
 `Entity Definition` | A URL where the definition for this entity can be obtained. This definition must include a type (XML, RDF, …)
