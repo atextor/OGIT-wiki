@@ -34,12 +34,20 @@ The Free attribute space in every node is used by applications, users and organi
 
 ### SGO - Semantic Graph Ontology
 
-The SGO is unique structure with represents the top level of semantic behind the Open Graph of IT. In this highest level of data structure the entities and actions connecting these entities are described. The SGO is maintained by the SGO Ontology Board. Because the entities are representing knowledge they will be categorized as knowledge classes. There are 4 categories of entities in the SGO, which differ in terms of validity, volatility and level of correctnes.
+The SGO is a unique structure with represents the top level of semantic behind the Open Graph of IT. In this highest level of data structure the entities and actions connecting these entities are described. The SGO is maintained by the SGO Ontology Board. Because the entities are representing knowledge they will be categorized as knowledge classes. There are 4 categories of entities in the SGO, which differ in terms of validity, volatility and level of correctnes.
 
 ______ | Global Knowledge | Factual Knowledge | Actionable Knowledge|Situational Knowledge
 ------ | --------------- | --------------- | --------------- | --------------- | 
 Description | long lasting meta definitions | actual state of the world | possible activities and decisions | current state of the model
-Examples | the ontology itself, governing policies | actual IT, contracts | commands, reactions to regul. demands | monitoring data, events, KPIs
+Examples | the ontology itself, governing policies | actual IT provisioned, contracts | commands, reactions to regul. demands | monitoring data, events, KPIs
 Volatility | extremely low | low | high | very high
 Validity | virtually infinite | long | virtually infinite | verly low
 Correctness | high | low | high | very high
+
+The ontology definition is stored in the global knowledge part itself, following a "build yourself" approach in terms of data, structure and platform. While the top layers "BigBang" and "Global, Factual, Actionable, Situational knowlege" are fixed, the further hierarchy constructed below these must follow these simple principles:
+
+a. Any child type must posses any categorizing "attribute/action" the parent type has.  
+
+b. An instance of a child type must be a valid instance of any parent type.  
+
+c. The "leafs" of the SGO type tree are described by NTOs
