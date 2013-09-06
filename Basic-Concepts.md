@@ -6,7 +6,7 @@ The goal of the OGIT Ontology Framework is to build an open semantic representat
 
 The best way to describe the meta model is to see it as a 5 layer onion to describe the data spaces within OGIT:
 
-The layers of the meta model[[/Wiki/imgs/Onion.png]]
+[[/Wiki/imgs/Onion.png]]
 
 ### 1. SGO - Semantic Graph Ontology
 
