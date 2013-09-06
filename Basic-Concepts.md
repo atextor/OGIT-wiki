@@ -1,6 +1,6 @@
 ## Introduction
 
-The goal of the OGIT Ontology Framework is to build an open semantic representation of all IT and it's interactions with business process and people for providing a foundation for computational evaluation. While previous approaches required too much details and did not allow any ambiguity and incorrectness, OGIT allows varying levels of details, accepts incorrectness and supports different classes of data to allow proper handling from a computational perspective.
+The goal of the OGIT (Open Graph of IT) Ontology Framework is to build an open semantic representation of all IT and it's interactions with business process and people for providing a foundation for computational evaluation. The resulting knowledge graph allows to interconnect various IT Systems in the IT Operations and IT Management space. While previous approaches required too much details and did not allow any ambiguity and incorrectness, OGIT allows varying levels of details, accepts incorrectness and supports different classes of data to allow proper handling from a computational perspective. The ontology structure is designed for providing a common, best practice approach, thought giving great flexibility and extensibility for every implementor.  
 
 ## The meta model
 
@@ -31,3 +31,7 @@ The Free attribute space in every node is used by applications, users and organi
 ![OGIT Structure](https://github.com/arago/graphIT-ontology/raw/master/Wiki/imgs/OGIT_Structure.png)
 
 ## The Ontology layers in details
+
+### SGO - Semantic Graph Ontology
+
+The SGO is unique structure with represents the top level of semantic behind the Open Graph of IT. In this highest level of data structure the entities and actions connecting these entities are described. The SGO is maintained by the SGO Ontology Board. Because the entities are representing knowledge they will be categorized as knowledge classes. There are 4 categories of entities in the SGO, which differ in terms of validity, volatility and level of correctnes.
