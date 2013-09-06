@@ -64,10 +64,18 @@ There are two kinds of data stored on the SGO level:
 
 Describes the kind of data that is stored under this category.
 
+Entity record definition
+
 2. Verbs
 
-Describes the type of connection and which other entities can be connected by it. 
+Describes the type of _connection*_ and which other entities can be connected by it. 
 
+Verb record definition
+
+_*_ _Connections_
+
+_We do not use the term connection on purpose, because we want to ensure that new users coming from a relational approach should not be tempted to simply transfer their table model into semantic networks, but should know that a connection between two entities is something one entity does to or with another. Facebook calls these connections actions. We do not call it actions, because we have actionable knowledge and want to avoid misunderstandings._ 
 
 ### NTO - Node Type Ontologies
+
 
