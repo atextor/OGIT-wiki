@@ -1,6 +1,6 @@
 An entity record consists of the following fields:
 
-`Element` | Definition
+Element | Definition
 -------- | ---------
 `EID` | ID generated automatically
 `Display Name` | A human readable descriptive name for this entity
