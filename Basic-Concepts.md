@@ -30,6 +30,8 @@ The Free attribute space in every node is used by applications, users and organi
 
 ![OGIT Structure](https://github.com/arago/graphIT-ontology/raw/master/Wiki/imgs/OGIT_Structure.png)
 
+***
+
 ## The Ontology layers in details
 
 ### SGO - Semantic Graph Ontology
@@ -51,3 +53,21 @@ a. Any child type must posses any categorizing "attribute/action" the parent typ
 b. An instance of a child type must be a valid instance of any parent type.  
 
 c. The "leafs" of the SGO type tree are described by NTOs
+
+This classification for each entity on the top level of the ontology of the open graph of IT is done to have a classification in terms of use case, but also to determine the class of technology and algorithmic approaches valid when working with data from the respective sets (i.e. can caching be applied, is in memory technology a good choice, do algorithms need to deal with incorrectness, is ambiguity part of analytical approaches etc.). 
+
+The boundary where SGO ends and the NTOs starts also determines the responsobility: While the SGO ist maintained by the SGO ontology board, the NTOs are maintained by appointed SMEs.
+
+There are two kinds of data stored on the SGO level:
+
+1. Entities
+
+Describes the kind of data that is stored under this category.
+
+2. Verbs
+
+Describes the type of connection and which other entities can be connected by it. 
+
+
+### NTO - Node Type Ontologies
+
