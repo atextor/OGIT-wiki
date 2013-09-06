@@ -105,7 +105,7 @@ Examples for NTOs are
 
 ### SNRA, SNBA, SNFA - Specific Node Attributes 
 
-Each of these attribute sections describes attributes available or used with a well defined note type (_SGO:NTO_).  
+Each of these attribute sections describes attributes available or used with a well defined note type ( _SGO:NTO_ ).  
 
 The SNRA are always included and will be syntax checked by the open graph of IT access methodologies.  
 
