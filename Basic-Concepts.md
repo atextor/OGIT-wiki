@@ -60,13 +60,13 @@ The boundary where SGO ends and the NTOs starts also determines the responsibili
 
 There are two kinds of data stored on the SGO level:
 
-*Entities*
+**Entities**
 
 Describes the kind of data that is stored under this category.
 
 _[Entity record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Entity-Record-Definion)_
 
-*Verbs*
+**Verbs**
 
 Describes the type of _connection*_ and which other entities can be connected by it. 
 
