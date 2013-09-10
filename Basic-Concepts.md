@@ -56,7 +56,7 @@ c. The "leafs" of the SGO type tree are described by NTOs
 
 This classification for each entity on the top level of the ontology of the open graph of IT is done to have a classification in terms of use case, but also to determine the class of technology and algorithmic approaches valid when working with data from the respective sets (i.e. can caching be applied, is in memory technology a good choice, do algorithms need to deal with incorrectness, is ambiguity part of analytical approaches etc.). 
 
-The boundary where SGO ends and the NTOs starts also determines the responsobility: While the SGO ist maintained by the SGO ontology board, the NTOs are maintained by appointed SMEs.
+The boundary where SGO ends and the NTOs starts also determines the responsibility: While the SGO ist maintained by the SGO ontology board, the NTOs are maintained by appointed SMEs.
 
 There are two kinds of data stored on the SGO level:
 
