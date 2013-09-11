@@ -37,7 +37,7 @@ The Free attribute space in every node is used by applications, users and organi
 
 ### SGO - Semantic Graph Ontology
 
-The SGO is a unique structure with represents the top level of semantic behind the Open Graph of IT. In this highest level of data structure the entities and actions connecting these entities are described. The SGO is maintained by the _SGO Ontology Board_. Because the entities are representing knowledge they will be categorized as knowledge classes. There are 4 categories of entities in the SGO, which differ in terms of validity, volatility and level of correctnes.
+The SGO is a unique structure with represents the top level of semantic behind the Open Graph of IT. In this highest level of data structure the entities and verbs connecting these entities are described. The SGO is maintained by the _SGO Ontology Board_. Because the entities are representing knowledge they will be categorized as knowledge classes. There are 4 categories of entities in the SGO, which differ in terms of validity, volatility and level of correctnes.
 
 ______ | Global Knowledge | Factual Knowledge | Actionable Knowledge|Situational Knowledge
 ------ | --------------- | --------------- | --------------- | --------------- | 
