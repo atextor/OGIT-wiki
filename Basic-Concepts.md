@@ -28,11 +28,12 @@ Each well defined node type can have a number of attributes that have proven use
 
 The Free attribute space in every node is used by applications, users and organizations to add data structured according to their own needs, concepts and ideas. Data stored here uses the mechanisms of the _Open Graph of IT_ for storage and the clients of the _Open Graph of IT_ as tools, but does not count on any cross user reuse or platform wide distribution of effect, e.g. marketability. This section is also the source for best practices which might move up the chain into the SNBA section. As users use the same or similar attributes in the SNFA sections they will move into the SNBA section to become published and discussed in a platform wide distribution.
 
-![OGIT Structure](https://github.com/arago/graphIT-ontology/raw/master/Wiki/imgs/OGIT_Structure.png)
-
 ***
 
 ## The Ontology layers in details
+
+![OGIT Structure](https://github.com/arago/graphIT-ontology/raw/master/Wiki/imgs/OGIT_Structure_0.2.png)
+
 
 ### SGO - Semantic Graph Ontology
 
