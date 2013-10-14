@@ -1,4 +1,7 @@
-0. Overview over Contents 
+
+
+0. Overview over Contents (short welcome, tralalala)
+
 1. What is GraphIT 
    1. short (exec summary)
    2. benefits (why do I need it)
