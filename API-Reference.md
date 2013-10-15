@@ -95,4 +95,12 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
 ## Javascript
 
+The GraphIT javascript can be loaded from GraphIT directly:
+
+    <!doctype html>
+      <head>
+        <script src="$url/graphit.js"></script>
+      </head>
+      <!-- -->
+
 ## GraphIT-CLI
