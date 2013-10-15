@@ -75,7 +75,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
     headers: GraphIT-Version, _TOKEN
     body: [none]
 
-    response: {"items": []}
+    response: {"items": [{"_id": "...", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
 
 ## Javascript
 
