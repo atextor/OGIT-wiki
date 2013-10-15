@@ -84,6 +84,7 @@ or listing any vertex, that the tutorial user has created `g.V("_id", "graphit-t
 
     {"items":[{"doors":"5","_type":"Car","_creator":"graphit-tutorial@arago.de","_id":"81f34412-8431-4581-97ad-09beeff047e9","color":"red","_graphtype":"vertex","_deleted":false,"_modified-on":1381843442494,"_created-on":1381843442476},{"doors":"3","_type":"Car","_creator":"graphit-tutorial@arago.de","_id":"b8422c98-e074-4304-8d3f-bcf1e49b686c","color":"yellow","_graphtype":"vertex","_deleted":false,"_modified-on":1381843449109,"_created-on":1381843449107}]}
 
+## Where to go from here
 
-
-## where to go from here
+* review basic aspects -> basics
+* learn how to put data into GraphIT
