@@ -74,4 +74,16 @@ Listing items can be done by running a [gremlin query](http://gremlindocs.com/),
     - {_in-id: 81f34412-8431-4581-97ad-09beeff047e9, _type: created, _edge-id: graphit-tutorial@arago.de_4e0da517-db73-4b98-8069-29cc61100c6f_81f34412-8431-4581-97ad-09beeff047e9, _graphtype: edge, _out-id: graphit-tutorial@arago.de}
     - {_in-id: b8422c98-e074-4304-8d3f-bcf1e49b686c, _type: created, _edge-id: graphit-tutorial@arago.de_4a098821-51d8-448a-97b5-c6491abe051a_b8422c98-e074-4304-8d3f-bcf1e49b686c, _graphtype: edge, _out-id: graphit-tutorial@arago.de}
 
+or listing any vertex, that the tutorial user has created `g.V("_id", "graphit-tutorial@arago.de").outE.inV`:
+
+> REST (request, NOTE `id` is passed as a parameter with a placeholder)
+
+    curl -X GET -H 'GraphIT-Version:4.2-SNAPSHOT' 'http://graphit-test.tech.arago.de/query/gremlin?query=g.V("_id",id).outE.inV&id=graphit-tutorial@arago.de&_TOKEN=$TOKEN'
+
+> REST (response)
+
+    {"items":[{"doors":"5","_type":"Car","_creator":"graphit-tutorial@arago.de","_id":"81f34412-8431-4581-97ad-09beeff047e9","color":"red","_graphtype":"vertex","_deleted":false,"_modified-on":1381843442494,"_created-on":1381843442476},{"doors":"3","_type":"Car","_creator":"graphit-tutorial@arago.de","_id":"b8422c98-e074-4304-8d3f-bcf1e49b686c","color":"yellow","_graphtype":"vertex","_deleted":false,"_modified-on":1381843449109,"_created-on":1381843449107}]}
+
+
+
 ## where to go from here
