@@ -8,7 +8,7 @@ The following request creates a `green` `Car` with `4` doors:
 
 > REST (request)
 
-    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' 'http://graphit-test.tech.arago.de/Car?_TOKEN=$TOKEN' -d '{"color":"green", "doors": "4"}'
+    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.tech.arago.de/Car?_TOKEN=$TOKEN' -d '{"color":"green", "doors": "4"}'
 
 > REST (response)
 
@@ -21,7 +21,7 @@ This request updates the `color` of the car to `red`:
 
 > REST (request)
 
-    curl -X PUT -H 'GraphIT-Version:4.2-SNAPSHOT' 'http://graphit-test.tech.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN' -d '{"color":"red"}'
+    curl -X PUT -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.tech.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN' -d '{"color":"red"}'
 
 > REST (response)
 
@@ -33,7 +33,7 @@ This request deletes the car:
 
 > REST (request)
 
-    curl -X DELETE -H 'GraphIT-Version:4.2-SNAPSHOT' 'http://graphit-test.tech.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN'
+    curl -X DELETE -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.tech.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN'
 
 > REST (response)
 
@@ -45,10 +45,10 @@ This request creates a connection of type `drives` between the `Driver` (id: $dr
 
 > REST (request)
 
-    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' 'http://graphit-test.tech.arago.de/connect/drives?_TOKEN=$TOKEN' -d '{"out": $driver, "in": $car}'
+    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.tech.arago.de/connect/drives?_TOKEN=$TOKEN' -d '{"out": $driver, "in": $car}'
 
 > REST (response)
 
     {"_in-id":"$car","_type":"drives","_edge-id":"3c7469b0-0b8c-424c-a73c-870ab164f385_0e59c3f8-86ba-4064-bd54-c47f71edb4da_b87bad04-f23d-47c9-8b7d-12b3b4994f20","_creator":"graphit-tutorial@arago.de","_graphtype":"edge","_out-id":"$driver","_deleted":false,"_created-on":1381846115968}
 
-The connection can now also be retrieved or deleted via `http://graphit-test.tech.arago.de/3c7469b0-0b8c-424c-a73c-870ab164f385_0e59c3f8-86ba-4064-bd54-c47f71edb4da_b87bad04-f23d-47c9-8b7d-12b3b4994f20`.
+The connection can now also be retrieved or deleted via `https://graphit-test.tech.arago.de/3c7469b0-0b8c-424c-a73c-870ab164f385_0e59c3f8-86ba-4064-bd54-c47f71edb4da_b87bad04-f23d-47c9-8b7d-12b3b4994f20`.
