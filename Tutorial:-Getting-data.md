@@ -41,7 +41,7 @@ Any item can be retrieved by its id, for example the identity of the tutorial us
 
 > CLI (request)
 
-    graphit-cli tcp://graphit-test.tech.arago.de:7290 -token $TOKEN -id graphit-tutorial@arago.de --format yaml
+    graphit-cli get tcp://graphit-test.tech.arago.de:7290 -token $TOKEN -id graphit-tutorial@arago.de --format yaml
 
 > CLI (response, yaml)
 
@@ -63,7 +63,7 @@ Listing items can be done by running a [gremlin query](http://gremlindocs.com/),
 
 > CLI (request, NOTE `id` is passed as a parameter with a placeholder)
 
-    graphit-cli get -u tcp://graphit-test.tech.arago.de:7290 query -type gremlin -query 'g.V("_id", id).outE' -p 'id=graphit-tutorial@arago.de' -token $TOKEN
+    graphit-cli query -u tcp://graphit-test.tech.arago.de:7290 -type gremlin -query 'g.V("_id", id).outE' -p 'id=graphit-tutorial@arago.de' -token $TOKEN
 
 > CLI (response, json)
 
