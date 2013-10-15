@@ -51,3 +51,4 @@ This request creates a connection of type `drives` between the `Driver` (id: $dr
 
     {"_in-id":"$car","_type":"drives","_edge-id":"3c7469b0-0b8c-424c-a73c-870ab164f385_0e59c3f8-86ba-4064-bd54-c47f71edb4da_b87bad04-f23d-47c9-8b7d-12b3b4994f20","_creator":"graphit-tutorial@arago.de","_graphtype":"edge","_out-id":"$driver","_deleted":false,"_created-on":1381846115968}
 
+The connection can now also be retrieved via `http://graphit-test.tech.arago.de/3c7469b0-0b8c-424c-a73c-870ab164f385_0e59c3f8-86ba-4064-bd54-c47f71edb4da_b87bad04-f23d-47c9-8b7d-12b3b4994f20`.
