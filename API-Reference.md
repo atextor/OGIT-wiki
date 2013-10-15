@@ -95,12 +95,95 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
 ## Javascript
 
-The GraphIT javascript can be loaded from GraphIT directly:
+* The GraphIT javascript can be loaded from GraphIT directly
+* It works against the GraphIT REST endpoint: $url
+* in order to use, an instance must be created:
 
     <!doctype html>
       <head>
         <script src="$url/graphit.js"></script>
       </head>
-      <!-- -->
+      <body>
+        <script>
+          // this is a generic error handling function which does nothing except logging
+          var handleError(error)
+          {
+            console.log(error);
+            throw(error);
+          };
+
+          var graphit = new GraphIT('$url');
+        </script>
+      </body>
+
+After instantiation the javascript api can be used as follows (all calls are in context of `<script />`):
+
+### authenticate
+
+    graphit.authenticate({/* authentication parameters */}, function(ret)
+    {
+      if (ret.error) return handleError(error);
+      
+      // graphit now has a token, it will automatically set it for all ongoing requests
+    });
+
+### get
+
+
+    graphit.get($id, function(ret)
+    {
+      if (ret.error) return handleError(error);
+      
+      console.log(ret);
+    });
+
+
+### create
+
+    
+    graphit.create($type, {/* attributes */}, function(ret)
+    {
+      if (ret.error) return handleError(error);
+      
+      console.log(ret);
+    });
+
+
+### update
+
+    graphit.update($id, {/* attributes */}, function(ret)
+    {
+      if (ret.error) return handleError(error);
+      
+      console.log(ret);
+    });
+
+### delete
+
+    graphit.del($id, function(ret)
+    {
+      if (ret.error) return handleError(error);
+      
+      console.log(ret);
+    });
+
+### connect
+
+    graphit.connect($idOut, $idIn, $connectionType, function(ret)
+    {
+      if (ret.error) return handleError(error);
+      
+      console.log(ret);
+    });
+
+### query
+
+
+    graphit.query($queryType, $queryString, {/* $queryParameters */}, function(ret)
+    {
+      if (ret.error) return handleError(error);
+      
+      console.log(ret.items);
+    });
 
 ## GraphIT-CLI
