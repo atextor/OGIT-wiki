@@ -77,6 +77,22 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
     response: {"items": [{"_id": "...", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
 
+### help
+
+    GET $url/help
+    headers: [none]
+    body: [none]
+
+    response: {/* json help file */}
+
+### graphit.js
+
+    GET $url/graphit.js
+    headers: [none]
+    body: [none]
+
+    response: /* GraphIT js api*/
+
 ## Javascript
 
 ## GraphIT-CLI
