@@ -99,22 +99,19 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 * It works against the GraphIT REST endpoint: $url
 * in order to use, an instance must be created:
 
-    <!doctype html>
-      <head>
-        <script src="$url/graphit.js"></script>
-      </head>
-      <body>
-        <script>
-          // this is a generic error handling function which does nothing except logging
-          var handleError(error)
-          {
-            console.log(error);
-            throw(error);
-          };
 
-          var graphit = new GraphIT('$url');
-        </script>
-      </body>
+     &lt;script src="$url/graphit.js"&lt;/script>
+
+     // this is a generic error handling function which does nothing except logging
+
+     var handleError(error)
+     {
+     console.log(error);
+     throw(error);
+     };
+
+    var graphit = new GraphIT('$url');
+
 
 After instantiation the javascript api can be used as follows (all calls are in context of `<script />`):
 
