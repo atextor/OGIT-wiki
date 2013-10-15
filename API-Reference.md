@@ -14,7 +14,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
 * All REST requests must contain a GraphIT version header: `GraphIT-Version`.
 * All requests except `authenticate` must contain a valid access token `_TOKEN`. 
-* All requests will be made against a base `$url` (e.g. `https://graphit-example.tech.arago.de/`). 
+* All requests will be made against a base `$url` (e.g. `https://graphit-test.arago.de/`). 
 * All responses are in JSON.
 
 ### authenticate
