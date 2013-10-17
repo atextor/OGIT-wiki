@@ -1,6 +1,6 @@
 # Overview
 
-This tutorial covers how one can access data stored in GraphIT. The test service resides at `https://graphit-test.arago.de/`.
+The first part of the tutorial covers how one can access data stored in GraphIT. The test service resides at `https://graphit-test.arago.de/`.
 REST explains how the service is used via curl (via http), CLI explains how the service is used with the graphit-cli (via zmq).
 
 ## Authenticating
@@ -86,5 +86,4 @@ or listing any vertex, that the tutorial user has created `g.V("_id", "graphit-t
 
 ## Where to go from here
 
-* review basic aspects -> basics
-* learn how to put data into GraphIT
+* [Learn how to get data into GraphIT](Getting-Started-Part-2)
