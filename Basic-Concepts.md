@@ -49,11 +49,11 @@ _Correctness_ | high | low | high | very high
 
 The ontology definition is stored in the global knowledge part itself, following a "build yourself" approach in terms of data, structure and platform. While the top layers _'BigBang'_ and _'Global, Factual, Actionable, Situational knowlege'_ are fixed, the further hierarchy constructed below these must follow these simple principles:
 
-a. Any child type must posses any categorizing 'attribute/action' the parent type has.  
+a. Any child type will inherit any categorizing 'attributes' from its ancestor types. A 'verb' which can be used with some type can also be used with all descendent types.  
 
 b. An instance of a child type must be a valid instance of any parent type.  
 
-c. The "leafs" of the SGO type tree are described by NTOs
+c. The "leafs" SGO type tree are NTO types. Each such NTO type may or may not have a tree of sub-types.
 
 This classification for each entity on the top level of the ontology of the open graph of IT is done to have a classification in terms of use case, but also to determine the class of technology and algorithmic approaches valid when working with data from the respective sets (i.e. can caching be applied, is in memory technology a good choice, do algorithms need to deal with incorrectness, is ambiguity part of analytical approaches etc.). 
 
