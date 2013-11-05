@@ -23,6 +23,7 @@ REST | Webbased API model | Open Standard | Architecture | W3C |
 [SLA@SOI](http://sla-at-soi.eu/) | SLA Framework for Service Oriented Infrastructure | Research Project | Architecture | Multiple Contributors | [Overview](http://sla-at-soi.eu/) 
 UML | General purpose modelling Language | Industry Standard | Architecture | [OMG](http://www.omg.org) | [Overview](http://www.uml.org/#UML2.0)
 USDL | Service Descrition Language | Open Standard | Architecture | SAP Research | [Artifacts](http://www.internet-of-services.com/index.php?id=288&L=0)
+XACML | Access Control / IAM | Industry Standard | Architecture | OASIS | [Overview](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xacml)
 
 
 Possible **Types** are _Open Standard_, _Industry Standard_, _Commercial Standard_, _Best Practice Framework_, _Open Source Project_, _Research Project_   
