@@ -3,8 +3,9 @@
 This Tutorial shows you how to work with the API an how you can
 put data into OGIT on the base of an example.
 
-## Example
-The Service Example
+## The Service Example
+First you have to create the NTO of the Service. A Service is an entity of global knowledge.
+The Service NTO is shown here.  
 
 ## Creating NTO
 
