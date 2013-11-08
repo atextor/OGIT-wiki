@@ -1,7 +1,7 @@
 # Graph API Tutorial
 
 This Tutorial shows you how to work with the API an how you can
-put data into OGIT on the base of an example. In that example the REST interface will be used.
+put data into OGIT on the base of an example.
 
 ## The Service Example
 
@@ -11,13 +11,15 @@ First you have to create the NTO of the Service. A Service is an entity of globa
 The Service NTO is shown here. https://github.com/arago/OGIT/tree/master/NTO/Service
 
 ## Authenticate
-First you send us an email to register. You need the registration to authenticate against OGIT.
+First you send us an email to register. You need the registration to authenticate against OGIT. With you username and password you will get an access token. This token is needed for further operations with the Graph API.
 
 > REST (request)
 
-    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' -H 'username:graphit-tutorial@arago.de' -H 'password:graphittutorial' 'https://graphit-test.arago.de/authenticate'
+    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' -H 'username:user' -H 'password:pw' 'https://graphit-test.arago.de/authenticate'
 
+> REST (response)
 
+    {"_TOKEN":"DLtVymWXhnem7pgyWsAd0lgnqPvbL0"}
 
 ## Create data into OGIT
 
