@@ -7,11 +7,10 @@ put data into OGIT on the base of an example.
 
 
 ## Creating NTO
-First you have to create the NTO of the Service. A Service is an entity of global knowledge.
-The Service NTO is shown here. https://github.com/arago/OGIT/tree/master/NTO/Service
+First please get familiar with the basic concepts (https://github.com/arago/OGIT/wiki/Basic-Concepts) to understand what an NTO is. After this you have to create the NTO of the Service. A Service is an entity of global knowledge. The Service NTO is shown here. https://github.com/arago/OGIT/tree/master/NTO/Service
 
 ## Authenticate
-First you send us an email to register. You need the registration to authenticate against OGIT. With you username and password you will get an access token. This token is needed for further operations with the Graph API.
+To register send us an email. The registration is needed to authenticate against OGIT. With you username and password you will get an access token. This token is needed for further operations with the Graph API.
 
 > REST (request)
 
