@@ -22,8 +22,40 @@ To register send us an email. The registration is needed to authenticate against
 
 ## Create data into OGIT
 
+The following request creates a `service` with a `name=Testservice` and a `description=This is the first service instance in OGIT`.
+$TOKEN is your personal access token you have get in the authenticate response.
+If the format of your services is in cvs or similar you can use the Mr. Data Converter (http://shancarter.github.io/mr-data-converter) to convert the payload into json. 
+
+> REST (request)
+
+    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/Car?_TOKEN=$TOKEN' -d '{"color":"green", "doors": "4"}'
+
+> REST (response)
+
+    {"doors":"4","_type":"Car","_id":"b87bad04-f23d-47c9-8b7d-12b3b4994f20","_creator":"graphit-tutorial@arago.de","color":"green","_graphtype":"vertex","_deleted":false,"_modified-on":1381845426211,"_created-on":1381845426210}
+
 ## Update data in OGIT
 
+This request updates the `color` of the car to `red`:
+
+> REST (request)
+
+    curl -X PUT -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN' -d '{"color":"red"}'
+
+> REST (response)
+
+    {"doors":"4","_type":"Car","_creator":"graphit-tutorial@arago.de","_id":"b87bad04-f23d-47c9-8b7d-12b3b4994f20","color":"red","_graphtype":"vertex","_deleted":false,"_modified-on":1381845614874,"_created-on":1381845426210}
+
 ## Delete data in OGIT
+
+This request deletes the car: 
+
+> REST (request)
+
+    curl -X DELETE -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN'
+
+> REST (response)
+
+    {"doors":"4","_type":"Car","_creator":"graphit-tutorial@arago.de","_id":"b87bad04-f23d-47c9-8b7d-12b3b4994f20","color":"red","_graphtype":"vertex","_deleted-on":1381845706465,"_deleted":true,"_modified-on":1381845614874,"_created-on":1381845426210}
 
 ## Query data in OGIT
