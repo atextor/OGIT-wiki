@@ -4,7 +4,7 @@ This Tutorial shows you how to work with the API an how you can
 put data into OGIT on the base of an example.
 
 ## Introduction Service Example
-The service example demonstrates you the whole OGIT process. A list of nearly hundred services will be posted to OGIT in this tutorial. The file of the services Services(Tutorial).xlsx is found here.
+The service example demonstrates you the whole OGIT process. A list of nearly hundred services will be posted to OGIT in this tutorial. The file of the services is found here [service_list.xlsx](https://github.com/arago/OGIT/blob/master/examples/service_list.xlsx)
 
 ## Creating NTO
 First please get familiar with the basic concepts (https://github.com/arago/OGIT/wiki/Basic-Concepts) to understand what an NTO is. After this you have to create the NTO of the Service. A Service is an entity of global knowledge. The Service NTO is shown here. https://github.com/arago/OGIT/tree/master/NTO/Service
