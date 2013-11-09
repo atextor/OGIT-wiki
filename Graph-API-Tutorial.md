@@ -4,7 +4,7 @@ This Tutorial shows you how to work with the API an how you can
 put data into OGIT on the base of an example.
 
 ## Introduction Service Example
-The service example demonstrates you the whole OGIT process. 
+The service example demonstrates you the whole OGIT process. A list of nearly hundred services will be posted to OGIT in this tutorial. The file of the services Services(Tutorial).xlsx is found here.
 
 ## Creating NTO
 First please get familiar with the basic concepts (https://github.com/arago/OGIT/wiki/Basic-Concepts) to understand what an NTO is. After this you have to create the NTO of the Service. A Service is an entity of global knowledge. The Service NTO is shown here. https://github.com/arago/OGIT/tree/master/NTO/Service
@@ -34,32 +34,33 @@ If the format of your services is in cvs or similar you can use the Mr. Data Con
 
     {"_type":"Service","level":"IaaS","_id":"99c5f2e4-0113-40f7-961a-8f49b633ca2e","_creator":"graphit-tutorial@arago.de","_owner":"graphit-tutorial@arago.de","_graphtype":"vertex","name":"Compute x86","_deleted":false,"_modified-on":1384027732695,"_created-on":1384027732688}
 
-The response is described as followed:
-_type:
-
+The response is described in https://github.com/arago/OGIT/wiki/API-Reference under `create`.
 
 ## Update data in OGIT
 
-This request updates the `color` of the car to `red`:
+This request updates the `name` of the service to `Compute SPARC`:
 
 > REST (request)
 
-    curl -X PUT -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN' -d '{"color":"red"}'
+    curl -X PUT -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/99c5f2e4-0113-40f7-961a-8f49b633ca2e?_TOKEN=$TOKEN' -d '{"name":""Compute SPARC"}'
 
 > REST (response)
 
-    {"doors":"4","_type":"Car","_creator":"graphit-tutorial@arago.de","_id":"b87bad04-f23d-47c9-8b7d-12b3b4994f20","color":"red","_graphtype":"vertex","_deleted":false,"_modified-on":1381845614874,"_created-on":1381845426210}
+    {"_type":"Service","level":"IaaS","_creator":"graphit-tutorial@arago.de","_id":"99c5f2e4-0113-40f7-961a-8f49b633ca2e","_owner":"graphit-tutorial@arago.de","_graphtype":"vertex","name":"Compute SPARC","_deleted":false,"_modified-on":1384030207505,"_created-on":1384027732688}
 
 ## Delete data in OGIT
 
-This request deletes the car: 
+This request deletes the service: 
 
 > REST (request)
 
-    curl -X DELETE -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN'
+    curl -X DELETE -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/99c5f2e4-0113-40f7-961a-8f49b633ca2e?_TOKEN=$TOKEN'
 
 > REST (response)
 
-    {"doors":"4","_type":"Car","_creator":"graphit-tutorial@arago.de","_id":"b87bad04-f23d-47c9-8b7d-12b3b4994f20","color":"red","_graphtype":"vertex","_deleted-on":1381845706465,"_deleted":true,"_modified-on":1381845614874,"_created-on":1381845426210}
+    {"_type":"Service","level":"IaaS","_creator":"graphit-tutorial@arago.de","_id":"99c5f2e4-0113-40f7-961a-8f49b633ca2e","_owner":"graphit-tutorial@arago.de","_graphtype":"vertex","name":"Compute SPARC","_deleted-on":1384030663012,"_deleted":true,"_modified-on":1384030207505,"_created-on":1384027732688}
 
 ## Query data in OGIT
+
+You can run a gremlin query to list items in OGIT. Please look at the  https://github.com/arago/OGIT/wiki/API-Reference under `Listing items`.
+The gremlin methods are listed here https://github.com/tinkerpop/gremlin/wiki/Gremlin-Steps.
