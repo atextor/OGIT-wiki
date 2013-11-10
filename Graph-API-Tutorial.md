@@ -7,7 +7,7 @@ put data into OGIT on the base of an example.
 The service example demonstrates you the whole OGIT process. A list of nearly hundred services will be posted to OGIT in this tutorial. The file of the services is found here [service_list.xlsx](https://github.com/arago/OGIT/blob/master/examples/service_list.xlsx).
 
 ## Creating NTO
-First please get familiar with the basic concepts (https://github.com/arago/OGIT/wiki/Basic-Concepts) to understand what an NTO is. After this you have to create the NTO of the Service. A Service is an entity of global knowledge. The Service NTO is shown here [Service NTO] (https://github.com/arago/OGIT/tree/master/NTO/Service).
+First please get familiar with the [basic concepts] (https://github.com/arago/OGIT/wiki/Basic-Concepts) to understand what an NTO is. After this you have to create the NTO of the Service. A Service is an entity of global knowledge. The Service NTO is shown here [Service NTO] (https://github.com/arago/OGIT/tree/master/NTO/Service).
 
 ## Authenticate
 To register send an email to ogit@arago.de. The registration is needed to authenticate against OGIT. With you username and password you will get an access token. This token is needed for further operations with the Graph API.
@@ -63,5 +63,5 @@ This request deletes the service:
 
 ## Query data in OGIT
 
-You can run a gremlin query to list items in OGIT. Please look at the  https://github.com/arago/OGIT/wiki/API-Reference under `Listing items`.
-The gremlin methods are listed here https://github.com/tinkerpop/gremlin/wiki/Gremlin-Steps.
+You can run a gremlin query to list items in OGIT. Please look at the [API-Reference] (https://github.com/arago/OGIT/wiki/API-Reference) under `Listing items`.
+The gremlin methods are listed [here] (https://github.com/tinkerpop/gremlin/wiki/Gremlin-Steps).
