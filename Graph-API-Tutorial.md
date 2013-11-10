@@ -24,7 +24,7 @@ To register send an email to ogit@arago.de. The registration is needed to authen
 
 The following request creates a `service` with the `level=IaaS` and a `name=Compute x86`.
 $TOKEN is your personal access token you have get in the authenticate response.
-If the format of your services is in cvs or similar you can use the Mr. Data Converter (http://shancarter.github.io/mr-data-converter) to convert the payload into json.
+If the format of your services is in cvs or similar you can use the [Mr. Data Converter] (http://shancarter.github.io/mr-data-converter) to convert the payload into json.
 To store all the services into OGIT the converter supported the generation of the following curl shell-script [curl_post_services.sh] (https://github.com/arago/OGIT/blob/master/examples/curl_post_services.sh)
 
 > REST (request)
