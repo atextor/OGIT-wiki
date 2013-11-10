@@ -35,7 +35,7 @@ To store all the services into OGIT the converter supported the generation of th
 
     {"_type":"Service","level":"IaaS","_id":"99c5f2e4-0113-40f7-961a-8f49b633ca2e","_creator":"graphit-tutorial@arago.de","_owner":"graphit-tutorial@arago.de","_graphtype":"vertex","name":"Compute x86","_deleted":false,"_modified-on":1384027732695,"_created-on":1384027732688}
 
-The response is described in https://github.com/arago/OGIT/wiki/API-Reference under `create`.
+The response is described in the [API-Reference] (https://github.com/arago/OGIT/wiki/API-Reference) under `create`.
 
 ## Update data in OGIT
 
