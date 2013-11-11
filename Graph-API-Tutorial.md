@@ -63,5 +63,15 @@ This request deletes the service:
 
 ## Query data in OGIT
 
-You can run a gremlin query to list items in OGIT. Please look at the [API-Reference] (https://github.com/arago/OGIT/wiki/API-Reference) under `Listing items`.
+You can run a gremlin query to list items in OGIT. The following query searches all the entities that `name` is `Memory SPARC` and `owned` by the user with the `id=username`.
+
+> REST (request)
+
+    curl -X GET -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/query/gremlin?query=g.V("_id",id).outE.has("label",label).inV.has("Name",name)&id=username&_TOKEN=$TOKEN&name=Memory%20SPARC&label=_owns'
+
+> REST (response)
+
+    {"items":[{"Name":"Memory SPARC","_type":"Service","_id":"ba1252d2-2022-471b-8d66-32174ae599b9","_creator":"graphit-tutorial@arago.de","_owner":"graphit-tutorial@arago.de","_graphtype":"vertex","Level":"IaaS","_deleted":false,"_modified-on":1384033807273,"_created-on":1384033807271}]}
+
+For further and detailed gremlin queries please look at the [API-Reference] (https://github.com/arago/OGIT/wiki/API-Reference) under `Listing items`.
 The gremlin methods are listed [here] (https://github.com/tinkerpop/gremlin/wiki/Gremlin-Steps).
