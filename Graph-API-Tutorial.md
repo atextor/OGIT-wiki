@@ -63,7 +63,7 @@ This request deletes the service:
 
 ## Query data in OGIT
 
-You can run a gremlin query to list items in OGIT. The following query searches all the entities that `name` is `Memory SPARC` and `owned` by the user with the `id=username`.
+You can run a [gremlin query](http://gremlindocs.com/) to list items in OGIT. The following query searches all the entities that `name` is `Memory SPARC` and `owned` by the user with the `id=username`.
 
 > REST (request)
 
