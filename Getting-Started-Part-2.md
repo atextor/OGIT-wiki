@@ -1,4 +1,4 @@
-## Overview
+a## Overview
 
 In this part of the tutorial we assume that we have a type `Car` which has two properties: `color` of the car and number of `doors`, as well as a type `Driver` which has a `name` and can `drive` cars:
 
@@ -8,7 +8,7 @@ The following request creates a `green` `Car` with `4` doors:
 
 > REST (request)
 
-    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/Car?_TOKEN=$TOKEN' -d '{"color":"green", "doors": "4"}'
+    curl -X POST  'https://graphit-test.arago.de/Car?_TOKEN=$TOKEN' -d '{"color":"green", "doors": "4"}'
 
 > REST (response)
 
@@ -21,7 +21,7 @@ This request updates the `color` of the car to `red`:
 
 > REST (request)
 
-    curl -X PUT -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN' -d '{"color":"red"}'
+    curl -X PUT  'https://graphit-test.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN' -d '{"color":"red"}'
 
 > REST (response)
 
@@ -33,7 +33,7 @@ This request deletes the car:
 
 > REST (request)
 
-    curl -X DELETE -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN'
+    curl -X DELETE  'https://graphit-test.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN'
 
 > REST (response)
 
@@ -45,7 +45,7 @@ This request creates a connection of type `drives` between the `Driver` (id: $dr
 
 > REST (request)
 
-    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/connect/drives?_TOKEN=$TOKEN' -d '{"out": $driver, "in": $car}'
+    curl -X POST  'https://graphit-test.arago.de/connect/drives?_TOKEN=$TOKEN' -d '{"out": $driver, "in": $car}'
 
 > REST (response)
 
