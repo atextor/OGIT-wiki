@@ -12,7 +12,6 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
 ## REST
 
-* All REST requests must contain a GraphIT version header: `GraphIT-Version`.
 * All requests except `authenticate` must contain a valid access token `_TOKEN`. 
 * All requests will be made against a base `$url` (e.g. `https://graphit-test.arago.de/`). 
 * All responses are in JSON.
@@ -24,12 +23,12 @@ The api reference contains an overview over all available GraphIT apis. Supporte
     body: [none]
 
     response: {"_TOKEN": "$TOKEN"}
-
+    // NOTE a cookie _TOKEN will also be set
 ### get
 
 
     GET $url/$id
-    headers: GraphIT-Version, _TOKEN
+    headers: _TOKEN
     body: [none]
 
     response: {"_id": "$id", /* json attributes */}
@@ -38,7 +37,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 ### create
 
     POST $url/$type
-    headers: GraphIT-Version, _TOKEN
+    headers: _TOKEN
     body: {/* json attributes */}
 
     response: {"_id": "generated id", "_type": "$type", "_graph-type": "vertex", /* json attributes */}
@@ -47,7 +46,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 ### update
 
     PUT $url/$id
-    headers: GraphIT-Version, _TOKEN
+    headers: _TOKEN
     body: {/* json attributes to update */}
 
     response: {"_id": "$id", /* updated json attributes */}
@@ -55,7 +54,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 ### delete
 
     DELETE $url/$id
-    headers: GraphIT-Version, _TOKEN
+    headers: _TOKEN
     body: [none]
 
     response: {"_id": "$id", "_deleted": true /* json attributes */}
@@ -63,7 +62,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 ### connect
 
     POST $url/connect/$type
-    headers: GraphIT-Version, _TOKEN
+    headers: _TOKEN
     body: {"out":"id of the outgoing GraphIT object", "in": "id of the ingoing GraphIT object"}
 
     response: {"_id": "generated edge id", "_type": "$type", "_graph-type": "edge", /* ... */}
@@ -72,7 +71,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
 
     POST $url/query/$type?query=$queryString&parameter1=val1&parameter2=
-    headers: GraphIT-Version, _TOKEN
+    headers: _TOKEN
     body: [none]
 
     response: {"items": [{"_id": "...", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
@@ -120,7 +119,7 @@ After instantiation the javascript api can be used as follows (all calls are in 
     {
       if (ret.error) return handleError(error);
       
-      // graphit now has a token, it will automatically set it for all ongoing requests
+      // graphit now has a token as a cookie, it will automatically set it for all ongoing requests
     });
 
 ### get
