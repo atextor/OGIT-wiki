@@ -9,7 +9,7 @@ In order to use GraphIT an access token has to be obtained. The `authenticate` e
 
 > REST (request)
 
-    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' -H 'USER:graphit-tutorial@arago.de' -H 'PASSWORD:0xDEADBEEF' 'https://graphit-test.arago.de/authenticate'
+    curl -X POST  -H 'USER:graphit-tutorial@arago.de' -H 'PASSWORD:0xDEADBEEF' 'https://graphit-test.arago.de/authenticate'
 
 > REST (response)
 
@@ -32,7 +32,7 @@ Any item can be retrieved by its id, for example the identity of the tutorial us
 
 > REST (request)
 
-    curl -X GET -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/graphit-tutorial@arago.de?_TOKEN=$TOKEN'
+    curl -X GET  'https://graphit-test.arago.de/graphit-tutorial@arago.de?_TOKEN=$TOKEN'
 
 > REST (response)
 
@@ -54,7 +54,7 @@ Listing items can be done by running a [gremlin query](https://gremlindocs.com/)
 
 > REST (request, NOTE `id` is passed as a parameter with a placeholder)
 
-    curl -X GET -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/query/gremlin?query=g.V("_id",id).outE&id=graphit-tutorial@arago.de&_TOKEN=$TOKEN'
+    curl -X GET  'https://graphit-test.arago.de/query/gremlin?query=g.V("_id",id).outE&id=graphit-tutorial@arago.de&_TOKEN=$TOKEN'
 
 > REST (response)
 
@@ -78,7 +78,7 @@ or listing any vertex, that the tutorial user has created `g.V("_id", "graphit-t
 
 > REST (request, NOTE `id` is passed as a parameter with a placeholder)
 
-    curl -X GET -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/query/gremlin?query=g.V("_id",id).outE.inV&id=graphit-tutorial@arago.de&_TOKEN=$TOKEN'
+    curl -X GET  'https://graphit-test.arago.de/query/gremlin?query=g.V("_id",id).outE.inV&id=graphit-tutorial@arago.de&_TOKEN=$TOKEN'
 
 > REST (response)
 
