@@ -14,7 +14,7 @@ To register send an email to __ogit@arago.de__. Registration is required to be a
 
 > REST (request)
 
-    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' -H 'username:user' -H 'password:pw' 'https://graphit-test.arago.de/authenticate'
+    curl -X POST -H 'username:user' -H 'password:pw' 'https://graphit-test.arago.de/authenticate'
 
 > REST (response)
 
@@ -29,7 +29,7 @@ To store all the services in OGIT the converter supports the generation of the f
 
 > REST (request)
 
-    curl -X POST -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/Service?_TOKEN=$TOKEN' -d '{"level":"IaaS", "name": "Compute x86"}'
+    curl -X POST 'https://graphit-test.arago.de/Service?_TOKEN=$TOKEN' -d '{"level":"IaaS", "name": "Compute x86"}'
 
 > REST (response)
 
@@ -43,7 +43,7 @@ This request updates the `name` of the service to `Compute SPARC`:
 
 > REST (request)
 
-    curl -X PUT -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/99c5f2e4-0113-40f7-961a-8f49b633ca2e?_TOKEN=$TOKEN' -d '{"name":""Compute SPARC"}'
+    curl -X PUT 'https://graphit-test.arago.de/99c5f2e4-0113-40f7-961a-8f49b633ca2e?_TOKEN=$TOKEN' -d '{"name":""Compute SPARC"}'
 
 > REST (response)
 
@@ -55,7 +55,7 @@ This request deletes the service:
 
 > REST (request)
 
-    curl -X DELETE -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/99c5f2e4-0113-40f7-961a-8f49b633ca2e?_TOKEN=$TOKEN'
+    curl -X DELETE 'https://graphit-test.arago.de/99c5f2e4-0113-40f7-961a-8f49b633ca2e?_TOKEN=$TOKEN'
 
 > REST (response)
 
@@ -67,7 +67,7 @@ You can run a [gremlin query](http://gremlindocs.com/) to list items in OGIT. Th
 
 > REST (request)
 
-    curl -X GET -H 'GraphIT-Version:4.2-SNAPSHOT' 'https://graphit-test.arago.de/query/gremlin?query=g.V("_id",id).outE.has("label",label).inV.has("Name",name)&id=username&_TOKEN=$TOKEN&name=Memory%20SPARC&label=_owns'
+    curl -X GET 'https://graphit-test.arago.de/query/gremlin?query=g.V("_id",id).outE.has("label",label).inV.has("Name",name)&id=username&_TOKEN=$TOKEN&name=Memory%20SPARC&label=_owns'
 
 > REST (response)
 
