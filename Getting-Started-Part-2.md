@@ -1,4 +1,4 @@
-a## Overview
+## Overview
 
 In this part of the tutorial we assume that we have a type `Car` which has two properties: `color` of the car and number of `doors`, as well as a type `Driver` which has a `name` and can `drive` cars:
 
