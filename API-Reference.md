@@ -26,12 +26,19 @@ The api reference contains an overview over all available GraphIT apis. Supporte
     // NOTE a cookie _TOKEN will also be set
 ### get
 
-
+    // get an object by id
     GET $url/$id
     headers: _TOKEN
     body: [none]
 
     response: {"_id": "$id", /* json attributes */}
+
+    // get outgoing vertices of edge/verb $type
+    GET $url/$id/$verb
+    headers: _TOKEN
+    body: [none]
+
+    response: {"items": {/* json attributes */}}
 
 
 ### create
@@ -75,6 +82,11 @@ The api reference contains an overview over all available GraphIT apis. Supporte
     body: [none]
 
     response: {"items": [{"_id": "...", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
+
+#### query types:
+
+* gremlin: $url/query/gremlin?query= (see http://gremlindocs.com/)
+* lucene: $url/query/vertices?query= and  $url/query/edges?query= (see http://lucene.apache.org/core/4_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description)
 
 ### help
 
