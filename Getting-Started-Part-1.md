@@ -5,11 +5,11 @@ REST explains how the service is used via curl (via http), CLI explains how the 
 
 ## Authenticating
 
-In order to use GraphIT an access token has to be obtained. The `authenticate` endpoint is called with the user `graphit-tutorial@arago.de` and the password `0xDEADBEEF`.
+To register send an email to ogit@arago.de. Registration is required to be able authenticate against OGIT. With your username and password you will receive an access token. This token is needed for further operations with the Graph API.
 
 > REST (request)
 
-    curl -X POST  -H 'USER:graphit-tutorial@arago.de' -H 'PASSWORD:0xDEADBEEF' 'https://graphit-test.arago.de/authenticate'
+    curl -X POST  -H 'username:user' -H 'password:pw' 'https://graphit-test.arago.de/authenticate'
 
 > REST (response)
 
@@ -18,7 +18,7 @@ In order to use GraphIT an access token has to be obtained. The `authenticate` e
 
 > CLI (request)
 
-    graphit-cli authenticate -u tcp://graphit-test.tech.arago.de:7290 -p 'USER=graphit-tutorial@arago.de' -p 'PASSWORD=0xDEADBEEF'
+    graphit-cli authenticate -u tcp://graphit-test.tech.arago.de:7290 -p 'username:user' -p 'password:pw'
 
 > CLI (response)
 
