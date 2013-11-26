@@ -28,7 +28,7 @@ This token can now be used in all subsequent requests. For brevity it will be ab
 
 ## Getting Items
 
-Any item can be retrieved by its id, for example the identity of the tutorial user:
+Any item can be retrieved by its id, for example the identity of the tutorial user graphit-tutorial@arago.de:
 
 > REST (request)
 
