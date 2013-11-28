@@ -8,7 +8,7 @@ The following request creates a `green` `Car` with `4` doors:
 
 > REST (request)
 
-    curl -X POST  'https://graphit-test.arago.de/Car?_TOKEN=$TOKEN' -d '{"color":"green", "doors": "4"}'
+    curl -X POST -H 'content-type:application/json' 'https://graphit-test.arago.de/Car?_TOKEN=$TOKEN' -d '{"color":"green", "doors": "4"}'
 
 > REST (response)
 
@@ -21,7 +21,7 @@ This request updates the `color` of the car to `red`:
 
 > REST (request)
 
-    curl -X PUT  'https://graphit-test.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN' -d '{"color":"red"}'
+    curl -X PUT -H 'content-type:application/json' 'https://graphit-test.arago.de/b87bad04-f23d-47c9-8b7d-12b3b4994f20?_TOKEN=$TOKEN' -d '{"color":"red"}'
 
 > REST (response)
 
@@ -45,7 +45,7 @@ This request creates a connection of type `drives` between the `Driver` (id: $dr
 
 > REST (request)
 
-    curl -X POST  'https://graphit-test.arago.de/connect/drives?_TOKEN=$TOKEN' -d '{"out": $driver, "in": $car}'
+    curl -X POST -H 'content-type:application/json' 'https://graphit-test.arago.de/connect/drives?_TOKEN=$TOKEN' -d '{"out": $driver, "in": $car}'
 
 > REST (response)
 
