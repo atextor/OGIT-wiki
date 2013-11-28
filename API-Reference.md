@@ -19,7 +19,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 ### authenticate
 
     POST $url/authenticate
-    headers: GraphIT-Version, USER, PASSWORD
+    headers: username, password
     body: [none]
 
     response: {"_TOKEN": "$TOKEN"}
@@ -44,7 +44,9 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 ### create
 
     POST $url/$type
-    headers: _TOKEN
+    headers: _TOKEN, content-type
+    
+    // content-type header must be application/json
     body: {/* json attributes */}
 
     response: {"_id": "generated id", "_type": "$type", "_graph-type": "vertex", /* json attributes */}
@@ -54,6 +56,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
     PUT $url/$id
     headers: _TOKEN
+    // content-type header must be application/json
     body: {/* json attributes to update */}
 
     response: {"_id": "$id", /* updated json attributes */}
@@ -70,6 +73,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
     POST $url/connect/$type
     headers: _TOKEN
+    // content-type header must be application/json
     body: {"out":"id of the outgoing GraphIT object", "in": "id of the ingoing GraphIT object"}
 
     response: {"_id": "generated edge id", "_type": "$type", "_graph-type": "edge", /* ... */}
@@ -309,4 +313,3 @@ Usage: graphit-cli query [options]
        type of the query
 
 </pre>
-
