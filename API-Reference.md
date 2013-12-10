@@ -91,6 +91,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
 * gremlin: $url/query/gremlin?query= (see http://gremlindocs.com/)
 * lucene: $url/query/vertices?query= and  $url/query/edges?query= (see http://lucene.apache.org/core/4_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description)
+* multi id query: $url/query/ids?query=id1,id2,id3,... fetches multiple ids at once
 
 ### help
 
