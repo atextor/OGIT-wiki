@@ -5,7 +5,8 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 * `authenticate`: authenticate against GraphIT and obtain an access token
 * `get`: get a GraphIT object via id
 * `create`: create a GraphIT object via type
-* `update`: update an existing GraphIT object
+* `update`: update an existing GraphIT object (add, overwrite and delete properties)
+* `write`: write an existing GraphIT object (write the object as in the request)
 * `delete`: delete an existing GraphIT object
 * `connect`: connect two existing GraphIT objects via connection-type
 * `query`: run queries against GraphIT
@@ -52,14 +53,26 @@ The api reference contains an overview over all available GraphIT apis. Supporte
     response: {"_id": "generated id", "_type": "$type", "_graph-type": "vertex", /* json attributes */}
 
 
-### update
+### write
 
     PUT $url/$id
     headers: _TOKEN
     // content-type header must be application/json
     body: {/* json attributes to update */}
 
+    response: {"_id": "$id", /* json attributes as in the request body */}
+
+### update
+
+    POST $url/$id
+    headers: _TOKEN
+    // content-type header must be application/json
+    // all properties in the body will be added or overwritten, to delete properties, set them to null, e.g.
+    // {"a": null, "b": null, "c": "5"} will delete properties a and b, and add or overwrite property c to 5
+    body: {/* json attributes to update */}
+
     response: {"_id": "$id", /* updated json attributes */}
+
 
 ### delete
 
@@ -170,6 +183,15 @@ After instantiation the javascript api can be used as follows (all calls are in 
       console.log(ret);
     });
 
+### write
+
+    graphit.write($id, {/* attributes */}, function(ret)
+    {
+      if (ret.error) return handleError(error);
+      
+      console.log(ret);
+    });
+
 ### delete
 
     graphit.del($id, function(ret)
@@ -250,6 +272,23 @@ Usage: graphit-cli create [options]
 ### update
 <pre>
 Usage: graphit-cli update [options] 
+  Options:
+        --format
+       output format (yaml|json)
+       Default: json
+  * -id
+       id of the graphit object
+    -p
+       object properties: -p id=15
+       Syntax: -pkey=value
+       Default: {}
+  * -token
+       security token
+</pre>
+
+### update
+<pre>
+Usage: graphit-cli write [options] 
   Options:
         --format
        output format (yaml|json)
