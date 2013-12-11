@@ -5,8 +5,8 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 * `authenticate`: authenticate against GraphIT and obtain an access token
 * `get`: get a GraphIT object via id
 * `create`: create a GraphIT object via type
-* `update`: update an existing GraphIT object (add, overwrite and delete properties)
-* `write`: write an existing GraphIT object (write the object as in the request)
+* `update`: update an existing GraphIT object (add, overwrite and delete properties) see http://stackoverflow.com/a/630475
+* `write`: write an existing GraphIT object (write the object as in the request) see http://stackoverflow.com/a/630475
 * `delete`: delete an existing GraphIT object
 * `connect`: connect two existing GraphIT objects via connection-type
 * `query`: run queries against GraphIT
