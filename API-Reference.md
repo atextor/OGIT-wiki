@@ -6,7 +6,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 * `get`: get a GraphIT object via id
 * `create`: create a GraphIT object via type
 * `update`: update an existing GraphIT object (MODIFY the node, add, overwrite and delete properties) see http://stackoverflow.com/a/630475
-* `write`: write an existing GraphIT object (REPLACE the node, write the object as in the request) see http://stackoverflow.com/a/630475
+* `replace`: replace an existing GraphIT object (REPLACE the node, write the object as in the request) see http://stackoverflow.com/a/630475
 * `delete`: delete an existing GraphIT object
 * `connect`: connect two existing GraphIT objects via connection-type
 * `query`: run queries against GraphIT
@@ -53,7 +53,7 @@ The api reference contains an overview over all available GraphIT apis. Supporte
     response: {"_id": "generated id", "_type": "$type", "_graph-type": "vertex", /* json attributes */}
 
 
-### write
+### replace
 
     PUT $url/$id
     headers: _TOKEN
@@ -183,9 +183,9 @@ After instantiation the javascript api can be used as follows (all calls are in 
       console.log(ret);
     });
 
-### write
+### replace
 
-    graphit.write($id, {/* attributes */}, function(ret)
+    graphit.replace($id, {/* attributes */}, function(ret)
     {
       if (ret.error) return handleError(error);
       
@@ -288,7 +288,7 @@ Usage: graphit-cli update [options]
 
 ### update
 <pre>
-Usage: graphit-cli write [options] 
+Usage: graphit-cli replace [options] 
   Options:
         --format
        output format (yaml|json)
