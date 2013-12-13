@@ -2,7 +2,7 @@
 
 The api reference contains an overview over all available GraphIT apis. Supported methods are:
 
-* `authenticate`: authenticate against GraphIT and obtain an access token
+* `authenticateç: authenticate against GraphIT and obtain an access token
 * `get`: get a GraphIT object via id
 * `create`: create a GraphIT object via type
 * `update`: update an existing GraphIT object (MODIFY the node, add, overwrite and delete properties)
@@ -102,9 +102,32 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
 #### query types:
 
-* gremlin: $url/query/gremlin?query= (see http://gremlindocs.com/)
-* lucene: $url/query/vertices?query= and  $url/query/edges?query= (see http://lucene.apache.org/core/4_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description)
-* multi id query: $url/query/ids?query=id1,id2,id3,... fetches multiple ids at once
+__gremlin__: `$url/query/gremlin?query=` (see http://gremlindocs.com/)
+
+
+    GET $url/query/gremlin?query=v("id",idParam)&idParam=123
+    headers: _TOKEN
+    body: [none]
+
+    response: {"items": [{"_id": "123", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
+
+
+__lucene__: `$url/query/vertices?query=` and  `$url/query/edges?query=` (see [query-parser syntax](http://lucene.apache.org/core/4_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description), [es-query-string](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html))
+
+    GET $url/query/vertices?query=+attribute:a +something:b
+    headers: _TOKEN
+    body: [none]
+
+    response: {"items": [{"_id": "...", /* json attributes */, "_graphtype": "vertex|edge"}, {"_id": "...", /* json attributes */}, ...]}
+
+__multi id query__: `$url/query/ids?query=id1,id2,id3,...` fetches multiple ids at once
+
+    GET $url/query/ids?query=id1,id2,id3
+    headers: _TOKEN
+    body: [none]
+
+    response: {"items": [{"_id": "id1", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
+
 
 ### help
 
