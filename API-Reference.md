@@ -15,7 +15,11 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
 * All requests except `authenticate` must contain a valid access token `_TOKEN`. 
 * All requests will be made against a base `$url` (e.g. `https://graphit-test.arago.de/`). 
-* All responses are in JSON.
+* All responses are in JSON unless otherwise desired.
+    * __JSON__ response format: set header `Accept` to `application/json`
+    * __JSON__ request format (for requests with body): set header `Content-Type` to `application/json`
+    * __YAML__ response format: set header `Accept` to `application/yaml`
+    * __YAML__ request format (for requests with body): set header `Content-Type` to `application/yaml` 
 
 ### authenticate
 
