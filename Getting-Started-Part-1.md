@@ -50,11 +50,11 @@ Any item can be retrieved by its id, for example the identity of the tutorial us
 
 ## Listing Items
 
-Listing items can be done by running a [gremlin query](https://gremlindocs.com/), in this example we get the identity vertex and list all outgoing edges/vertices `g.V("_id", "graphit-tutorial@arago.de").outE`.
+Listing items can be done by running a [gremlin query](https://gremlindocs.com/), in this example we get the identity vertex and list all outgoing edges/vertices of graphit-tutorial@arago.de: `outE`.
 
-> REST (request, NOTE `id` is passed as a parameter with a placeholder)
+> REST (request, NOTE `root` is passed as a parameter with a placeholder, the root is the id of the root vertex where the query starts, and it must be present)
 
-    curl -X GET  'https://graphit-test.arago.de/query/gremlin?query=g.V("_id",id).outE&id=graphit-tutorial@arago.de&_TOKEN=$TOKEN'
+    curl -X GET  'https://graphit-test.arago.de/query/gremlin?query=outE&root=graphit-tutorial@arago.de&_TOKEN=$TOKEN'
 
 > REST (response)
 
@@ -63,7 +63,7 @@ Listing items can be done by running a [gremlin query](https://gremlindocs.com/)
 
 > CLI (request, NOTE `id` is passed as a parameter with a placeholder)
 
-    graphit-cli query -u tcp://graphit-test.tech.arago.de:7290 -type gremlin -query 'g.V("_id", id).outE' -p 'id=graphit-tutorial@arago.de' -token $TOKEN
+    graphit-cli query -u tcp://graphit-test.tech.arago.de:7290 -type gremlin -query 'outE' -p 'root=graphit-tutorial@arago.de' -token $TOKEN
 
 > CLI (response, json)
 
@@ -74,11 +74,11 @@ Listing items can be done by running a [gremlin query](https://gremlindocs.com/)
     - {_in-id: 81f34412-8431-4581-97ad-09beeff047e9, _type: created, _edge-id: graphit-tutorial@arago.de_4e0da517-db73-4b98-8069-29cc61100c6f_81f34412-8431-4581-97ad-09beeff047e9, _graphtype: edge, _out-id: graphit-tutorial@arago.de}
     - {_in-id: b8422c98-e074-4304-8d3f-bcf1e49b686c, _type: created, _edge-id: graphit-tutorial@arago.de_4a098821-51d8-448a-97b5-c6491abe051a_b8422c98-e074-4304-8d3f-bcf1e49b686c, _graphtype: edge, _out-id: graphit-tutorial@arago.de}
 
-or listing any vertex, that the tutorial user has created `g.V("_id", "graphit-tutorial@arago.de").outE.inV`:
+or listing any vertex, that the tutorial user has created `outE.inV`:
 
-> REST (request, NOTE `id` is passed as a parameter with a placeholder)
+> REST (request)
 
-    curl -X GET  'https://graphit-test.arago.de/query/gremlin?query=g.V("_id",id).outE.inV&id=graphit-tutorial@arago.de&_TOKEN=$TOKEN'
+    curl -X GET  'https://graphit-test.arago.de/query/gremlin?query=outE.inV&root=graphit-tutorial@arago.de&_TOKEN=$TOKEN'
 
 > REST (response)
 
