@@ -15,6 +15,15 @@ To register send an email to ogit@arago.de. Registration is required to be able 
 
     {"_TOKEN":"DLtVymWXhnem7pgyWsAd0lgnqPvbL0"}
 
+> REST (request, plain)
+
+    curl -X POST  -H 'username:user' -H 'password:pw' 'https://graphit-test.arago.de/authenticate/plain'
+
+
+> REST (response, plain, can be used to obtain token as: TOKEN=`curl .../plain`; echo $TOKEN)
+
+    DLtVymWXhnem7pgyWsAd0lgnqPvbL0
+
 
 > CLI (request)
 
