@@ -67,7 +67,7 @@ You can run a [gremlin query](http://gremlindocs.com/) to list items in OGIT. Th
 
 > REST (request)
 
-    curl -X GET 'https://graphit-test.arago.de/query/gremlin?query=g.V("_id",id).outE.has("label",label).inV.has("Name",name)&id=username&_TOKEN=$TOKEN&name=Memory%20SPARC&label=_owns'
+    curl -X GET 'https://graphit-test.arago.de/query/gremlin?query=outE.has("label",label).inV.has("Name",name)&root=username&_TOKEN=$TOKEN&name=Memory%20SPARC&label=_owns'
 
 > REST (response)
 
