@@ -106,10 +106,10 @@ The api reference contains an overview over all available GraphIT apis. Supporte
 
 #### query types:
 
-__gremlin__: `$url/query/gremlin?query=` (see http://gremlindocs.com/)
+__gremlin__: `$url/query/gremlin?query=&root=` (see http://gremlindocs.com/)
 
-
-    GET $url/query/gremlin?query=v("id",idParam)&idParam=123
+    // MANDATORY root is the vertex id of the root vertex
+    GET $url/query/gremlin?query=outE.inV&root=123
     headers: _TOKEN
     body: [none]
 
