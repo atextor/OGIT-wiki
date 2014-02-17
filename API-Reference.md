@@ -2,7 +2,7 @@
 
 The api reference contains an overview over all available GraphIT apis. Supported methods are:
 
-* `authenticateç: authenticate against GraphIT and obtain an access token
+* `authenticate`: authenticate against GraphIT and obtain an access token
 * `get`: get a GraphIT object via id
 * `create`: create a GraphIT object via type
 * `update`: update an existing GraphIT object (MODIFY the node, add, overwrite and delete properties)
