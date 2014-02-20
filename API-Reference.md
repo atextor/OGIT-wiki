@@ -315,7 +315,7 @@ Usage: graphit-cli update [options]
        security token
 </pre>
 
-### update
+### replace
 <pre>
 Usage: graphit-cli replace [options] 
   Options:
