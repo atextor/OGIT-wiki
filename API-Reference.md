@@ -250,12 +250,14 @@ After instantiation the javascript api can be used as follows (all calls are in 
 ## GraphIT-CLI
 <pre>
 Usage: graphit-cli {authenticate|get|create|update|delete|query} [options] 
-  Options:
+Options:
+  * -u, --url
+       zmq connection url
+  * -su, --stream-url
+       zmq stream url
     -t, --timeout
        zmq connection timeout
        Default: 1000
-  * -u, --url
-       zmq connection url
 </pre>
 ### authenticate
 
@@ -263,7 +265,7 @@ Usage: graphit-cli {authenticate|get|create|update|delete|query} [options]
 Usage: graphit-cli authenticate [options] 
   Options:
     -p
-       authentication properties: -p USER=15
+       authentication properties: -p 'username=user' -p 'password=pw'
 </pre>
 
 ### get
