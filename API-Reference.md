@@ -1,6 +1,9 @@
 ## Overview
 
-The api reference contains an overview over all available GraphIT apis. Supported methods are:
+The api reference contains an overview over all available GraphIT apis. 
+All attributes not starting with _ must be of type string.
+
+Supported methods are:
 
 * `authenticate`: authenticate against GraphIT and obtain an access token
 * `get`: get a GraphIT object via id
