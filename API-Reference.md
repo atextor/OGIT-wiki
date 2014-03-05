@@ -55,6 +55,7 @@ Supported methods are:
     headers: _TOKEN, content-type
     
     // content-type header must be application/json
+    // you can also pass an own _id
     body: {/* json attributes */}
 
     response: {"_id": "generated id", "_type": "$type", "_graph-type": "vertex", /* json attributes */}
