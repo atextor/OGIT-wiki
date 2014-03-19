@@ -122,7 +122,7 @@ __gremlin__: `$url/query/gremlin?query=&root=` (see http://gremlindocs.com/)
 
 __lucene__: `$url/query/vertices?query=` and  `$url/query/edges?query=` (see [query-parser syntax](http://lucene.apache.org/core/4_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description), [es-query-string](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html))
 
-    GET $url/query/vertices?query=+attribute:a +something:b
+    GET $url/query/vertices?query=+attribute:a +something:b&limit=10&offset=0&order=a asc, b desc
     headers: _TOKEN
     body: [none]
 
