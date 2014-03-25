@@ -185,7 +185,7 @@ After instantiation the javascript api can be used as follows (all calls are in 
 
     graphit.authenticate({/* authentication parameters */}, function(ret)
     {
-      if (ret.error) return handleError(error);
+      if (ret.error) return handleError(ret.error);
       
       // graphit now has a token as a cookie, it will automatically set it for all ongoing requests
     });
@@ -195,7 +195,7 @@ After instantiation the javascript api can be used as follows (all calls are in 
 
     graphit.get($id, function(ret)
     {
-      if (ret.error) return handleError(error);
+      if (ret.error) return handleError(ret.error);
       
       console.log(ret);
     });
@@ -206,7 +206,7 @@ After instantiation the javascript api can be used as follows (all calls are in 
     
     graphit.create($type, {/* attributes */}, function(ret)
     {
-      if (ret.error) return handleError(error);
+      if (ret.error) return handleError(ret.error);
       
       console.log(ret);
     });
@@ -216,7 +216,7 @@ After instantiation the javascript api can be used as follows (all calls are in 
 
     graphit.update($id, {/* attributes */}, function(ret)
     {
-      if (ret.error) return handleError(error);
+      if (ret.error) return handleError(ret.error);
       
       console.log(ret);
     });
@@ -225,7 +225,7 @@ After instantiation the javascript api can be used as follows (all calls are in 
 
     graphit.replace($id, {/* attributes */}, function(ret)
     {
-      if (ret.error) return handleError(error);
+      if (ret.error) return handleError(ret.error);
       
       console.log(ret);
     });
@@ -234,7 +234,7 @@ After instantiation the javascript api can be used as follows (all calls are in 
 
     graphit.del($id, function(ret)
     {
-      if (ret.error) return handleError(error);
+      if (ret.error) return handleError(ret.error);
       
       console.log(ret);
     });
@@ -243,7 +243,7 @@ After instantiation the javascript api can be used as follows (all calls are in 
 
     graphit.connect($idOut, $idIn, $connectionType, function(ret)
     {
-      if (ret.error) return handleError(error);
+      if (ret.error) return handleError(ret.error);
       
       console.log(ret);
     });
@@ -253,7 +253,7 @@ After instantiation the javascript api can be used as follows (all calls are in 
 
     graphit.query($queryType, $queryString, {/* $queryParameters */}, function(ret)
     {
-      if (ret.error) return handleError(error);
+      if (ret.error) return handleError(ret.error);
       
       console.log(ret.items);
     });
