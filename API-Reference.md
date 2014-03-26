@@ -5,7 +5,6 @@ All attributes not starting with _ must be of type string.
 
 Supported methods are:
 
-* `authenticate`: authenticate against GraphIT and obtain an access token
 * `get`: get a GraphIT object via id
 * `create`: create a GraphIT object via type
 * `update`: update an existing GraphIT object (MODIFY the node, add, overwrite and delete properties)
@@ -16,22 +15,12 @@ Supported methods are:
 
 ## REST
 
-* All requests except `authenticate` must contain a valid access token `_TOKEN`. 
+* All requests must contain a valid access token `_TOKEN`. 
 * All requests will be made against a base `$url` (e.g. `https://graphit-test.arago.de/`). 
-* All responses are in JSON unless otherwise desired.
+* All responses are in JSON
     * __JSON__ response format: set header `Accept` to `application/json`
     * __JSON__ request format (for requests with body): set header `Content-Type` to `application/json`
-    * __YAML__ response format: set header `Accept` to `application/yaml`
-    * __YAML__ request format (for requests with body): set header `Content-Type` to `application/yaml` 
 
-### authenticate
-
-    POST $url/authenticate
-    headers: username, password
-    body: [none]
-
-    response: {"_TOKEN": "$TOKEN"}
-    // NOTE a cookie _TOKEN will also be set
 ### get
 
     // get an object by id
@@ -144,13 +133,6 @@ __multi id query__: `$url/query/ids?query=id1,id2,id3,...` fetches multiple ids 
     response: {"items": [{"_id": "id1", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
 
 
-### help
-
-    GET $url/help
-    headers: [none]
-    body: [none]
-
-    response: {/* json help file */}
 
 ### graphit.js
 
@@ -180,15 +162,6 @@ __multi id query__: `$url/query/ids?query=id1,id2,id3,...` fetches multiple ids 
 
 </pre>
 After instantiation the javascript api can be used as follows (all calls are in context of `<script />`):
-
-### authenticate
-
-    graphit.authenticate({/* authentication parameters */}, function(ret)
-    {
-      if (ret.error) return handleError(ret.error);
-      
-      // graphit now has a token as a cookie, it will automatically set it for all ongoing requests
-    });
 
 ### get
 
@@ -257,139 +230,3 @@ After instantiation the javascript api can be used as follows (all calls are in 
       
       console.log(ret.items);
     });
-
-## GraphIT-CLI
-<pre>
-Usage: graphit-cli {authenticate|get|create|update|delete|query} [options] 
-Options:
-  * -u, --url
-       zmq connection url
-  * -su, --stream-url
-       zmq stream url
-    -t, --timeout
-       zmq connection timeout
-       Default: 1000
-</pre>
-### authenticate
-
-<pre>
-Usage: graphit-cli authenticate [options] 
-  Options:
-    -p
-       authentication properties: -p 'username=user' -p 'password=pw'
-</pre>
-
-### get
-<pre>
-Usage: graphit-cli get [options] 
-  Options:
-        --format
-       output format (yaml|json)
-       Default: json
-  * -id
-       the id to get
-  * -token
-       security token
-</pre>
-
-### create
-<pre>
-Usage: graphit-cli create [options] 
-  Options:
-        --format
-       output format (yaml|json)
-       Default: json
-    -p
-       object properties: -p id=15
-       Syntax: -pkey=value
-       Default: {}
-  * -token
-       security token
-  * -type
-       type of the graphit object
-</pre>
-
-### update
-<pre>
-Usage: graphit-cli update [options] 
-  Options:
-        --format
-       output format (yaml|json)
-       Default: json
-  * -id
-       id of the graphit object
-    -p
-       object properties: -p id=15
-       Syntax: -pkey=value
-       Default: {}
-  * -token
-       security token
-</pre>
-
-### replace
-<pre>
-Usage: graphit-cli replace [options] 
-  Options:
-        --format
-       output format (yaml|json)
-       Default: json
-  * -id
-       id of the graphit object
-    -p
-       object properties: -p id=15
-       Syntax: -pkey=value
-       Default: {}
-  * -token
-       security token
-</pre>
-
-### delete
-<pre>
-Usage: graphit-cli delete [options] 
-  Options:
-        --format
-       output format (yaml|json)
-       Default: json
-  * -id
-       the id to delete
-  * -token
-       security token
-
-</pre>
-
-### connect
-<pre>
-Usage: graphit-cli connect [options] 
-  Options:
-        --format
-       output format (yaml|json)
-       Default: json
-  * -in
-       the id of the ingoing vertex
-  * -out
-       the id of the outgoing vertex
-  * -token
-       security token
-  * -type
-       the type of the connection
-</pre>
-
-### query
-<pre>
-Usage: graphit-cli query [options] 
-  Options:
-        --format
-       output format (yaml|json)
-       Default: json
-    -p
-       query parameter: -p id=15
-       Syntax: -pkey=value
-       Default: {}
-  * -query
-       content of the query
-  * -token
-       security token
-  * -type
-       type of the query
-
-</pre>
