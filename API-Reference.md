@@ -147,6 +147,108 @@ __multi id query__: `$url/query/ids?query=id1,id2,id3,...` fetches multiple ids 
 
     response: /* GraphIT js api*/
 
+
+### Batch Requests
+
+Batch requests are request executed in one transaction.
+
+    POST $url/batch
+    headers: _TOKEN
+    // content-type header must be application/json
+    body: {"requests": [{/* first batch request */}, {/* second batch request *//*, ... */}]}
+
+    response: {"items": [{/* result of first batch request */}, {/* result of second batch request */}/*, ...*/]}
+
+
+Available request types are: `GET`, `CONNECT`, `CREATE`, `UPDATE`, `REPLACE`, `DELETE`. 
+Batch requests support backreferencing, values may contain a relative or absolute backreference:
+
+* absolute: `${15}` is the 15th request in the sent request list
+* relative: `${-2}` is the -2 request in the sent request list from the current request
+
+e.g.: 
+
+    CREATE x
+    GET    Y
+    CONNECT ${0} ${-1}
+    
+    // will connect x->y
+    // these are the same only with different references
+    // CONNECT ${0} ${1} - both absolutely referenced
+    // CONNECT ${-2} ${-1} - both relatively referenced
+    // CONNECT ${-2} ${1} - like ${0} ${-1}
+    
+
+### Batch GET
+
+      {
+          "type": "GET",
+          "parameters": {
+              "ogit/_id": "vertex-id"
+          }
+      }
+
+### Batch CONNECT
+
+      {
+          "type": "CONNECT",
+          "body": {
+              "ogit/_out-id": "out-vertex-id",
+              "ogit/_in-id": "in-vertex-id",
+              "ogit/_type": "connect-type-id"
+          }
+      }
+
+### Batch CREATE
+
+      {
+          "type": "CREATE",
+          "parameters": {
+              "ogit/_type": "entity-type-id"
+          },
+          "body": {
+              /* "ogit/_id": "user-defined-id", */
+              "/some-property": "value"
+          }
+      }
+
+### Batch UPDATE
+
+      {
+          "type": "UPDATE",
+          "parameters": {
+              "ogit/_id": "vertex-id"
+          },
+          "body": {
+              /* "ogit/_id": "user-defined-id", */
+              "/some-property": "value"
+          }
+      }
+
+### Batch REPLACE
+
+      {
+          "type": "REPLACE",
+          "parameters": {
+              "ogit/_id": "vertex-id"
+          },
+          "body": {
+              /* "ogit/_id": "user-defined-id", */
+              "/some-property": "value"
+          }
+      }
+
+### Batch DELETE
+
+      {
+          "type": "DELETE",
+          "parameters": {
+              "ogit/_id": "$id"
+          }
+      }
+
+
+
 ## Javascript
 
 * The GraphIT javascript can be loaded from GraphIT directly
