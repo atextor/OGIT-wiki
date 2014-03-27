@@ -108,6 +108,7 @@ __gremlin__: `$url/query/gremlin?query=&root=` (see http://gremlindocs.com/)
 
     response: {"items": [{"_id": "123", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
 
+gremlin can use placeholders: `$url/query/gremlin?query=has('attribute',var1)&root=&var1=value` whereas var1 is the placeholder vor value. 
 
 __lucene__: `$url/query/vertices?query=` and  `$url/query/edges?query=` (see [query-parser syntax](http://lucene.apache.org/core/4_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description), [es-query-string](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html))
 
@@ -123,6 +124,9 @@ __lucene__: `$url/query/vertices?query=` and  `$url/query/edges?query=` (see [qu
     body: [none]
 
     response: {"items": [{"_id": "...", /* json attributes */, "_graphtype": "vertex|edge"}, {"_id": "...", /* json attributes */}, ...]}
+
+lucene can use placeholders: `$url/query/vertices?query=+field:$var1 +anotherfield:"$var2"&var1=value&var2=value2` whereas var1 is the placeholder for value1 and var2 the placeholder value2. placeholders are very useful, because escaping is done automatically.
+
 
 __multi id query__: `$url/query/ids?query=id1,id2,id3,...` fetches multiple ids at once
 
