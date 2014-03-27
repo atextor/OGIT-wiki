@@ -41,7 +41,7 @@ Appending `?metadata=1` to a `GET` for a vertex will return metadata about the v
 
 ### create
 
-    POST $url/_new/$type
+    POST $url/new/$type
     headers: _TOKEN, content-type
     
     // content-type header must be application/json
