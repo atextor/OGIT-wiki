@@ -41,11 +41,11 @@ Appending `?metadata=1` to a `GET` for a vertex will return metadata about the v
 
 ### create
 
-    POST $url/$type
+    POST $url/_new/$type
     headers: _TOKEN, content-type
     
     // content-type header must be application/json
-    // you can also pass an own _id
+    // you can also pass an own ogit/_id
     body: {/* json attributes */}
 
     response: {"ogit/_id": "generated id", "ogit/_type": "$type", "ogit/_graph-type": "vertex", /* json attributes */}
