@@ -28,7 +28,7 @@ Supported methods are:
     headers: _TOKEN
     body: [none]
 
-    response: {"_id": "$id", /* json attributes */}
+    response: {"ogit/_id": "$id", /* json attributes */}
 
     // get outgoing vertices of edge/verb $type
     GET $url/$id/$verb
@@ -37,6 +37,7 @@ Supported methods are:
 
     response: {"items": {/* json attributes */}}
 
+Appending `?metadata=1` to a `GET` for a vertex will return metadata about the vertex.
 
 ### create
 
@@ -47,7 +48,7 @@ Supported methods are:
     // you can also pass an own _id
     body: {/* json attributes */}
 
-    response: {"_id": "generated id", "_type": "$type", "_graph-type": "vertex", /* json attributes */}
+    response: {"ogit/_id": "generated id", "ogit/_type": "$type", "ogit/_graph-type": "vertex", /* json attributes */}
 
 
 ### replace
@@ -57,7 +58,7 @@ Supported methods are:
     // content-type header must be application/json
     body: {/* json attributes to update */}
 
-    response: {"_id": "$id", /* json attributes as in the request body */}
+    response: {"ogit/_id": "$id", /* json attributes as in the request body */}
 
 ### update
 
@@ -68,7 +69,7 @@ Supported methods are:
     // {"a": null, "b": null, "c": "5"} will delete properties a and b, and add or overwrite property c to 5
     body: {/* json attributes to update */}
 
-    response: {"_id": "$id", /* updated json attributes */}
+    response: {"ogit/_id": "$id", /* updated json attributes */}
 
 
 ### delete
@@ -77,7 +78,7 @@ Supported methods are:
     headers: _TOKEN
     body: [none]
 
-    response: {"_id": "$id", "_deleted": true /* json attributes */}
+    response: {"ogit/_id": "$id", "_deleted": true /* json attributes */}
 
 ### connect
 
@@ -86,7 +87,7 @@ Supported methods are:
     // content-type header must be application/json
     body: {"out":"id of the outgoing GraphIT object", "in": "id of the ingoing GraphIT object"}
 
-    response: {"_id": "generated edge id", "_type": "$type", "_graph-type": "edge", /* ... */}
+    response: {"ogit/_id": "generated edge id", "ogit/_type": "$type", "ogit/_graph-type": "edge", /* ... */}
 
 ### query
 
@@ -95,7 +96,7 @@ Supported methods are:
     headers: _TOKEN
     body: [none]
 
-    response: {"items": [{"_id": "...", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
+    response: {"items": [{"ogit/_id": "...", /* json attributes */}, {"ogit/_id": "...", /* json attributes */}, ...]}
 
 #### query types:
 
@@ -106,7 +107,7 @@ __gremlin__: `$url/query/gremlin?query=&root=` (see http://gremlindocs.com/)
     headers: _TOKEN
     body: [none]
 
-    response: {"items": [{"_id": "123", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
+    response: {"items": [{"ogit/_id": "123", /* json attributes */}, {"ogit/_id": "...", /* json attributes */}, ...]}
 
 gremlin can use placeholders: `$url/query/gremlin?query=has('attribute',var1)&root=&var1=value` whereas var1 is the placeholder vor value. 
 
@@ -123,7 +124,7 @@ __lucene__: `$url/query/vertices?query=` and  `$url/query/edges?query=` (see [qu
     headers: _TOKEN
     body: [none]
 
-    response: {"items": [{"_id": "...", /* json attributes */, "_graphtype": "vertex|edge"}, {"_id": "...", /* json attributes */}, ...]}
+    response: {"items": [{"ogit/_id": "...", /* json attributes */, "_graphtype": "vertex|edge"}, {"ogit/_id": "...", /* json attributes */}, ...]}
 
 lucene can use placeholders: `$url/query/vertices?query=+field:$var1 +anotherfield:"$var2"&var1=value&var2=value2` whereas var1 is the placeholder for value1 and var2 the placeholder value2. placeholders are very useful, because escaping is done automatically.
 
@@ -134,7 +135,7 @@ __multi id query__: `$url/query/ids?query=id1,id2,id3,...` fetches multiple ids 
     headers: _TOKEN
     body: [none]
 
-    response: {"items": [{"_id": "id1", /* json attributes */}, {"_id": "...", /* json attributes */}, ...]}
+    response: {"items": [{"ogit/_id": "id1", /* json attributes */}, {"ogit/_id": "...", /* json attributes */}, ...]}
 
 
 
