@@ -31,6 +31,7 @@ Supported methods are:
     response: {"ogit/_id": "$id", /* json attributes */}
 
     // get outgoing vertices of edge/verb $type
+    // optional parameter direction=in|out
     GET $url/$id/$verb
     headers: _TOKEN
     body: [none]
