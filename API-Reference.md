@@ -47,6 +47,14 @@ Supported methods are:
 
     response: {"items": {/* timeseries values */}}
 
+    // stream events from graphit
+    GET $url/stream
+    headers: _TOKEN
+    body: [none]
+
+    // the response is a newline `\n` separated list of events
+    response: {"identity":"id of the identity","action":"type, e.g. CREATE","element":{/* properties like ogit/_id*/}}`\n`/* more events */
+
 Appending `?metadata=1` to a `GET` for a vertex will return metadata about the vertex.
 
 ### create
