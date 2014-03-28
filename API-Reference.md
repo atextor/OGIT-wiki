@@ -1,7 +1,7 @@
 ## Overview
 
 The api reference contains an overview over all available GraphIT apis. 
-All attributes not starting with _ must be of type string.
+All attributes not starting with ogit/_ must be of type string.
 
 Supported methods are:
 
