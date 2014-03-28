@@ -81,6 +81,13 @@ Appending `?metadata=1` to a `GET` for a vertex will return metadata about the v
 
     response: {"ogit/_id": "$id", /* updated json attributes */}
 
+    // write timeseries value for types that support it
+    POST $url/$id/values
+    headers: _TOKEN
+    body: {"value": "timeseries value", "timestamp": timestampInMs}
+
+    response: {}
+
 
 ### delete
 
