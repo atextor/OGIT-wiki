@@ -11,7 +11,9 @@ Supported methods are:
 * `replace`: replace an existing GraphIT object (REPLACE the node, write the object as in the request)
 * `delete`: delete an existing GraphIT object
 * `connect`: connect two existing GraphIT objects via connection-type
+* `stream`: stream GraphIT events
 * `query`: run queries against GraphIT
+
 
 ## REST
 
@@ -46,14 +48,6 @@ Supported methods are:
     body: [none]
 
     response: {"items": {/* timeseries values */}}
-
-    // stream events from graphit
-    GET $url/stream
-    headers: _TOKEN
-    body: [none]
-
-    // the response is a newline (\n) separated list of events
-    response: {"identity":"id of the identity","action":"type, e.g. CREATE","element":{/* properties like ogit/_id*/}}\n/* more \n-separated events */
 
 Appending `?metadata=1` to a `GET` for a vertex will return metadata about the vertex.
 
@@ -114,6 +108,19 @@ Appending `?metadata=1` to a `GET` for a vertex will return metadata about the v
 
     response: {"ogit/_id": "generated edge id", "ogit/_type": "$type", "ogit/_graph-type": "edge", /* ... */}
 
+
+### stream
+
+
+    // stream events from graphit
+    GET $url/stream
+    headers: _TOKEN
+    body: [none]
+
+    // the response is a newline (\n) separated list of events
+    response: {"identity":"id of the identity","action":"type, e.g. CREATE","element":{/* properties like ogit/_id*/}}\n/* more \n-separated events */
+
+
 ### query
 
 
@@ -162,7 +169,6 @@ __multi id query__: `$url/query/ids?query=id1,id2,id3,...` fetches multiple ids 
     body: [none]
 
     response: {"items": [{"ogit/_id": "id1", /* json attributes */}, {"ogit/_id": "...", /* json attributes */}, ...]}
-
 
 
 ### graphit.js
