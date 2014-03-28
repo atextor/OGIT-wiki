@@ -38,6 +38,15 @@ Supported methods are:
 
     response: {"items": {/* json attributes */}}
 
+    // get timeseries values of types that support it
+    // from=timestamp in ms
+    // to=timestamp in ms 
+    GET $url/$id/values?from=&to=
+    headers: _TOKEN
+    body: [none]
+
+    response: {"items": {/* timeseries values */}}
+
 Appending `?metadata=1` to a `GET` for a vertex will return metadata about the vertex.
 
 ### create
