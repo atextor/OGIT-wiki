@@ -119,6 +119,7 @@ __lucene__: `$url/query/vertices?query=` and  `$url/query/edges?query=` (see [qu
        limit  = limit of results to return
        offset = offset of results
        order  = how to order search results: prop asc|desc[, prop1 asc|desc]
+       fields = comma-separated list of attributes to fetch
     */
 
     headers: _TOKEN
