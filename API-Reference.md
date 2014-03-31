@@ -14,6 +14,9 @@ Supported methods are:
 * `stream`: stream GraphIT events
 * `query`: run queries against GraphIT
 
+## Namespace
+
+All attributes in GraphIT are namespaced. To ensure consistency and avoid ambiguity, attributes have a mandatory prefix `http://www.purl.org/`. Everything after this prefix is the attribute, e.g. `ogit/_id` derives from http://www.purl.org/ogit/_id. (see http://www.purl.org/docs/index.html for further info).
 
 ## REST
 
