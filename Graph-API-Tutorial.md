@@ -23,11 +23,11 @@ To store all the services in OGIT the converter supports the generation of the f
 
 > REST (request)
 
-    curl -X POST 'https://graphit-test.arago.de/new/http:%2f%2fwww.purl.org%2farago%2fService?_TOKEN='$TOKEN -d '{"/Level":"IaaS", "/Name": "Compute x86"}'
+    curl -X POST 'https://graphit-test.arago.de/new/arago%2fService?_TOKEN='$TOKEN -d '{"/Level":"IaaS", "/Name": "Compute x86"}'
 
 > REST (response)
 
-    {"ogit/_type":"http://www.purl.org/arago/Service","/Level":"IaaS","ogit/_id":"99c5f2e4-0113-40f7-961a-8f49b633ca2e","ogit/_creator":"graphit-tutorial@arago.de","ogit/_owner":"graphit-tutorial@arago.de","ogit/_graphtype":"vertex","/Name":"Compute x86","ogit/_deleted":false,"ogit/_modified-on":1384027732695,"ogit/_created-on":1384027732688}
+    {"ogit/_type":"arago/Service","/Level":"IaaS","ogit/_id":"99c5f2e4-0113-40f7-961a-8f49b633ca2e","ogit/_creator":"graphit-tutorial@arago.de","ogit/_owner":"graphit-tutorial@arago.de","ogit/_graphtype":"vertex","/Name":"Compute x86","ogit/_is-deleted":false,"ogit/_modified-on":1384027732695,"ogit/_created-on":1384027732688}
 
 The response is described in the [API-Reference] (https://github.com/arago/OGIT/wiki/API-Reference) under `create`.
 
@@ -41,7 +41,7 @@ This request updates the `Name` of the service to `Compute SPARC`:
 
 > REST (response)
 
-    {"ogit/_type":"http://www.purl.org/arago/Service","/Level":"IaaS","ogit/_creator":"graphit-tutorial@arago.de","ogit/_id":"99c5f2e4-0113-40f7-961a-8f49b633ca2e","ogit/_owner":"graphit-tutorial@arago.de","ogit/_graphtype":"vertex","/Name":"Compute SPARC","ogit/_deleted":false,"ogit/_modified-on":1384030207505,"ogit/_created-on":1384027732688}
+    {"ogit/_type":"arago/Service","/Level":"IaaS","ogit/_creator":"graphit-tutorial@arago.de","ogit/_id":"99c5f2e4-0113-40f7-961a-8f49b633ca2e","ogit/_owner":"graphit-tutorial@arago.de","ogit/_graphtype":"vertex","/Name":"Compute SPARC","ogit/_is-deleted":false,"ogit/_modified-on":1384030207505,"ogit/_created-on":1384027732688}
 
 ## Delete data in OGIT
 
@@ -53,7 +53,7 @@ This request deletes the service:
 
 > REST (response)
 
-    {"ogit/_type":"http://www.purl.org/arago/Service","/Level":"IaaS","ogit/_creator":"graphit-tutorial@arago.de","ogit/_id":"99c5f2e4-0113-40f7-961a-8f49b633ca2e","ogit/_owner":"graphit-tutorial@arago.de","ogit/_graphtype":"vertex","/Name":"Compute SPARC","ogit/_deleted-on":1384030663012,"ogit/_deleted":true,"ogit/_modified-on":1384030207505,"ogit/_created-on":1384027732688}
+    {"ogit/_type":"arago/Service","/Level":"IaaS","ogit/_creator":"graphit-tutorial@arago.de","ogit/_id":"99c5f2e4-0113-40f7-961a-8f49b633ca2e","ogit/_owner":"graphit-tutorial@arago.de","ogit/_graphtype":"vertex","/Name":"Compute SPARC","ogit/_is-deleted-on":1384030663012,"ogit/_is-deleted":true,"ogit/_modified-on":1384030207505,"ogit/_created-on":1384027732688}
 
 ## Query data in OGIT
 
@@ -65,7 +65,7 @@ You can run a [gremlin query](http://gremlindocs.com/) to list items in OGIT. Th
 
 > REST (response)
 
-    {"items":[{"/Name":"Memory SPARC","ogit/_type":"http://www.purl.org/arago/Service","ogit/_id":"ba1252d2-2022-471b-8d66-32174ae599b9","ogit/_creator":"graphit-tutorial@arago.de","ogit/_owner":"graphit-tutorial@arago.de","ogit/_graphtype":"vertex","/Level":"IaaS","ogit/_deleted":false,"ogit/_modified-on":1384033807273,"ogit/_created-on":1384033807271}]}
+    {"items":[{"/Name":"Memory SPARC","ogit/_type":"arago/Service","ogit/_id":"ba1252d2-2022-471b-8d66-32174ae599b9","ogit/_creator":"graphit-tutorial@arago.de","ogit/_owner":"graphit-tutorial@arago.de","ogit/_graphtype":"vertex","/Level":"IaaS","ogit/_is-deleted":false,"ogit/_modified-on":1384033807273,"ogit/_created-on":1384033807271}]}
 
 For further and detailed gremlin queries please look at the [API-Reference] (https://github.com/arago/OGIT/wiki/API-Reference) under `Listing items`.
 The gremlin methods are listed [here] (https://github.com/tinkerpop/gremlin/wiki/Gremlin-Steps).
