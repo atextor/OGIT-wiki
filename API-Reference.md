@@ -16,7 +16,7 @@ Supported methods are:
 
 ## Namespace
 
-All attributes in GraphIT are namespaced. To ensure consistency and avoid ambiguity, attributes have a mandatory prefix `http://www.purl.org/`. Everything after this prefix is the attribute, e.g. `ogit/_id` derives from http://www.purl.org/ogit/_id. (see http://www.purl.org/docs/index.html for further info).
+All type ids (attribute ids, entity ids, verb ids, ...) in GraphIT are namespaced. To ensure consistency and avoid ambiguity, these have a mandatory prefix `http://www.purl.org/`. Everything after this prefix is the shortened id, that will be used by graphit, e.g. `ogit/_id` derives from http://www.purl.org/ogit/_id. (see http://www.purl.org/docs/index.html for further info).
 Attributes, that are not defined in OGIT have an empty namespace, e.g.: `/IssueXML`.
 
 ## REST
@@ -101,7 +101,7 @@ Appending `?metadata=1` to a `GET` for a vertex will return metadata about the v
     headers: _TOKEN
     body: [none]
 
-    response: {"ogit/_id": "$id", "_deleted": true /* json attributes */}
+    response: {"ogit/_id": "$id", "ogit/_is-deleted": true /* json attributes */}
 
 ### connect
 
