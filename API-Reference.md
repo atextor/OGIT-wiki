@@ -53,7 +53,7 @@ Attributes, that are not defined in OGIT have an empty namespace, e.g.: `/IssueX
 
     response: {"items": {/* timeseries values */}}
 
-Appending `?metadata=1` to a `GET` for a vertex will return metadata about the vertex.
+Appending `?metadata=true` to a `GET` for a vertex will return metadata about the vertex.
 
 ### create
 
