@@ -1,4 +1,4 @@
-## Overview
+![graphit-logo](https://github.com/arago/OGIT/raw/master/docs/images/graphit-logo.png)
 
 The api reference contains an overview over all available GraphIT apis. 
 All attributes not starting with ogit/_ must be of type string.
