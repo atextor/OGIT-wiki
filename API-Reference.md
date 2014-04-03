@@ -18,6 +18,7 @@ Supported methods are:
 
 All type ids (attribute ids, entity ids, verb ids, ...) in GraphIT are namespaced. To ensure consistency and avoid ambiguity, these have a mandatory prefix `http://www.purl.org/`. Everything after this prefix is the shortened id, that will be used by graphit, e.g. `ogit/_id` derives from http://www.purl.org/ogit/_id. (see http://www.purl.org/docs/index.html for further info).
 Attributes, that are not defined in OGIT have an empty namespace, e.g.: `/IssueXML`.
+(sidenote: the properties `id` and `label` can never be used due to storage limitations).
 
 ## REST
 
