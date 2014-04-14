@@ -200,7 +200,7 @@ Batch requests are request executed in one transaction. Batch requests are `0`-i
 Available request types are: `GET`, `CONNECT`, `CREATE`, `UPDATE`, `REPLACE`, `DELETE`. 
 Batch requests support backreferencing, values may contain a relative or absolute backreference:
 
-* absolute: `${15}` is the 15th request in the sent request list
+* absolute: `${15}` is the 14th request in the sent request list
 * relative: `${-2}` is the -2 request in the sent request list from the current request
 
 e.g.: 
