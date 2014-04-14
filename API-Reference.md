@@ -187,7 +187,7 @@ __multi id query__: `$url/query/ids?query=id1,id2,id3,...` fetches multiple ids 
 
 ### Batch Requests
 
-Batch requests are request executed in one transaction.
+Batch requests are request executed in one transaction. Batch requests are `0`-indexed, so the first request has the index `0`.
 
     POST $url/batch
     headers: _TOKEN
