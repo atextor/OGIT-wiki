@@ -54,6 +54,15 @@ Attributes, that are not defined in OGIT have an empty namespace, e.g.: `/IssueX
 
     response: {"items": {/* timeseries values */}}
 
+    // get history of the vertex (from newest to oldest)
+    // offset=long
+    // limit=long
+    GET $url/$id/history?offset=&limit=
+    headers: _TOKEN
+    body: [none]
+
+    response: {"items": {/* history values */}}
+
 Appending `?metadata=true` to a `GET` for a vertex will return metadata about the vertex.
 
 ### create
