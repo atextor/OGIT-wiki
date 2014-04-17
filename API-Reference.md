@@ -43,7 +43,7 @@ Attributes, that are not defined in OGIT have an empty namespace, e.g.: `/IssueX
     headers: _TOKEN
     body: [none]
 
-    response: {"items": {/* json attributes */}}
+    response: {"items": [/* json attributes */]}
 
     // get timeseries values of types that support it
     // from=timestamp in ms
@@ -52,7 +52,7 @@ Attributes, that are not defined in OGIT have an empty namespace, e.g.: `/IssueX
     headers: _TOKEN
     body: [none]
 
-    response: {"items": {/* timeseries values */}}
+    response: {"items": [/* timeseries values */]}
 
     // get history of the vertex (from newest to oldest)
     // offset=long
@@ -61,7 +61,7 @@ Attributes, that are not defined in OGIT have an empty namespace, e.g.: `/IssueX
     headers: _TOKEN
     body: [none]
 
-    response: {"items": {/* history values */}}
+    response: {"items": [/* vertex, vertex, ... */]}
 
 Appending `?metadata=true` to a `GET` for a vertex will return metadata about the vertex.
 
