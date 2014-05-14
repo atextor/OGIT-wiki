@@ -20,6 +20,12 @@ All type ids (attribute ids, entity ids, verb ids, ...) in GraphIT are namespace
 Attributes, that are not defined in OGIT have an empty namespace, e.g.: `/IssueXML`.
 (sidenote: the properties `id` and `label` can never be used due to storage limitations).
 
+## Special Attributes
+
+`ogit/_content` when written is indexed with the standard elasticsearch analyzer. It is also indexed with a ngram(3, 4) analyzer. a text like "a sample text of things" can be queried like `ogit/_content:sample` to find words in it, or `ogit/_content.ngram:amp` to find ngrams in it. This field is allowed for all entities.
+
+`ogit/_tags` when written is indexed as a list of keywords. The format when writing is `"some, tag, with spaces"` and internally is indexed as `["some", "tag", "with spaces"]`. It can be searched like `ogit/_tags:some` to find full tags in the list. This field is allowed for all entities.
+
 ## REST
 
 * All requests must contain a valid access token `_TOKEN`. 
@@ -101,8 +107,10 @@ Appending `?metadata=true` to a `GET` for a vertex will return metadata about th
     POST $url/$id/values
     headers: _TOKEN
     body: {"value": "timeseries value", "timestamp": timestampInMs}
+    # OR multiple values can be written at once
+    body: {"items": [{"value": "timeseries value", "timestamp": timestampInMs}, {"value": "timeseries value", "timestamp": timestampInMs}, ...]}
 
-    response: {}
+    response: {"ogit/_id": "..."}
 
 
 ### delete
@@ -157,7 +165,7 @@ __gremlin__: `$url/query/gremlin?query=&root=` (see http://gremlindocs.com/)
 
 gremlin can use placeholders: `$url/query/gremlin?query=has('attribute',var1)&root=&var1=value` whereas var1 is the placeholder vor value. 
 
-__lucene__: `$url/query/vertices?query=` and  `$url/query/edges?query=` (see [query-parser syntax](http://lucene.apache.org/core/4_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description), [es-query-string](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html))
+__elasticsearch__: `$url/query/vertices?query=` and  `$url/query/edges?query=` (see [query-parser syntax](http://lucene.apache.org/core/4_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description), [es-query-string](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html))
 
     GET $url/query/vertices?query=+attribute:a +something:b&limit=10&offset=0&order=a asc, b desc
     /*
@@ -173,7 +181,7 @@ __lucene__: `$url/query/vertices?query=` and  `$url/query/edges?query=` (see [qu
 
     response: {"items": [{"ogit/_id": "...", /* json attributes */, "_graphtype": "vertex|edge"}, {"ogit/_id": "...", /* json attributes */}, ...]}
 
-lucene can use placeholders: `$url/query/vertices?query=+field:$var1 +anotherfield:"$var2"&var1=value&var2=value2` whereas var1 is the placeholder for value1 and var2 the placeholder value2. placeholders are very useful, because escaping is done automatically.
+elasticsearch can use placeholders: `$url/query/vertices?query=+field:$var1 +anotherfield:"$var2"&var1=value&var2=value2` whereas var1 is the placeholder for value1 and var2 the placeholder value2. placeholders are very useful, because escaping is done automatically.
 
 
 __multi id query__: `$url/query/ids?query=id1,id2,id3,...` fetches multiple ids at once
