@@ -107,7 +107,7 @@ Appending `?metadata=true` to a `GET` for a vertex will return metadata about th
     POST $url/$id/values
     headers: _TOKEN
     body: {"value": "timeseries value", "timestamp": timestampInMs}
-    # OR multiple values can be written at once
+    // OR multiple values can be written at once
     body: {"items": [{"value": "timeseries value", "timestamp": timestampInMs}, {"value": "timeseries value", "timestamp": timestampInMs}, ...]}
 
     response: {"ogit/_id": "..."}
