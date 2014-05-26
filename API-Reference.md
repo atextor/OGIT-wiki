@@ -146,7 +146,7 @@ Appending `?metadata=true` to a `GET` for a vertex will return metadata about th
 ### query
 
 
-    POST $url/query/$type?query=$queryString&parameter1=val1&parameter2=
+    GET $url/query/$type?query=$queryString&parameter1=val1&parameter2=
     headers: _TOKEN
     body: [none]
 
