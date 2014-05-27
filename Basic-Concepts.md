@@ -18,7 +18,7 @@ This level describes the sub ontology for a specific node type, which is represe
 
 ### 3. SNRA - Specific Node Required Attribute
 
-Each node well defined by SGO and NTO ontologies will have a set of attributes that is specific to this unique type of node. The SNRA defines the minimal required attribute set. The _Open Graph of IT_ can handle any data following the SGO and NT typology, but the tools attached will only work properly if the SNRA definition is followed.
+Each node well defined by SGO and NTO ontologies will have a set of attributes that is specific to this unique type of node. The SNRA defines the minimal required attribute set. The _Open Graph of IT_ can handle any data following the SGO and NTO typology, but the tools attached will only work properly if the SNRA definition is followed.
 
 ### 4. SNBA - Specific Node Best Practice Attributes
 
