@@ -30,7 +30,7 @@ USDL | Service Descrition Language | Open Standard | Architecture | SAP Research
 
 Name | Description | Type  | Scope | Issuer/<br>Organiz. | Link | 
 ------ | ------ | ------ | ------ | ------ | ------ | 
-ISO 8601:2000 | Date/Time strings | 
+ISO 8601:2000 | Date/Time strings | Industry Standard | | ISO | [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) |
 
 Possible **Types** are _Open Standard_, _Industry Standard_, _Commercial Standard_, _Best Practice Framework_, _Open Source Project_, _Research Project_   
 Valid **scopes** are _API_, _Architecture_, _Cloud Management_, _Internet of Things_, _ITSM_, _Semantic Web_, _Test Frameworks_, _W3C/XML_
