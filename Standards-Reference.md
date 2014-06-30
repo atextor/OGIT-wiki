@@ -31,7 +31,7 @@ USDL | Service Descrition Language | Open Standard | Architecture | SAP Research
 Name | Description | Type  | Scope | Issuer/<br>Organiz. | Link | 
 ------ | ------ | ------ | ------ | ------ | ------ | 
 ISO 8601:2000 | Date/Time strings | Industry Standard | Data | ISO | [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) |
-International System of Units | Units | Industry Standard | Data | BIPM | [SI](http://www.bipm.org/fr/si/si_brochure/general.html) |
+UCUM | units of measure | Industry Standard | Data | UCUM Organization | [UCUM](http://unitsofmeasure.org/ucum.html) |
  
 
 Possible **Types** are _Open Standard_, _Industry Standard_, _Commercial Standard_, _Best Practice Framework_, _Open Source Project_, _Research Project_   
