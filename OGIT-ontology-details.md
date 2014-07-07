@@ -99,6 +99,8 @@ Defining a _verb_ in OGIT ontology will require a YAML stanza like this (the exa
     allowed:
      - from: http://www.purl.org/ogit/Person
        to: http://www.purl.org/ogit/Tree
+     - from: http://www.purl.org/ogit/Animal
+       to: http://www.purl.org/ogit/Person
 ```
 The example contains the following details
 
@@ -112,9 +114,13 @@ The example contains the following details
 
 #### Attribute Validation
 
-property checks of vertices.
+For most operations on a vertex ("create", "update", ...) attribute validation takes place. This consists of two steps. The basis for attribute validation will be entity definition of the type the vertex belongs to.
 
-property value checks
+* check the list of properties provided along with the vertex operation:
+  * during "create" (and "replace") any attribute defined as "mandatory" must be present (an empty value is possible though). If it is present the value validation will take place.
+  * if any attribute defined as "optional" is present the value validation will take place
+  * if request contains properties neither defined by "mandatory" nor "optional" attributes then the 'any' switch is checked. If it is true and the property names start with a '/' it will be accepted (without any value validation). Otherwise the whole vertex data is considered invalid.
+* value validation will be based on validation-type, validation-parameter of the corresponding attribute definition. Empty values mean: no further validation. 
 
 #### IDs of ontology elements
 
