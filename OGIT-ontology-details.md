@@ -33,7 +33,7 @@ The ontology is represented in YAML format. By convention we are maintaining an 
 
 #### Attribute definitions
 
-Defining an attribute in OGIT ontology will require a YAML stanza like this (the exact format can be found in [Attribute.yaml.tpl](../blob/master/SGO/format/Attribute.yaml.tpl)):
+Defining an _attribute_ in OGIT ontology will require a YAML stanza like this (the exact format can be found in [Attribute.yaml.tpl](../blob/master/SGO/format/Attribute.yaml.tpl)):
 
 ```yaml
 - Attribute:
@@ -55,7 +55,7 @@ The example contains the following details
 
 #### Entity definitions
 
-Defining an entity in OGIT ontology will require a YAML stanza like this (the exact format can be found in [Entity.yaml.tpl](../blob/master/SGO/format/Entity.yaml.tpl)):
+Defining an _entity_ in OGIT ontology will require a YAML stanza like this (the exact format can be found in [Entity.yaml.tpl](../blob/master/SGO/format/Entity.yaml.tpl)):
 
 ```yaml
 - Entity:
@@ -83,6 +83,22 @@ The example contains the following details
 | scope | either "SGO" (stating that this entity definition is considered as part of the core ontology) or "NTO" (meaning that this entity definition is part of some domain specific extension) |
 | parent | contains the id of another entity definition (see section about "Inheritance" below) |
 | attributes | used for the property validation of all instances (vertices) of that entity type |  
+
+#### Verb definitions
+
+Defining a _verb_ in OGIT ontology will require a YAML stanza like this (the exact format can be found in [Verb.yaml.tpl](../blob/master/SGO/format/Verb.yaml.tpl)):
+
+```yaml
+- Verb:
+    id: "id of the verb, e.g. likes"
+    name: "name of the verb"
+    description: "description of the verb"
+    cardinality: 
+
+    allowed:
+     - from: entity id
+       to: entity id
+```
 
 #### Attribute Validation
 
