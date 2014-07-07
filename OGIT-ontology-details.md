@@ -93,7 +93,7 @@ Defining a _verb_ in OGIT ontology will require a YAML stanza like this (the exa
     id: http://www.purl.org/ogit/likes
     name: likes
     description: |
-      expressed that the 'from' entity 'likes' the 'to' entity
+      expresses that the 'from' entity 'likes' the 'to' entity
     cardinality: 
 
     allowed:
