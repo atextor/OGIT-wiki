@@ -6,7 +6,7 @@ Reading this will help you give a deeper understanding of the ontology and make 
 
 Reading this is a must if you want to contribute to the ontology.
 
-## Some terminology
+### Some terminology
 
 The ontology defines
 * attributes 
@@ -134,3 +134,12 @@ To ensure uniqueness we register a suitable Persistent URL for each ontology ele
 
 ### to inherit or not to inherit?
 
+Each _entity_ definition contains a _parent_ entity type. Using this the new _entity_ type 
+* "inherits" attribute declarations from ancestor types
+* "inherits" allowed verbs ('from' and 'to' end) from ancestor types.
+This is mainly for convenience: it presents ontology maintainers to repeat the same definitions again and again.
+Especially each _entity_ will automatically have all the default attributes which are used by GraphIT for proper handling of vertex data (e.g. 'ogit/_id', 'ogit/_type', and so on).
+
+Those parent/child relationships of _entity_ definitions must form a tree (e.g. must not contain any loops)
+
+**Note:** It is just to simplify the ontology definitions. It is not real inheritance as you know from OO design! For example: let's assume the ontology defines an _entity_ 'ogit/Plant' and 'ogit/Tree' having the first one as parent type. Now let's assume you create a vertex A of type 'ogit/Plant' and a vertex B of type 'ogit/Tree' in GraphIT. If you then query for all vertices of type 'ogit/Plant' GraphIT will return A but not B!
