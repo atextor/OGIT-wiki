@@ -46,7 +46,8 @@ Defining an attribute in OGIT ontology will require a YAML stanza like this (the
 
 That example contains the following details
 
-^ Parameter ^ Description ^
+| Parameter | Description |
+| --- | --- |
 | id | a unique id for that ontology elements (see below) | 
 | name | by convention this repeats the last part of ID. It is only used as display name. | 
 | description | should describe the semantics of that attribute as clear as possible. This will be the main source of information if somebody needs to decide if that attribute can be re-used |
