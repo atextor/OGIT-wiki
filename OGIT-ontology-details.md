@@ -59,16 +59,16 @@ Defining an _entity_ in OGIT ontology will require a YAML stanza like this (the 
 
 ```yaml
 - Entity:
-    id: 
+    id: http://www.purl.org/ogit/Tree
     name: Tree
-    description: ""
+    description: "This entity type models a tree"
     scope: SGO
     parent: http://www.purl.org/ogit/Factual
 
     attributes:
       any: false
       mandatory:
-        - http://www.purl.org/ogit/name
+        - http://www.purl.org/ogit/type
       optional:
         - http://www.purl.org/ogit/color
 ```
@@ -90,15 +90,25 @@ Defining a _verb_ in OGIT ontology will require a YAML stanza like this (the exa
 
 ```yaml
 - Verb:
-    id: "id of the verb, e.g. likes"
-    name: "name of the verb"
-    description: "description of the verb"
+    id: http://www.purl.org/ogit/likes
+    name: likes
+    description: |
+      expressed that the 'from' entity 'likes' the 'to' entity
     cardinality: 
 
     allowed:
-     - from: entity id
-       to: entity id
+     - from: http://www.purl.org/ogit/Person
+       to: http://www.purl.org/ogit/Tree
 ```
+The example contains the following details
+
+| Parameter | Description |
+| --- | --- |
+| id | a unique id for that ontology element (see "IDs of ontology elements" below) | 
+| name | by convention this repeats the last part of ID. It is only used as display name. |
+| description | description of the semantics of this verb. This should be detailed enough to let others decide whether this verb can be re-used |
+| cardinality | possible values are: one2one, one2many, many2one, many2many. An empty value defaults to many2many. This is used by the GraphIT validator during edge creation. See https://github.com/thinkaurelius/titan/wiki/Type-Definition-Overview#cardinality-constraints for the specification of cardinality constraints |
+| allowed | This is used by GraphIT validator during edge creation. It is a list of \['from', 'to'\] pairs. An edge of that verb type can be created if the pair \['entity type of source vertex', 'entity type of destination vertex'\] is compatible with one of the \['from', 'to'\] pairs. This comparison takes "inheritance" into account. |
 
 #### Attribute Validation
 
