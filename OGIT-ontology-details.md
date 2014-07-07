@@ -25,4 +25,8 @@ to ensure that only valid data gets stored. We have the following relation betwe
 * All **edges** in the graph must have labels defined by some _verb_ type in the ontology. 
 * All triples defined by graph data must be valid according to the ontology (see below for more details)
 
- 
+Note: to prevent some confusion from now on we will use the terms _attribute_, _entity_, and _verb_ whenever referring to elements from the ontology and _property_, _vertex_, and _edge_ when talking about instance data.
+
+### OGIT ontology format description
+
+The ontology is represented in YAML format. We are 
