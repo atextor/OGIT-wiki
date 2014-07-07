@@ -44,19 +44,51 @@ Defining an attribute in OGIT ontology will require a YAML stanza like this (the
     validation-parameter: ""
 ```
 
-That example contains the following details
+The example contains the following details
 
 | Parameter | Description |
 | --- | --- |
-| id | a unique id for that ontology elements (see "IDs of ontology elements" below) | 
+| id | a unique id for that ontology element (see "IDs of ontology elements" below) | 
 | name | by convention this repeats the last part of ID. It is only used as display name. | 
 | description | should describe the semantics of that attribute as clear as possible. This will be the main source of information if somebody needs to decide if that attribute can be re-used |
 | validation-type, validation-parameter | if an entity definition refers to that attribute definition and a vertex of that entity is to be created, then actual value of that attribute will be the validated according to the requirements defined by validation-type and validation-parameter. Empty values, as in our example, will skip any further validation. (see "Attribute Validation") |
 
 #### Entity definitions
 
+Defining an entity in OGIT ontology will require a YAML stanza like this (the exact format can be found in [Entity.yaml.tpl](../blob/master/SGO/format/Entity.yaml.tpl)):
+
+```yaml
+- Entity:
+    id: 
+    name: Tree
+    description: ""
+    scope: SGO
+    parent: http://www.purl.org/ogit/Factual
+
+    attributes:
+      any: false
+      mandatory:
+        - http://www.purl.org/ogit/name
+      optional:
+        - http://www.purl.org/ogit/color
+```
+
+The example contains the following details
+
+| Parameter | Description |
+| --- | --- |
+| id | a unique id for that ontology element (see "IDs of ontology elements" below) | 
+| name | by convention this repeats the last part of ID. It is only used as display name. |
+| description | description of the purpose of that entity. This should be detailed enough to let others decide whether this entity can be re-used |
+| scope | either "SGO" (stating that this entity definition is considered as part of the core ontology) or "NTO" (meaning that this entity definition is part of some domain specific extension) |
+| parent | contains the id of another entity definition (see section about "Inheritance" below) |
+| attributes | used for the property validation of all instances (vertices) of that entity type |  
 
 #### Attribute Validation
+
+property checks of vertices.
+
+property value checks
 
 #### IDs of ontology elements
 
@@ -65,3 +97,8 @@ IDs of ontology elements, e.g. _http://www.purl.org/ogit/color_ must be unique a
 To ensure uniqueness we register a suitable Persistent URL for each ontology element at www.purl.org. 
 
 **Note:** When using GraphIT REST API those IDs are always used with the prefix _http://www.purl.org/_. In our examples you would use _ogit/color_ to address that attribute type within an application.
+
+#### Naming conventions
+
+### to inherit or not to inherit?
+
