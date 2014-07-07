@@ -82,7 +82,9 @@ The example contains the following details
 | description | description of the purpose of that entity. This should be detailed enough to let others decide whether this entity can be re-used |
 | scope | either "SGO" (stating that this entity definition is considered as part of the core ontology) or "NTO" (meaning that this entity definition is part of some domain specific extension) |
 | parent | contains the id of another entity definition (see section about "Inheritance" below) |
-| attributes | used for the property validation of all instances (vertices) of that entity type |  
+| attributes | used for the property validation of all instances (vertices) of that entity type: 
+
+xxx |  
 
 #### Verb definitions
 
