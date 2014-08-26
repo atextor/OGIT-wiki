@@ -87,7 +87,7 @@ The example contains the following details
 | scope | either "SGO" (stating that this entity definition is considered as part of the core ontology) or "NTO" (meaning that this entity definition is part of some domain specific extension) |
 | parent | contains the id of another entity definition (see section about "Inheritance" below) |
 | attributes | used for the property validation of all instances (vertices) of that entity type: <br/> <br/> 'mandatory' defines all properties that must be present in a vertex to be valid. This corresponds to the [Specific Node Required Attributes](Basic-Concepts#3-snra---specific-node-required-attribute) <br/> <br/> 'optional' defines all properties that can be present in a vertex and the semantics of which is well-defined.  This corresponds to the [Specific Node Best Practice Attributes](Basic-Concepts#4-snba---specific-node-best-practice-attributes) <br/> <br/> 'any: true' ensures any vertex property with a name starting with '/' will be accepted. This corresponds to the [Specific Node Free Attributes](Basic-Concepts#5-snfa---specific-node-free-attributes) <br/> <br/>
-'validation-type, validation-parameter' if an entity definition refers to that attribute definition and a vertex of |
+'validation-type, validation-parameter' if an entity definition refers to that attribute definition and a vertex of|
 
 #### Verb definitions
 
