@@ -40,8 +40,6 @@ Defining an _attribute_ in OGIT ontology will require a YAML stanza like this (t
     id: http://www.purl.org/ogit/color
     name: color
     description: "can be used to store the color of objects"
-    validation-type: ""
-    validation-parameter: ""
 ```
 
 The example contains the following details
@@ -51,7 +49,6 @@ The example contains the following details
 | id | a unique id for that ontology element (see "IDs of ontology elements" below) | 
 | name | by convention this repeats the last part of ID. It is only used as display name. | 
 | description | should describe the semantics of that attribute as clear as possible. This will be the main source of information if somebody needs to decide if that attribute can be re-used |
-| validation-type, validation-parameter | if an entity definition refers to that attribute definition and a vertex of that entity is to be created, then actual value of that attribute will be the validated according to the requirements defined by validation-type and validation-parameter. Empty values, as in our example, will skip any further validation. (see "Attribute Validation") |
 
 #### Entity definitions
 
