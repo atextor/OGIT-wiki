@@ -68,9 +68,13 @@ Defining an _entity_ in OGIT ontology will require a YAML stanza like this (the 
     attributes:
       any: false
       mandatory:
-        - http://www.purl.org/ogit/type
+        - id: http://www.purl.org/ogit/type
+          validation-type: ""
+          validation-parameter: ""
       optional:
-        - http://www.purl.org/ogit/color
+        - id: http://www.purl.org/ogit/color
+          validation-type: ""
+          validation-parameter: ""
 ```
 
 The example contains the following details
