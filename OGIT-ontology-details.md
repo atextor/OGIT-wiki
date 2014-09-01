@@ -144,15 +144,10 @@ In general we allow:
   * characters: lowercase and uppercase
   * digits
   * '-' (minus sign)
-\<namespace\> may also contain '/'.
 
-For the last part (<short name of ontology element>) the following convention applies:
+_namespace_ may also contain '/'.
 
-| Ontology Element Type | Naming Convention |
-| --- | --- |
-| Attribute |
-| Entity |
-| verb |
+For the last part (_short name of ontology element_) the conventions are described [here](../../tree/master/SGO/format/README.md).
 
 ### to inherit or not to inherit?
 
