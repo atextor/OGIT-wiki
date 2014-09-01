@@ -147,7 +147,7 @@ In general we allow:
 
 _namespace_ may also contain '/'.
 
-For the last part (_short name of ontology element_) the conventions are described [here](../../tree/master/SGO/format/README.md).
+For the last part (_short name of ontology element_) the conventions are described [here](../tree/master/SGO/format/README.md).
 
 ### to inherit or not to inherit?
 
