@@ -1,7 +1,5 @@
 ## Ontology extensions - best practices
 
-
-
 ### General recommendations
 
 * consider reusing existing attributes and verbs before adding new ones
@@ -20,4 +18,7 @@
 * if you need a verb that has general semantics and is not defined in SGO, yet.
   you should request SGO extension for it (even if your current need is restricted to relationships between entities from your NTO)
 * if you need a verb that is very specific for you domain then you should define it within the NTO's namespace (then it can define relationships only between entities of that NTO)
- 
+
+### Reusing definitions from other standards/ontologies.
+
+It is quite useful to reuse work from others. 
