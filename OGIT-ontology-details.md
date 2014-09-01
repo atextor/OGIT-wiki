@@ -144,7 +144,7 @@ In general we allow:
   * characters: lowercase and uppercase
   * digits
   * '-' (minus sign)
-<namespace> may also contain '/'.
+\<namespace\> may also contain '/'.
 
 For the last part (<short name of ontology element>) the following convention applies:
 
