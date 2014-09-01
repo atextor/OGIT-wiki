@@ -134,6 +134,24 @@ To ensure uniqueness we register a suitable Persistent URL for each ontology ele
 
 #### Naming conventions
 
+Each Ontology element has a unique ID. Each ID consists of three parts:
+
+http://www.purl.org/<namespace><short name of ontology element>
+
+In general we allow: 
+  * characters: lowercase and uppercase
+  * digits
+  * '-' (minus sign)
+<namespace> may also contain '/'.
+
+For the last part (<short name of ontology element>) the following convention applies:
+
+| Ontology Element Type | Naming Convention |
+| --- | --- |
+| Attribute |
+| Entity |
+| verb |
+
 ### to inherit or not to inherit?
 
 Each _entity_ definition contains a _parent_ entity type. Using this the new _entity_ type 
@@ -144,4 +162,4 @@ Especially each _entity_ will automatically have all the default attributes whic
 
 Those parent/child relationships of _entity_ definitions must form a tree (e.g. must not contain any loops)
 
-**Note:** It is just to simplify the ontology definitions. It is not real inheritance as you know from OO design! For example: let's assume the ontology defines an _entity_ 'ogit/Plant' and 'ogit/Tree' having the first one as parent type. Now let's assume you create a vertex A of type 'ogit/Plant' and a vertex B of type 'ogit/Tree' in GraphIT. If you then query for all vertices of type 'ogit/Plant' GraphIT will return A but not B!
+**Note:** This inheritance mechanism exists just to simplify the ontology definitions. It is not real inheritance as you know from OO design! For example: let's assume the ontology defines an _entity_ 'ogit/Plant' and 'ogit/Tree' having the first one as parent type. Now let's assume you create a vertex A of type 'ogit/Plant' and a vertex B of type 'ogit/Tree' in GraphIT. If you then query for all vertices of type 'ogit/Plant' GraphIT will return A but not B!
