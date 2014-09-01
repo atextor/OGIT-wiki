@@ -21,4 +21,6 @@
 
 ### Reusing definitions from other standards/ontologies.
 
-It is quite useful to reuse work from others. 
+It is quite useful to reuse work from others. The authors of the source ontology might not know about that reuse. 
+All ontology elements based on something else will have the _source_ information in the *admin-contact* field. *tech-contact* will refer to the importing organziation.
+
