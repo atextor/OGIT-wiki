@@ -130,13 +130,15 @@ IDs of ontology elements, e.g. _http://www.purl.org/ogit/color_ must be unique a
 
 To ensure uniqueness we register a suitable Persistent URL for each ontology element at www.purl.org. 
 
-**Note:** When using GraphIT REST API those IDs are always used with the prefix _http://www.purl.org/_. In our examples you would use _ogit/color_ to address that attribute type within an application.
+**Note:** When using GraphIT REST API those IDs are always used without the prefix _http://www.purl.org/_. In our examples you would use _ogit/color_ to address that attribute type within an application.
 
 #### Naming conventions
 
 Each Ontology element has a unique ID. Each ID consists of three parts:
 
+```
 http://www.purl.org/<namespace><short name of ontology element>
+```
 
 In general we allow: 
   * characters: lowercase and uppercase
