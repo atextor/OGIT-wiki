@@ -66,12 +66,10 @@ Defining an _entity_ in OGIT ontology will require a YAML stanza like this (the 
       any: false
       mandatory:
         - id: http://www.purl.org/ogit/type
-          validation-type: ""
-          validation-parameter: ""
       optional:
         - id: http://www.purl.org/ogit/color
-          validation-type: ""
-          validation-parameter: ""
+          validation-type: "regex"
+          validation-parameter: "^(blue|red|yellow)$"
 ```
 
 The example contains the following details
@@ -84,7 +82,7 @@ The example contains the following details
 | scope | either "SGO" (stating that this entity definition is considered as part of the core ontology) or "NTO" (meaning that this entity definition is part of some domain specific extension) |
 | parent | contains the id of another entity definition (see section about "Inheritance" below) |
 | attributes | used for the property validation of all instances (vertices) of that entity type: <br/> <br/> 'mandatory' defines all properties that must be present in a vertex to be valid. This corresponds to the [Specific Node Required Attributes](Basic-Concepts#3-snra---specific-node-required-attribute) <br/> <br/> 'optional' defines all properties that can be present in a vertex and the semantics of which is well-defined.  This corresponds to the [Specific Node Best Practice Attributes](Basic-Concepts#4-snba---specific-node-best-practice-attributes) <br/> <br/> 'any: true' ensures any vertex property with a name starting with '/' will be accepted. This corresponds to the [Specific Node Free Attributes](Basic-Concepts#5-snfa---specific-node-free-attributes) |
-| validation-type, validation-parameter | if an entity definition refers to that attribute definition and a vertex of that entity is to be created, then actual value of that attribute will be the validated according to the requirements defined by validation-type and validation-parameter. Possible validation-types are 'regex', 'xml' and 'generator'. Empty values, as in our example, will skip any further validation. (see "Attribute Validation") |
+| validation-type, validation-parameter | allow to define an optional attribute value validation: <br/> if an entity definition refers to that attribute definition and a vertex of that entity is to be created, then actual value of that attribute will be the validated according to the requirements defined by validation-type and validation-parameter. Possible validation-types are 'regex', 'xml' and 'generator'. Empty values, as in our example, will skip any further validation. (see "Attribute Validation") |
 
 #### Verb definitions
 
