@@ -122,7 +122,7 @@ For most operations on a vertex ("create", "update", ...) attribute validation t
   * during "create" (and "replace") any attribute defined as "mandatory" must be present (an empty value is possible though). If it is present the value validation will take place.
   * if any attribute defined as "optional" is present the value validation will take place
   * if request contains properties neither defined by "mandatory" nor "optional" attributes then the 'any' switch is checked. If it is true and the property names start with a '/' it will be accepted (without any value validation). Otherwise the whole vertex data is considered invalid.
-* value validation will be based on validation-type, validation-parameter of the corresponding attribute definition. Empty values mean: no further validation. 
+* value validation will be based on validation-type, validation-parameter of the corresponding entity definition. This means, that an attribute can be validated different for each entity it belongs. Empty values mean: no further validation. 
 
 #### IDs of ontology elements
 
