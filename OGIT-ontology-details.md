@@ -112,7 +112,7 @@ The example contains the following details
 | name | by convention this repeats the last part of ID. It is only used as display name. |
 | description | description of the semantics of this verb. This should be detailed enough to let others decide whether this verb can be re-used |
 | cardinality | possible values are: one2one, one2many, many2one, many2many. An empty value defaults to many2many. This is used by the GraphIT validator during edge creation. See https://github.com/thinkaurelius/titan/wiki/Type-Definition-Overview#cardinality-constraints for the specification of cardinality constraints |
-| allowed | This is used by GraphIT validator during edge creation. It is a list of \['from', 'to'\] pairs. An edge of that verb type can be created if the pair \['entity type of source vertex', 'entity type of destination vertex'\] is compatible with one of the \['from', 'to'\] pairs. This comparison takes "inheritance" into account. |
+| allowed | this is used by GraphIT validator during edge creation. It is a list of \['from', 'to'\] pairs. An edge of that verb type can be created if the pair \['entity type of source vertex', 'entity type of destination vertex'\] is compatible with one of the \['from', 'to'\] pairs. This comparison takes "inheritance" into account. |
 
 #### Attribute Validation
 
@@ -154,7 +154,7 @@ For the last part (_short name of ontology element_) the conventions are describ
 Each _entity_ definition contains a _parent_ entity type. Using this the new _entity_ type 
 * "inherits" attribute declarations from ancestor types
 * "inherits" allowed verbs ('from' and 'to' end) from ancestor types.
-This is mainly for convenience: it presents ontology maintainers to repeat the same definitions again and again.
+This is mainly for convenience: it prevents ontology maintainers from repeating the same definitions again and again.
 Especially each _entity_ will automatically have all the default attributes which are used by GraphIT for proper handling of vertex data (e.g. 'ogit/_id', 'ogit/_type', and so on).
 
 Those parent/child relationships of _entity_ definitions must form a tree (e.g. must not contain any loops)
