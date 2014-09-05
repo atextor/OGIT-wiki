@@ -29,6 +29,11 @@ All ontology elements based on something else will have the _source_ information
 When data is actually stored in GraphIT the access control cannot be defined below the entity/node level. I.e. it is possible to allow/disallow
 * access to all nodes of a specific type (e.g. 'biology/Tree')
 * access to a specific node(s) 
-to people or group(s) of people
+to people or group(s) of people.
 
+However, attribute level access control is supported. I.e. it is impossible to allow access to some node 'A' to some people but restricting access to an attribue 'x' in 'A' only to a smaller group of people.
+
+Or in other words: a user can access a node either whole or not at all.
+
+Hence before you add attributes containing sensitive data to some existing entity type you should consider the following alternative: Create a new entity type with some suitable relation to the existing type and define the attributes containing the critical data in the new entity type.
    
