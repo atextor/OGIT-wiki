@@ -157,4 +157,4 @@ Especially each _entity_ will automatically have all the default attributes whic
 
 Those parent/child relationships of _entity_ definitions must form a tree (e.g. must not contain any loops)
 
-**Note:** This inheritance mechanism exists just to simplify the ontology definitions. It is not real inheritance as you know from OO design! For example: let's assume the ontology defines an _entity_ 'ogit/Plant' and 'ogit/Tree' having the first one as parent type. Now let's assume you create a vertex A of type 'ogit/Plant' and a vertex B of type 'ogit/Tree' in GraphIT. If you then query for all vertices of type 'ogit/Plant' GraphIT will return A but not B!
+**Note:** This inheritance mechanism exists just to simplify the ontology definitions. It is not real inheritance as you know from OO design! For example: let's assume the ontology defines an _entity_ 'biology/Plant' and 'biology/Tree' having the first one as parent type. Now let's assume you create a vertex A of type 'biology/Plant' and a vertex B of type 'biology/Tree' in GraphIT. If you then query for all vertices of type 'biology/Plant' GraphIT will return A but not B!
