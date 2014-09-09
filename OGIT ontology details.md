@@ -158,3 +158,39 @@ Especially each _entity_ will automatically have all the default attributes whic
 Those parent/child relationships of _entity_ definitions must form a tree (e.g. must not contain any loops)
 
 **Note:** This inheritance mechanism exists just to simplify the ontology definitions. It is not real inheritance as you know from OO design! For example: let's assume the ontology defines an _entity_ 'biology/Plant' and 'biology/Tree' having the first one as parent type. Now let's assume you create a vertex A of type 'biology/Plant' and a vertex B of type 'biology/Tree' in GraphIT. If you then query for all vertices of type 'biology/Plant' GraphIT will return A but not B!
+
+### Free attributes
+
+The so-called //Specific Node Free Attributes// are not part of the ontology. The OGIT ontology only defines which entity types can have free attributes. This is done with the _allow: any_ declaration in the _attributes_ section:
+
+```yaml
+- Entity:
+    id: http://www.purl.org/biology/Tree
+    name: Tree
+
+    ...
+    attributes:
+      any: true
+      mandatory:
+        - id: http://www.purl.org/ogit/type
+      optional:
+        - id: http://www.purl.org/ogit/color
+```
+
+If free attributes are allowed then any attribute name starting with a slash '/', i.e. belonging to the empty namespace, will be accepted.
+
+For example the following JSON will be valid node definition for entity type _biology/Tree_ according to our sample definition above:
+
+```
+{
+   "ogit/type": "elm",
+   "/size": "15",
+   "/size-unit": "m",
+}
+```
+
+See [GraphIT REST API Documentation for more details](https://autpilot.co/dev/docs/graphit_rest_api.html).
+
+#### Naming convention for free attributes
+
+Except the leading slash we recommend to adopt the same naming convention as for regular attributes. Hence free attribute names should match the pattern /[a-z][a-zA-Z0-9-]*
