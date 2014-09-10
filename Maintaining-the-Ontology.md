@@ -24,6 +24,10 @@
 It is quite useful to reuse work from others. The authors of the source ontology might not know about that reuse. 
 All ontology elements based on something else will have the _source_ information in the *admin-contact* field. *tech-contact* will refer to the importing organization.
 
+### Maintaining PURLs
+
+**TODO**
+
 ### Small, Medium, Large?
 
 There are several ways to contribute to the ontology. Depending on the complexity of extension you are going to suggest/make you might choose a way that gives you more freedom for modelling. However, more flexibility comes with more responsibility you take for your contributions:
