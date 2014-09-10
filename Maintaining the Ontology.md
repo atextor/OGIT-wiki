@@ -26,7 +26,7 @@ All ontology elements based on something else will have the _source_ information
 
 ### Maintaining PURLs
 
-**TODO**
+see [here](../../blob/master/NTO/PURL_ID_Registration.md)
 
 ### Small, Medium, Large?
 
@@ -36,7 +36,7 @@ There are several ways to contribute to the ontology. Depending on the complexit
 
 2. you want to model a problem domain where you are confident it will be of general use. Then the best approach is to create a sub-namespace of /ogit for things specific to that problem domain. You should plan such a big extension with the help of the _SGO Board_. GitHub's pull mechanism will be the appropriate tool to submit your results.
 
-3. you want to model a problem domain with more freedom and you are not sure about the general applicability, yet. The the best approach is to define a new namespace /myspace and define everything in there. <br/> By convention there is one restriction: Inside such a new namespace you can't define verbs (relationships) pointing to entities from outside that namespace. Such relationships have to requested to be included in the /ogit namespace.
+3. you want to model a problem domain with more freedom and you are not sure about the general applicability, yet. The the best approach is to define a new namespace /myspace and define everything in there. <br/> By convention there is one restriction: Inside such a new namespace you can't define verbs (relationships) pointing to entities from outside that namespace. Such relationships have to requested to be included in the /ogit namespace.<br/> Using that approach you're expected to maintain the PURL domain for /myspace by yourself. 
 
 ### Modelling for security
 
