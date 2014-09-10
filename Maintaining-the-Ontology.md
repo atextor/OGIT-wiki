@@ -28,11 +28,11 @@ All ontology elements based on something else will have the _source_ information
 
 There are several ways to contribute to the ontology. Depending on the complexity of extension you are going to suggest/make you might choose a way that gives you more freedom for modelling. However, more flexibility comes with more responsibility you take for your contributions:
 
-1. you want to use the ontology as is, but you would like to have some extensions (or things in namespace ''/ogit'' or one of its sub-namespaces). Then use either GitHub's [issue and/or pull mechanism](../../blob/master/CONTRIBUTING.md). 
+1. you want to use the ontology as is, but you would like to have some extensions (or things in namespace ''/ogit'' or one of its sub-namespaces). Then use either GitHub's [issue and/or pull mechanism](../../blob/master/CONTRIBUTING.md). Any such change has to be approved by the //SGO Board//.
 
-2. .... sub-namespace of /ogit
+2. you want to model a problem domain where you are confident it will be of general use. Then the best approach is to create a sub-namespace of /ogit for things specific to that problem domain. You should plan such a big extension with the help of the //SGO Board//. GitHub's pull mechanism will be the appropriate tool to submit your results.
 
-3. .... own namespace
+3. you want to model a problem domain with more freedom and you are not sure about the general applicability, yet. The the best approach is to define a new namespace /myspace and define everything in there. <br/> By convention there is one restriction: Inside such a new namespace you can't define verbs (relationships) pointing to entities from outside that namespace. Such relationships have to requested to be included in the /ogit namespace.
 
 ### Modelling for security
 
@@ -47,3 +47,4 @@ Or in other words: a user can access a node either whole or not at all.
 
 Hence before you add attributes containing sensitive data to some existing entity type you should consider the following alternative: Create a new entity type with some suitable relation to the existing type and define the attributes containing the critical data in the new entity type.
    
+If you decide to create new entity types to protect some attributes you should link the new type with 'ogit/extends' relationship to the original one.
