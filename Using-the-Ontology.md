@@ -31,6 +31,7 @@ Find all registered users with an email address ending in "@x.com".
 #### Mapping to OGIT data
 
 | natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- |
 | user | ogit/Person | entity | |
 | email address | ogit/email | attribute | play the role of a *primary key* for ogit/Person entities |
 
