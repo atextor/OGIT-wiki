@@ -22,6 +22,8 @@ In the following we present a few use cases showing how questions about your IT 
 * suitable data is already there (i.e. the queries can return a non-empty set)
 * the access policies allow the user to read/query the data
 
+First we start with same basic examples in more depth:
+
 ### Simple Use case A: basic attribute search
 
 #### Problem description
@@ -33,11 +35,11 @@ Find all registered users with an email address ending in "@x.com".
 | natural language term | OGIT element | OGIT type | remark |
 | --- | --- | --- | --- |
 | user | ogit/Person | entity | |
-| email address | ogit/email | attribute | play the role of a *primary key* for ogit/Person entities |
+| email address | ogit/email | attribute | plays the role of a *primary key* for ogit/Person entities |
 
 #### Sample query
 
-Attribute based search is best done with a query of type *vertices*. 
+Attribute based search is best done with an index query of type *vertices*. 
 ```
 curl -X GET '<graphit base url>/query/vertices?query=ogit%5C%2email%3A*%40x.com%20AND%20ogit%5C%2F_type%3Aogit%5C%2FPerson'
 ```
@@ -51,14 +53,72 @@ The unescaped query string will be:
 ogit\/email:*@x.com AND ogit\/_type:ogit\/Person
 ```
 
-### Simple Use case B: basic graph search
+### Simple Use case B: on step graph search
+
+#### Problem description
+
+Which groups, departments, companies does user with *sample@x.com* belong is member of?
+
+#### Mapping to OGIT data
+
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
+| user | ogit/Person | entity | |
+| email address | ogit/email | attribute | plays the role of a *primary key* for ogit/Person entities |
+| group | ogit/Organization | entity | |
+| department | ogit/Organization | entity | |
+| company | ogit/Organization | entity | |
+| is member of | ogit/isMemberOf | verb | |
+| *UUID* | ogit/_id | attribute | internal attribute |
+
+#### Sample query
+
+First we need an index query to figure out the UUID of the ogit/Person node with email *sample@x.com*:
+
+Attribute based search is best done with an index query of type *vertices*. 
+```
+curl -X GET '<graphit base url>/query/vertices?query=ogit%5C%2email%3Asample%40x.com%20AND%20ogit%5C%2F_type%3Aogit%5C%2FPerson'
+```
+
+query part in unescaped form will be:
+```
+ogit\/email:sample@x.com AND ogit\/_type:ogit\/Person
+```
+
+The result will be a JSON structure liek this:
+```
+[
+  {
+    "ogit/_created-on" : "Wed, 01 Jan 2014 12:00:00 GMT"
+    "ogit/_creator" : "autopilotadmin@arago.de"
+    "ogit/_graphtype" : "vertex"
+    "ogit/_id" : "sample@x.com"
+    "ogit/_is-deleted" : "false"
+    "ogit/_modified-on" : "Wec, 01 Jan 2014 12:00:00 GMT"
+    "ogit/_owner" : "sample@x.com"
+    "ogit/_type" : "ogit/Person"
+    "ogit/email" : "sample@x.com"
+  }
+]
+```
+
+From the result we pick *ogit/_id*. (in case of *ogit/Person* objects this will be identidal to *ogit/email* but that's not true for other entity types).
+
+Then we use that ID as starting point for the secondary query:
+
+```
+curl -X GET '<graphit base url>/sample%40x.com/ogit%2FisMemberOf'
+```
+
+...TO DO HERE....
+
+### Simple Use case C: basic graph search
 
 #### Problem description
 
 #### Mapping to OGIT data
 
 #### Sample query
-
 
 ### Use case 1: ticket statistics
 
