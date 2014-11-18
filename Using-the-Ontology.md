@@ -18,4 +18,65 @@ But the most interesting aspect of OGIT and GraphIT is the way you can work with
 
 In the following we present a few use cases showing how questions about your IT environment translate into queries based on OGIT ontology.
 
+**Note**: all example assume:
+* suitable data is already there (i.e. the queries can return a non-empty set)
+* the access policies allow the user to read/query the data
+
+### Simple Use case A: basic attribute search
+
+#### Problem description
+
+Find all registered users with an email address ending in "@x.com".
+
+#### Mapping to OGIT data
+
+| natural language term | OGIT element | OGIT type | remark |
+| user | ogit/Person | entity | |
+| email address | ogit/email | attribute | play the role of a *primary key* for ogit/Person entities |
+
+#### Sample query
+
+Attribute based search is best done with a query of type *vertices*. 
+```
+curl -X GET '<graphit base url>/query/vertices?query=ogit%5C%2email%3A*%40x.com%20AND%20ogit%5C%2F_type%3Aogit%5C%2FPerson'
+```
+
+special characters are escaped using standard URL escaping rules.
+
+The query syntax is based on [lucene index queries](http://lucene.apache.org/core/4_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description). 
+
+The unescaped query string will be:
+```
+ogit\/email:*@x.com AND ogit\/_type:ogit\/Person
+```
+
+### Simple Use case B: basic graph search
+
+#### Problem description
+
+#### Mapping to OGIT data
+
+#### Sample query
+
+
+### Use case 1: ticket statistics
+
+#### Problem description
+
+A User wants to compile various statistics on Tickets: Find out who was the responsible agent, when and what he did, which authorizations were required, how long it took solve the problem. Also have a look at the request side - find out who was the requester, which applications/components were affected. 
+
+#### Mapping to OGIT data
+
+#### Sample query
+
+
+### Use case 1: ticket statistics
+
+#### Problem description
+
+A User wants to compile various statistics on Tickets: Find out who was the responsible agent, when and what he did, which authorizations were required, how long it took solve the problem. Also have a look at the request side - find out who was the requester, which applications/components were affected. 
+
+#### Mapping to OGIT data
+
+#### Sample query
 
