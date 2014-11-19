@@ -167,5 +167,4 @@ A User wants to compile various statistics on Tickets: Find out who was the resp
 | natural language term | OGIT element | OGIT type | remark |
 | --- | --- | --- | --- |
 | User | ogit/Person | entity | |
-| Tickets | ogit/ITSM/Incident
-ogit/ITSM/ChangeRequest | entity | |
+| Tickets | ogit/ITSM/Incident\\ ogit/ITSM/ChangeRequest | entity | |
