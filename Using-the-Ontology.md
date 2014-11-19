@@ -57,7 +57,7 @@ ogit\/email:*@x.com AND ogit\/_type:ogit\/Person
 
 #### Problem description
 
-Which groups, departments, companies does user with *sample@x.com* is member of?
+Which groups, departments, companies user with email address *sample@x.com* is member of?
 
 #### Mapping to OGIT data
 
