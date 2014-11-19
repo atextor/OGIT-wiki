@@ -53,7 +53,7 @@ The unescaped query string will be:
 ogit\/email:*@x.com AND ogit\/_type:ogit\/Person
 ```
 
-### Simple Use case B: on step graph search
+### Simple Use case B: one step graph search
 
 #### Problem description
 
@@ -164,14 +164,8 @@ A User wants to compile various statistics on Tickets: Find out who was the resp
 
 #### Sample query
 
-
-### Use case 1: ticket statistics
-
-#### Problem description
-
-A User wants to compile various statistics on Tickets: Find out who was the responsible agent, when and what he did, which authorizations were required, how long it took solve the problem. Also have a look at the request side - find out who was the requester, which applications/components were affected. 
-
-#### Mapping to OGIT data
-
-#### Sample query
-
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
+| User | ogit/Person | entity | |
+| Tickets | ogit/ITSM/Incident
+ogit/ITSM/ChangeRequest | entity | |
