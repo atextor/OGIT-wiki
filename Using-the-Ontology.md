@@ -70,6 +70,8 @@ Which groups, departments, companies does user with *sample@x.com* belong is mem
 | company | ogit/Organization | entity | |
 | is member of | ogit/isMemberOf | verb | |
 | *UUID* | ogit/_id | attribute | internal attribute |
+| group/department/company ID | ogit/_id | attribute | by convention ogit/Organization will have some domain name like *ogit/_id* used as primary identifier |
+| group/department/company name | ogit/name | attribute | uniquness not guaranteed |
 
 #### Sample query
 
@@ -110,15 +112,52 @@ Then we use that ID as starting point for the secondary query:
 curl -X GET '<graphit base url>/sample%40x.com/ogit%2FisMemberOf'
 ```
 
-...TO DO HERE....
+the result will be a JSON array containing all entities connected via *ogit/isMemberOf* to the starting point of the search. Each entry will look like:
+
+```
+  {
+    "ogit/_created-on" : "Thu, 04 Sep 2014 13:02:01 GMT"
+    "ogit/_creator" : "autopilotadmin@arago.de"
+    "ogit/_graphtype" : "vertex"
+    "ogit/_id" : "x.com"
+    "ogit/_is-deleted" : "false"
+    "ogit/_modified-on" : "Thu, 04 Sep 2014 13:02:01 GMT"
+    "ogit/_owner" : "autopilotadmin@arago.de"
+    "ogit/_type" : "ogit/Organization"
+    "ogit/name" : "X Ltd."
+  }
+```
+
+(to be sure) you should filter the result set by condition: *ogit/_type* equals *ogit/Organization*. Then the list of *ogit/_id* attributes will be the final result.
+
 
 ### Simple Use case C: basic graph search
 
 #### Problem description
 
-#### Mapping to OGIT data
+For a giving *Organization* find all other organizations which directly connected to the given one by any type of relationship.
+
+
+https://cassandra3.tech.arago.de:8443/query/gremlin?query=bothE.bothV.has%28%27ogit%2F_type%27%2C%20%27ogit%2FOrganization%27%29&root=
+
+https://cassandra3.tech.arago.de:8443/query/gremlin?query=outE.hasNot%28%27label%27%2C%20%27arago%2FhasIssueHistoryEntry%27%29&root=50e0fe7d-89b1-42c1-ad4d-87901510f3d6
 
 #### Sample query
+
+As in the previous example we need to figure out the *ogit/_id* of *ogit/Organization* being the starting point of our search. Let's assume this resulted in "ca9c2d7e-7dc1-4ba2-9995-01e2d66c47d4".
+
+Then the answer to our graph query will be found by:
+```
+curl -X GET '<graphit base url>/query/gremlin?query=bothE.bothV.has%28%27ogit%2F_type%27%2C%20%27ogit%2FOrganization%27%29&root=ca9c2d7e-7dc1-4ba2-9995-01e2d66c47d4"
+```
+
+Without URL escaping the query reads
+```
+bothE.bothV.has('ogit/_type', 'ogit/Organization')
+```
+
+Graph queries are based on the [Gremlin query language](http://gremlindocs.com/)
+
 
 ### Use case 1: ticket statistics
 
