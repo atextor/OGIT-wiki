@@ -1,6 +1,6 @@
 ## High Level Use case examples
 
-After you got familiar with same concepts and ideas behind OGIT and its ontology you might ask:
+After you got familiar with some concepts and ideas behind OGIT and its ontology you might ask:
 
 * What is it good for?
 * What can I do with it?
@@ -57,7 +57,7 @@ ogit\/email:*@x.com AND ogit\/_type:ogit\/Person
 
 #### Problem description
 
-Which groups, departments, companies does user with *sample@x.com* belong is member of?
+Which groups, departments, companies does user with *sample@x.com* is member of?
 
 #### Mapping to OGIT data
 
@@ -87,7 +87,7 @@ query part in unescaped form will be:
 ogit\/email:sample@x.com AND ogit\/_type:ogit\/Person
 ```
 
-The result will be a JSON structure liek this:
+The result will be a JSON structure like this:
 ```
 [
   {
@@ -104,7 +104,7 @@ The result will be a JSON structure liek this:
 ]
 ```
 
-From the result we pick *ogit/_id*. (in case of *ogit/Person* objects this will be identidal to *ogit/email* but that's not true for other entity types).
+From the result we pick *ogit/_id*. (in case of *ogit/Person* objects this will be identical to *ogit/email* but that's not true for other entity types).
 
 Then we use that ID as starting point for the secondary query:
 
