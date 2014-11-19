@@ -137,11 +137,6 @@ the result will be a JSON array containing all entities connected via *ogit/isMe
 
 For a giving *Organization* find all other organizations which directly connected to the given one by any type of relationship.
 
-
-https://cassandra3.tech.arago.de:8443/query/gremlin?query=bothE.bothV.has%28%27ogit%2F_type%27%2C%20%27ogit%2FOrganization%27%29&root=
-
-https://cassandra3.tech.arago.de:8443/query/gremlin?query=outE.hasNot%28%27label%27%2C%20%27arago%2FhasIssueHistoryEntry%27%29&root=50e0fe7d-89b1-42c1-ad4d-87901510f3d6
-
 #### Sample query
 
 As in the previous example we need to figure out the *ogit/_id* of *ogit/Organization* being the starting point of our search. Let's assume this resulted in "ca9c2d7e-7dc1-4ba2-9995-01e2d66c47d4".
