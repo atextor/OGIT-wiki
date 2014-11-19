@@ -180,7 +180,7 @@ A User wants to compile various statistics on Tickets: Find out who was the resp
 
 #### Sample query
 
-As an example we show the queries needed for one specific question for the problem domain:
+As an example we show the query needed for one specific question from our problem domain:
 
 Show all unresolved incident records reported by user 'sample@x.com'.
 
