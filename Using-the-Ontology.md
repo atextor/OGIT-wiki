@@ -135,7 +135,7 @@ the result will be a JSON array containing all entities connected via *ogit/isMe
 
 #### Problem description
 
-For a giving *Organization* find all other organizations which directly connected to the given one by any type of relationship.
+For a giving *Organization* find all other organizations which are directly connected to the given one by any type of relationship.
 
 #### Sample query
 
