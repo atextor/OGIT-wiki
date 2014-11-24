@@ -67,13 +67,11 @@ Describes the kind of data that is stored under this category.
 
 _[Entity record definition](OGIT-ontology-details#entity-definitions)_
 
-https://github.com/arago/OGIT/wiki/OGIT-ontology-details#entity-definitions
-
-_[Entity record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Entity-Record-Definion)_
-
 **Verbs**
 
 Describes the type of _connection*_ and which other entities can be connected by it. 
+
+_[Verb record definition](OGIT-ontology-details#verb-definitions)_
 
 _[Verb record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Verb-Record-Definition)_
 
