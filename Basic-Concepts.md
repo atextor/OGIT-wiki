@@ -65,7 +65,9 @@ There are two kinds of data stored on the SGO level:
 
 Describes the kind of data that is stored under this category.
 
-_[Entity record definition](OGIT-ontology-details#-Entity-definitions)_
+_[Entity record definition](OGIT-ontology-details#entity-definitions)_
+
+https://github.com/arago/OGIT/wiki/OGIT-ontology-details#entity-definitions
 
 _[Entity record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Entity-Record-Definion)_
 
