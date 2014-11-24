@@ -2,7 +2,7 @@
 
 Here we present some real life and sophisticated use cases based on *GraphIT* and *OGIT ontology*.
 
-You should consult the [Simple use case examples](Using-the-Ontology.md) first.
+You should consult the [Simple use case examples](https://github.com/arago/OGIT/wiki/Using-the-Ontology) first.
 
 ### Use case 1: ticket statistics
 
@@ -39,5 +39,4 @@ This can be done using graph query
 inE.has('label','ogit/ITSM/reportedBy').outV.or(_().hasNot('ogit/ITSM/resolvedAt), _().has('ogit/ITSM/resolvedAt', ''))
 ```
 anchored at `root=sample@x.com`.
-
 
