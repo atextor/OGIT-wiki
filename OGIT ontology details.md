@@ -189,7 +189,7 @@ For example the following JSON will be valid node definition for entity type _bi
 }
 ```
 
-See [GraphIT REST API Documentation for more details](https://autopilot.co/dev/docs/graphit_rest_api.html).
+See [GraphIT REST API Documentation for more details](https://autopilot.co/dev/docs/graphit_rest_api.html) (registration required).
 
 
 #### Naming convention for free attributes
