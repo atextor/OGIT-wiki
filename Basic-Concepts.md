@@ -73,8 +73,6 @@ Describes the type of _connection*_ and which other entities can be connected by
 
 _[Verb record definition](OGIT-ontology-details#verb-definitions)_
 
-_[Verb record definition](https://github.com/arago/graphIT-ontology/wiki/SGO---Verb-Record-Definition)_
-
 **Examples**
 
 _Entities:_  
