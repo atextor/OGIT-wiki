@@ -54,6 +54,7 @@ A user wants to perform Provider Management: The user needs to know which compon
 | --- | --- | --- | --- |
 | User, Contacts | ogit/Person, ogit/Organization | entity | individual or group of individuals |
 | Component | ogit/ITSM/Asset, ogit/Software/Application | entity | |
+| which Asset to which Contract | ogit/ITSM/Asset - ogit/coveredBy -> ogit/Contract | entity, verb | |
 | Contract | ogit/Contract | entity | |
 | which component has which type of contract | ogit/ITSM/Asset - ogit/coveredBy -> ogit/Contract | entity, verb | |
 | type of contract | ogit/contractType | attribute | specifies the type of an ogit/Contract entity. E.g. "HardwareContract" |
