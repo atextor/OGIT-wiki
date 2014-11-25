@@ -40,3 +40,15 @@ inE.has('label','ogit/ITSM/reportedBy').outV.or(_().hasNot('ogit/ITSM/resolvedAt
 ```
 anchored at `root=sample@x.com`.
 
+
+### Use case 2: Provider Management
+
+#### Problem description
+
+A user wants to perform Provider Management: The user needs to know which component has which type of contract. Details about the contracts like terms and conditions, SLAs, cost structure, penalties including history, contacts, escalation procedures and vendors are accessed.
+
+#### Mapping to OGIT data
+
+
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
