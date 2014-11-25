@@ -66,3 +66,24 @@ A user wants to perform Provider Management: The user needs to know which compon
 | which contract of which vendor | ogit/Contract - ogit/belongsTo -> ogit/Organization | entity, verb | |
 | details of contract | ogit/Contract - ogit/contains => ogit/ITSM/License, ogit/ITService/SLA | entity, verb | | 
 | which penalties | ogit/Contract - ogit/defines -> ogit/Penalty | entity, verb | |
+
+### Use case 3: Network Planning
+
+#### Problem description
+
+User wants to plan technical networking architecture. Therefor he needs information about the network and application structure and usage (throughput, structure, error rates). Also he needs information from the vendor side about contracts and service.
+
+#### Mapping to OGIT data
+
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
+| User | ogit/Person | entity | |
+| networking architecture | ogit/Network/* | entity | several entities |
+| vendors | ogit/Organization | entity | |
+| Contract | ogit/Contract | entity | |
+| SLA | ogit/ITService/SLA | entity | |
+| network and application structure I | ogit/Network/Port - ogit/connectsTo -> ogit/Network/NIC, ogit/Network/FCHBA | entity, verb | |
+| network and application structure II | ogit/Network/Router - ogit/extends -> ogit/Network/SimpleDevice, ogit/Network/Card | entity, verb | |
+| network and application structure III | ogit/Network/Shelf - ogit/has -> ogit/Network/Slot, ogit/Network/SimpleDevice - ogit/has -> ogit/Network/Port, ogit/Network/Card - ogit/has -> ogit/Network/Port | entity, verb | |
+
+
