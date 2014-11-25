@@ -52,17 +52,16 @@ A user wants to perform Provider Management: The user needs to know which compon
 
 | natural language term | OGIT element | OGIT type | remark |
 | --- | --- | --- | --- |
-| User, Contacts | ogit/Person | entity | |
-| Component | ogit/ITSM/Asset | entity | |
+| User, Contacts | ogit/Person, ogit/Organization | entity | individual or group of individuals |
+| Component | ogit/ITSM/Asset, ogit/Software/Application | entity | |
 | Contract | ogit/Contract | entity | |
 | which component has which type of contract | ogit/ITSM/Asset - ogit/coveredBy -> ogit/Contract | entity, verb | |
 | type of contract | ogit/contractType | attribute | specifies the type of an ogit/Contract entity. E.g. "HardwareContract" |
 | SLA | ogit/ITService/SLA | entity | |
-| cost structure | CostModel/* | several entities | |
+| cost structure | CostModel/* | several entities | e.g. CostModel/Budget, CostModel/CostElement |
 | penalties | ogit/Penalty | entity | |
 | vendors | ogit/Organization | entity | |
 | terms and conditions | ogit/ITSM/License | entity | |
 | which contract of which vendor | ogit/Contract - ogit/belongsTo -> ogit/Organization | entity, verb | |
 | details of contract | ogit/Contract - ogit/contains => ogit/ITSM/License, ogit/ITService/SLA | entity, verb | | 
 | which penalties | ogit/Contract - ogit/defines -> ogit/Penalty | entity, verb | |
-
