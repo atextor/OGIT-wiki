@@ -4,7 +4,7 @@ Here we present some real life and sophisticated use cases based on *GraphIT* an
 
 You should consult the [Simple use case examples](https://github.com/arago/OGIT/wiki/Using-the-Ontology) first.
 
-### Use case 1: ticket statistics
+### Use case 1: Ticket Statistics
 
 #### Problem description
 
@@ -104,3 +104,69 @@ User wants to compare architectures and need to observe which software is used a
 | how the software is used | ogit/Software/Application - ogit/responsibleFor <- ogit/Person | entity, verb | responsibility of the software |
 | how the software is used | ogit/Software/Application - ogit/owns <- ogit/Person | entity, verb | owner of the software |
 | users, transaction rates, user satisfaction, errors, service disruptions | see use case 1 | entity, verb | see Ticket stuff of use case 1 |
+
+### Use case 5: Forecasting Technological Trends
+
+#### Problem description
+
+User wants to forecast technological trends. He wants to look at which technology is used by whom, how efficient technology is used, how a technology is related to others, who hase delivery and serviced the technology. If this data would exist as historical data, he want's to find out who are the "early adopters" and who are the "Trend spotters".
+
+#### Mapping to OGIT data
+
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
+
+### Use case 6: Data Center Planning
+
+#### Problem description
+
+User wants to analyse existing and plan new Data Centers: Therefore he needs beside geographical and architectural information also information about HVAC, networking, Datacenter assets including contract information but also information about the security requirements of the applications and the responsible persons and organisations.
+
+#### Mapping to OGIT data
+
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
+
+### Use case 7: Application Migration
+
+#### Problem description
+
+User wants to migrate Applications from one infrastructure to another. He needs to find out, which components are required, which infrastructure capacities are used, if they are shared or dedicated. Further he wants to know who is operating/servicing the application and its components, under which contract terms and conditions.
+
+#### Mapping to OGIT data
+
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
+
+### Use case 8: Technical Analysis of Business Processes
+
+#### Problem description
+
+User wants to analyze Business processes from a technical perspective. He needs to find out the relationships between technology and business processes, esp. the usage of technology. Also he needs to learn about the business flow and which applications, components and services are required for the business flow. Here there wants to understand who is using the processes, which data are processes, at which rates and what results are produced. In addition the user wants to learn, what people and IT services are involved, what contracts exist and how the financial flows are.
+
+#### Mapping to OGIT data
+
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
+
+### Use case 9: IT Organisation Insights
+
+#### Problem description
+
+User wants to gain insights into current IT organization, that is who is involved from the technical and the process perspective. How are the reporting and communication flows, how the dependencies and contractual arrangement between involved organizational units are.
+
+#### Mapping to OGIT data
+
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
+
+### Use case 10: User Ranking
+
+#### Problem description
+
+IT/Business wants to identify the "best" and "worst" users of a certain application. They want to find out which application has the highest number of incidents, changes and complaints, which users are reporting tickets using which channel. On the other hand they want to find out which agent is solving/processing the tickets/changes. For each (Users, agents and application) they want to find out the responsibilities within the organisation and which contractors are involved.
+
+#### Mapping to OGIT data
+
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
