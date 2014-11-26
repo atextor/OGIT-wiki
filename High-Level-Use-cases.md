@@ -115,6 +115,12 @@ User wants to forecast technological trends. He wants to look at which technolog
 
 | natural language term | OGIT element | OGIT type | remark |
 | --- | --- | --- | --- |
+| User | ogit/Person | entity | |
+| technology | ogit/Software/Application | entity | |
+| is used by whom | ogit/Software/Application - ogit/uses <- ogit/Person | entity, verb | |
+| is installed by whom | ogit/Software/Application - ogit/installedBy -> ogit/Person | entity, verb | |
+| exist as historical data | ogit/Software/Application - ogit/hasTimeseries -> ogit/Timeseries | entity, verb | |
+| historical data | ogit/Timeseries | entity | |
 
 ### Use case 6: Data Center Planning
 
