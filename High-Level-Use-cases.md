@@ -86,4 +86,21 @@ User wants to plan technical networking architecture. Therefor he needs informat
 | network and application structure II | ogit/Network/Router - ogit/extends -> ogit/Network/SimpleDevice, ogit/Network/Card | entity, verb | |
 | network and application structure III | ogit/Network/Shelf - ogit/has -> ogit/Network/Slot, ogit/Network/SimpleDevice - ogit/has -> ogit/Network/Port, ogit/Network/Card - ogit/has -> ogit/Network/Port | entity, verb | |
 
+### Use case 4: Compare Architectures
 
+#### Problem description
+
+User wants to compare architectures and need to observe which software is used and how the software is used (users, transaction rates, user satisfaction, errors, service disruptions.
+
+#### Mapping to OGIT data
+
+| natural language term | OGIT element | OGIT type | remark |
+| --- | --- | --- | --- |
+| User | ogit/Person | entity | |
+| Software | ogit/Software/Application | |
+| transaction rates | ogit/Software/Application - ogit/hasTimeseries -> ogit/Timeseries | entity, verb | |
+| observe which software is used | ogit/Software/Application - ogit/appearsAs <- arago/MARSNode | entity, verb | |
+| observe which software is used | ogit/Software/Application - ogit/uses <- ogit/Person | entity, verb | |
+| how the software is used | ogit/Software/Application - ogit/responsibleFor <- ogit/Person | entity, verb | responsibility of the software |
+| how the software is used | ogit/Software/Application - ogit/owns <- ogit/Person | entity, verb | owner of the software |
+| users, transaction rates, user satisfaction, errors, service disruptions | see use case 1 | entity, verb | see Ticket stuff of use case 1 |
