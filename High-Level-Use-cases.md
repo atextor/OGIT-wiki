@@ -132,6 +132,18 @@ User wants to analyse existing and plan new Data Centers: Therefore he needs bes
 
 | natural language term | OGIT element | OGIT type | remark |
 | --- | --- | --- | --- |
+| User | ogit/Person | entity | |
+| Data Center | ogit/DCIM/Datacenter | entity | |
+| more Data Center stuff | ogit/DCIM/* e.g. ogit/DCIM/Building | entity | |
+| geographical information | ogit/DCIM/Datacenter - ogit/locatedIn -> ogit/gr/Location | entity, verb | |
+| geographical information | ogit/gr/Location | entity | |
+| architectural information | ogit/DCIM/* e.g. ogit/DCIM/Building, ogit/DCIM/Room, ogit/DCIM/Rack, ogit/DCIM/Cooling … | entity | |
+| architectural information | ogit/DCIM/Datacenter - ogit/has -> ogit/DCIM/Building, ogit/DCIM/Building - ogit/has -> ogit/DCIM/Room, ogit/DCIM/Room - ogit/has -> ogit/DCIM/Section | entity, verb | and more „ogit/has“ relations |
+| Datacenter assets | ogit/ITSM/Asset | entity |
+| contract information | ogit/ITSM/Asset - ogit/coveredBy -> ogit/Contract | |
+| responsible persons | ogit/DCIM/Datacenter - ogit/responsibleFor <- ogit/Person | entity, verb | |
+| responsible organisations | ogit/DCIM/Datacenter - ogit/manages <- ogit/gr/BusinessEntity - ogit/appearsAs <- ogit/Organization | entity, verb | |
+
 
 ### Use case 7: Application Migration
 
