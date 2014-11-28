@@ -155,6 +155,16 @@ User wants to migrate Applications from one infrastructure to another. He needs 
 
 | natural language term | OGIT element | OGIT type | remark |
 | --- | --- | --- | --- |
+| User | ogit/Person | entity | |
+| asset, infrastructure | ogit/ITSM/Asset | entity | |
+| infrastructure nodes | arago/MARSNode | entity | |
+| applications | ogit/Software/Application | entity | |
+| describe infrastructure I | ogit/ITSM/Asset - ogit/describes -> arago/MARSNode, ogit/Network/Fabric, ogit/Network/SimpleDevice, ogit/Network/Card, ogit/Network/Enclosure, ogit/DCIM/Cooling, ogit/DCIM/Rack, ogit/DCIM/Device, ogit/DCIM/PDU | entity, verb | |
+| describe infrastructure II | arago/MARSNode - ogit/appearsAs -> ogit/Software/Application, ogit/Software/Application - ogit/consistsOf -> ogit/Software/Component | entity, verb | |
+| contract terms | ogit/ITSM/Asset - ogit/coveredBy -> ogit/Contract | entity, verb | |
+| who is operating/servicing the application I | ogit/Software/Application - ogit/belongsTo -> ogit/ITService/SLA | entity, verb | |
+| who is operating/servicing the application II | ogit/Person - ogit/responsibleFor -> ogit/Software/Application, ogit/Organization - ogit/manages -> ogit/Software/Application | entity, verb | |
+
 
 ### Use case 8: Technical Analysis of Business Processes
 
