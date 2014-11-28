@@ -176,6 +176,19 @@ User wants to analyze Business processes from a technical perspective. He needs 
 
 | natural language term | OGIT element | OGIT type | remark |
 | --- | --- | --- | --- |
+| User | ogit/Person | entity | |
+| business processes | ogit/BPMN2/Process | entity | |
+| Contract | ogit/Contract | entity | |
+| Application | ogit/Software/Application | entity | |
+| Service | ogit/ITService/Service | entity | |
+| business process parts | ogit/BPMN2/SubProcess, ogit/BPMN2/ProcessPool, ogit/BPMN2/ProcessLane, ogit/BPMN2/Gateway, ogit/BPMN2/TextAnnotation, ogit/BPMN2/Event, ogit/BPMN2/DataObject, ogit/BPMN2/Group, ogit/BPMN2/Task, ogit/BPMN2/DataStore| entity | |
+| relationships between technology and business processes I | ogit/BPMN2/Process - ogit/supports -> ogit/Software/Application, ogit/Software/Component | entity, verb | |
+| relationships between technology and business processes II | ogit/BPMN2/Process - ogit/consistsOf -> ogit/Software/Application, ogit/Software/Component | entity, verb | |
+| services are required | ogit/BPMN2/Task - ogit/uses -> ogit/ITService/Service | entity, verb | |
+| which data are processed I | ogit/BPMN2/Process - ogit/uses -> ogit/BPMN2/DataObject | entity, verb | |
+| which data are processed II | ogit/BPMN2/Process - ogit/BPMN2/read, ogit/BPMN2/write -> ogit/BPMN2/DataStore | entity, verb | |
+| what contracts exist | ogit/BPMN2/Task - ogit/uses -> ogit/Contract | entity, verb | |
+
 
 ### Use case 9: IT Organisation Insights
 
