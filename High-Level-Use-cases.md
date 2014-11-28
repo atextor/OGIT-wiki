@@ -224,3 +224,12 @@ IT/Business wants to identify the "best" and "worst" users of a certain applicat
 
 | natural language term | OGIT element | OGIT type | remark |
 | --- | --- | --- | --- |
+| Person | ogit/Person | entity | |
+| IT/Business Role | ogit/Role | entity | |
+| what is IT/Business | ogit/Person - ogit/has -> ogit/Role | entity, verb | |
+| application | ogit/Software/Application | entity | |
+| who uses the application | ogit/Person - ogit/uses -> ogit/Software/Application | entity, verb | |
+| who is operating/servicing the application I | ogit/Software/Application - ogit/belongsTo -> ogit/ITService/SLA | entity, verb | |
+| who is operating/servicing the application II | ogit/Person - ogit/responsibleFor -> ogit/Software/Application, ogit/Organization - ogit/manages -> ogit/Software/Application | entity, verb | |
+| time series of an application | ogit/Software/Application - ogit/hasTimeseries -> ogit/Timeseries | entity, verb | |
+| number of incidents, changes and complaints, which users are reporting tickets using which channel, agent is solving/processing the tickets/changes | see use case 1 | entity, verb | all Ticket stuff |
