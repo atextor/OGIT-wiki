@@ -200,6 +200,19 @@ User wants to gain insights into current IT organization, that is who is involve
 
 | natural language term | OGIT element | OGIT type | remark |
 | --- | --- | --- | --- |
+| Person | ogit/Person | entity | |
+| IT Management Role | ogit/Role | entity | |
+| what is IT Management I | ogit/Person - ogit/has -> ogit/Role | entity, verb | |
+| what is IT Management II | ogit/Organization - ogit/defines -> ogit/Role | entity, verb | |
+| what is IT Management III | ogit/Person - ogit/manages -> ogit/Organization, ogit/Software/Application | entity, verb | |
+| IT organisation | ogit/Organization | entity | |
+| Contract | ogit/Contract | entity | |
+| who is involved | ogit/Person - ogit/isMemberOf -> ogit/Organization | entity, verb | |
+| dependencies and contractual arrangement between involved organisational units I | ogit/Organization - ogit/dependsOn -> ogit/Organization | entity, verb | |
+| dependencies and contractual arrangement between involved organisational units II | ogit/Contract - ogit/belongsTo -> ogit/Organization | entity, verb | |
+| dependencies and contractual arrangement between involved organisational units III | ogit/Organization - ogit/includes -> ogit/Organization | entity, verb | |
+| reporting and communication flows | ogit/Organization - ogit/communicatesWith -> ogit/Organization | entity, verb | |
+
 
 ### Use case 10: User Ranking
 
