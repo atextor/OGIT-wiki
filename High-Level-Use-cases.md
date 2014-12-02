@@ -23,6 +23,7 @@ A User wants to compile various statistics on Tickets: Find out who was the resp
 | authorizations | ogit/ITSM/ApprovalTask - ogit/belongsTo -> ogit/ITSM/ChangeRequest, ... | entity, verb | |
 | when was it reported | ogit/ITSM/reportedAt | attribute | specific for ogit/ITSM/Incident, other ticket types might use other fields, e.g. ogit/ITSM/openedAt |
 | when was it resolved | ogit/ITSM/resolvedAt | attribute | specific for ogit/ITSM/Incident, other ticket types might use other fields, e.g. ogit/ITSM/closedAt |
+| when was it closed | ogit/ITSM/Ticket - ogit/ITSM/closedBy -> ogit/Person | entity, verb | |
 | requester | ogit/ITSM/requestedBy -> ogit/Person, ogit/Organization  | verb, entity| specific for ogit/ITSM/ChangeRequest |
 | reporter | ogit/ITSM/reportedBy -> ogit/Person | verb, entity | specific for ogit/ITSM/Incident, ogit/ITSM/Problem |
 | affected components | ogit/ITSM/reportedOn -> arago/MARSNode | verb, entity | primary CI of some incident or problem |
