@@ -68,6 +68,7 @@ A user wants to perform Provider Management: The user needs to know which compon
 | details of contract | ogit/Contract - ogit/contains => ogit/ITSM/License, ogit/ITService/SLA | entity, verb | | 
 | which penalties | ogit/Contract - ogit/defines -> ogit/Penalty | entity, verb | |
 | which SLA triggers penalties | ogit/ITService/SLA - ogit/triggers -> ogit/Penalty | entity, verb | |
+| ownership relations | ogit/Person - ogit/owns -> ogit/ITService/Service, ogit/Person - ogit/owns -> ogit/Software/Application, ogit/Organization - ogit/owns ->  ogit/ITSM/Asset | entity, verb | |
 
 ### Use case 3: Network Planning
 
