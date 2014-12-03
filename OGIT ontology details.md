@@ -2,7 +2,7 @@
 
 Here we take a more technical view of OGIT. 
 
-Reading this will help you give a deeper understanding of the ontology and make it much easier to read the [ontology documentation](https://graphit.co/doxygen-graphit).
+Reading this will help you give a deeper understanding of the ontology and make it much easier to read the [ontology documentation](https://graphit.co/docs).
 
 Reading this is a must if you want to contribute to the ontology.
 
