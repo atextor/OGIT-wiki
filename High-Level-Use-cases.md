@@ -85,6 +85,7 @@ User wants to plan technical networking architecture. Therefor he needs informat
 | vendors | ogit/Organization | entity | |
 | Contract | ogit/Contract | entity | |
 | SLA | ogit/ITService/SLA | entity | |
+| Asset | ogit/ITSM/Asset | entity | |
 | network and application structure I | ogit/Network/Port - ogit/connectsTo -> ogit/Network/NIC, ogit/Network/FCHBA | entity, verb | |
 | network and application structure II | ogit/Network/Router - ogit/extends -> ogit/Network/SimpleDevice, ogit/Network/Card | entity, verb | |
 | network and application structure III | ogit/Network/Shelf - ogit/has -> ogit/Network/Slot, ogit/Network/SimpleDevice - ogit/has -> ogit/Network/Port, ogit/Network/Card - ogit/has -> ogit/Network/Port | entity, verb | |
