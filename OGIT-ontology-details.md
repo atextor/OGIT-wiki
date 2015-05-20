@@ -138,30 +138,19 @@ Each Ontology element has a unique ID. Each ID consists of three parts:
 http://www.purl.org/<namespace><short name of ontology element>
 ```
 
-In general we allow: 
-  * characters: lowercase and uppercase
-  * digits
-  * '-' (minus sign)
-
-_namespace_ may also contain '/'.
-
-For the last part (_short name of ontology element_) the conventions are described [here](../tree/master/SGO/format/README.md).
+Guidelines for all OGIT elements including NTO's can be found [here]
+(../tree/master/SGO/format/README.md).
 
 ### to inherit or not to inherit?
 
-Each _entity_ definition contains a _parent_ entity type. Using this the new _entity_ type 
-* "inherits" attribute declarations from ancestor types
-* "inherits" allowed verbs ('from' and 'to' end) from ancestor types.
-This is mainly for convenience: it prevents ontology maintainers from repeating the same definitions again and again.
-Especially each _entity_ will automatically have all the default attributes which are used by GraphIT for proper handling of vertex data (e.g. 'ogit/_id', 'ogit/_type', and so on).
-
-Those parent/child relationships of _entity_ definitions must form a tree (e.g. must not contain any loops)
-
-**Note:** This inheritance mechanism exists just to simplify the ontology definitions. It is not real inheritance as you know from OO design! For example: let's assume the ontology defines an _entity_ 'biology/Plant' and 'biology/Tree' having the first one as parent type. Now let's assume you create a vertex A of type 'biology/Plant' and a vertex B of type 'biology/Tree' in GraphIT. If you then query for all vertices of type 'biology/Plant' GraphIT will return A but not B!
+Currently inheritance is not being supported in OGIT for it's based on semantic graphs and not object oriented.
 
 ### Free attributes
 
-The so-called //Specific Node Free Attributes// are not part of the ontology. The OGIT ontology only defines which entity types can have free attributes. This is done with the _allow: any_ declaration in the _attributes_ section:
+The so-called //Specific Node Free Attributes// are not part of the ontology.
+All entity types can have free attributes.
+
+Technically this is implemented with the  any_ declaration in the _attributes_ section:
 
 ```yaml
 - Entity:
@@ -177,7 +166,7 @@ The so-called //Specific Node Free Attributes// are not part of the ontology. Th
         - id: http://www.purl.org/ogit/color
 ```
 
-If free attributes are allowed then any attribute name starting with a slash '/', i.e. belonging to the empty namespace, will be accepted.
+Any attribute name starting with a slash '/', i.e. belonging to the empty namespace, will be accepted.
 
 For example the following JSON will be valid node definition for entity type _biology/Tree_ according to our sample definition above:
 
