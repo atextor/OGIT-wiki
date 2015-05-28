@@ -11,6 +11,7 @@
 3. If an issue or pull request is processed then:
   + necessary changes are applied to corresponding yaml-files
   + issues is closed or pull request is accepted
+  + declaring a new version number as described in [README.md](../blob/master/versioning/README.md).
   + a note is added in [version.info](../blob/master/versioning/version.info) in the 'next version' section
 
  
