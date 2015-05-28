@@ -183,4 +183,4 @@ See [GraphIT REST API Documentation for more details](https://autopilot.co/dev/d
 
 #### Naming convention for free attributes
 
-Except the leading slash we recommend to adopt the same naming convention as for regular attributes. Hence free attribute names should match the pattern /[a-z][a-zA-Z0-9-]*
+Except the leading slash we recommend to adopt the same naming convention as for regular attributes. Hence check guidelines [here](https://github.com/arago/OGIT/blob/master/SGO/format/README.md).
