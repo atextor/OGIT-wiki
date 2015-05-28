@@ -1,9 +1,5 @@
 ## Introduction
 
-The goal of the _OGIT (Open Graph of IT) Ontology Framework_ is to build an open semantic representation of all IT and it's interactions with business process and people for providing a foundation for computational evaluation. The resulting knowledge graph allows to interconnect various IT Systems in the IT Operations and IT Management space. While previous approaches like the [IBM Common Data Model (CDM)](https://www.ibm.com/developerworks/mydeveloperworks/groups/service/html/communityview?communityUuid=e1effee6-69a2-4c91-90aa-347f79d0030e) required too much details and did not allow any ambiguity and incorrectness, OGIT allows varying levels of details, accepts incorrectness and supports different classes of data to allow proper handling from a computational perspective. The ontology structure is designed for providing a common, best practice approach, thought giving great flexibility and extensibility for every implementor.  
-
-## The meta model
-
 The best way to describe the meta model is to see it as a 5 layer onion to describe the data spaces within OGIT:
 
 ![Onion like Meta model](https://github.com/arago/graphIT-ontology/raw/master/Wiki/imgs/Onion.png)
@@ -22,7 +18,7 @@ Each node well defined by SGO and NTO ontologies will have a set of attributes t
 
 ### 4. SNBA - Specific Node Best Practice Attributes
 
-Each well defined node type can have a number of attributes that have proven useful. If these attribute suggestions are followed reuse and effectiveness of platform resources (e. g. knowledge in automation, architectural benchmarks) are maximized.
+Each well defined node type can have a number of attributes that have proven useful. If these attribute suggestions are followed, then the reuse and effectiveness of platform resources (e. g. knowledge in automation, architectural benchmarks) are maximized. SNBA could be read as "optional" attributes in GraphIT documentation [entity pages] (https://graphit.co/docs/group__entities.html).
 
 ### 5. SNFA - Specific Node Free Attributes 
 
@@ -32,32 +28,12 @@ The Free attribute space in every node is used by applications, users and organi
 
 ## The Ontology layers in details
 
-![OGIT Structure](https://github.com/arago/graphIT-ontology/raw/master/Wiki/imgs/OGIT_Structure_0.2.png)
-
-
 ### SGO - Semantic Graph Ontology
 
-The SGO is a unique structure with represents the top level of semantic behind the Open Graph of IT. In this highest level of data structure the entities and verbs connecting these entities are described. The SGO is maintained by the _SGO Ontology Board_. Because the entities are representing knowledge they will be categorized as knowledge classes. There are 4 categories of entities in the SGO, which differ in terms of validity, volatility and level of correctnes.
+The SGO is a unique structure with represents the top level of semantic behind the Open Graph of IT. In this highest level of data structure the entities and verbs connecting these entities are described. The SGO is maintained by the _Ontology Board_.
 
-______ | Global Knowledge | Factual Knowledge | Actionable Knowledge|Situational Knowledge
------- | --------------- | --------------- | --------------- | --------------- | 
-_Description_ | long lasting meta definitions | actual state of the world | possible activities and decisions | current state of the model
-_Examples_ | the ontology itself, governing policies | actual IT provisioned, contracts | commands, reactions to regul. demands | monitoring data, events, KPIs
-_Volatility_ | extremely low | low | high | very high
-_Validity_ | virtually infinite | long | virtually infinite | verly low
-_Correctness_ | high | low | high | very high
-
-The ontology definition is stored in the global knowledge part itself, following a "build yourself" approach in terms of data, structure and platform. While the top layers _'BigBang'_ and _'Global, Factual, Actionable, Situational knowlege'_ are fixed, the further hierarchy constructed below these must follow these simple principles:
-
-a. Any child type will inherit any categorizing 'attributes' from its ancestor types. A 'verb' which can be used with some type can also be used with all descendent types.  
-
-b. An instance of a child type must be a valid instance of any parent type.  
-
-c. The "leafs" SGO type tree are NTO types. Each such NTO type may or may not have a tree of sub-types.
-
-This classification for each entity on the top level of the ontology of the open graph of IT is done to have a classification in terms of use case, but also to determine the class of technology and algorithmic approaches valid when working with data from the respective sets (i.e. can caching be applied, is in memory technology a good choice, do algorithms need to deal with incorrectness, is ambiguity part of analytical approaches etc.). 
-
-The boundary where SGO ends and the NTOs starts also determines the responsibility: While the SGO ist maintained by the SGO ontology board, the NTOs are maintained by appointed SMEs.
+The "leafs" SGO type tree are NTO types.
+The boundary where SGO ends and the NTOs starts also determines the responsibility: While the SGO ist maintained by the _Ontology board_, the NTOs are maintained by appointed SMEs.
 
 There are two kinds of data stored on the SGO level:
 
