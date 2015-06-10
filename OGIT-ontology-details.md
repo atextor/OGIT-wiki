@@ -63,13 +63,13 @@ Defining an _entity_ in OGIT ontology will require a YAML stanza like this (the 
     parent: http://www.purl.org/ogit/Factual
 
     attributes:
-      any: false
       mandatory:
         - id: http://www.purl.org/ogit/type
       optional:
         - id: http://www.purl.org/ogit/color
           validation-type: "regex"
           validation-parameter: "^(blue|red|yellow)$"
+          indexed: true or false (default is false)
 ```
 
 The example contains the following details
@@ -81,8 +81,9 @@ The example contains the following details
 | description | description of the purpose of that entity. This should be detailed enough to let others decide whether this entity can be re-used |
 | scope | either "SGO" (stating that this entity definition is considered as part of the core ontology) or "NTO" (meaning that this entity definition is part of some domain specific extension) |
 | parent | contains the id of another entity definition (see section about "Inheritance" below) |
-| attributes | used for the property validation of all instances (vertices) of that entity type: <br/> <br/> 'mandatory' defines all properties that must be present in a vertex to be valid. This corresponds to the [Specific Node Required Attributes](Basic-Concepts#3-snra---specific-node-required-attribute) <br/> <br/> 'optional' defines all properties that can be present in a vertex and the semantics of which is well-defined.  This corresponds to the [Specific Node Best Practice Attributes](Basic-Concepts#4-snba---specific-node-best-practice-attributes) <br/> <br/> 'any: true' ensures any vertex property with a name starting with '/' will be accepted. This corresponds to the [Specific Node Free Attributes](Basic-Concepts#5-snfa---specific-node-free-attributes) |
+| attributes | used for the property validation of all instances (vertices) of that entity type: <br/> <br/> 'mandatory' defines all properties that must be present in a vertex to be valid. This corresponds to the [Specific Node Required Attributes](Basic-Concepts#3-snra---specific-node-required-attribute) <br/> <br/> 'optional' defines all properties that can be present in a vertex and the semantics of which is well-defined.  This corresponds to the [Specific Node Best Practice Attributes](Basic-Concepts#4-snba---specific-node-best-practice-attributes) <br/> <br/> |
 | validation-type, validation-parameter | allow to define an optional attribute value validation: <br/> if an entity definition refers to that attribute definition and a vertex of that entity is to be created, then actual value of that attribute will be the validated according to the requirements defined by validation-type and validation-parameter. Possible validation-types are 'regex', 'xml' and 'generator'. Empty values, as in our example, will skip any further validation. (see "Attribute Validation") |
+| indexed | if 'true', the attribute will be indexed for ngram search |
 
 #### Verb definitions
 
@@ -150,21 +151,7 @@ Currently inheritance is not being supported in OGIT for it's based on semantic 
 The so-called //Specific Node Free Attributes// are not part of the ontology.
 All entity types can have free attributes.
 
-Technically this is implemented with the  any_ declaration in the _attributes_ section:
-
-```yaml
-- Entity:
-    id: http://www.purl.org/biology/Tree
-    name: Tree
-
-    ...
-    attributes:
-      any: true
-      mandatory:
-        - id: http://www.purl.org/ogit/type
-      optional:
-        - id: http://www.purl.org/ogit/color
-```
+Technically this is implemented within graphit and no special handling in the ontology is needed.
 
 Any attribute name starting with a slash '/', i.e. belonging to the empty namespace, will be accepted.
 
