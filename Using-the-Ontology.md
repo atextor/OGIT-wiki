@@ -1,3 +1,5 @@
+[comment]: # (Should most of this article better be moved to GraphIT? Tinkerpop/Gremlin and the REST Interface are specific to GraphIT/Autopilot, otherwise there should be a proper definition of how the REST interface maps to OGIT. But then there should be good reasons not to refer to JSON-LD and/or LDP.)
+
 ## Simple Use case examples
 
 After you got familiar with some concepts and ideas behind OGIT and its ontology you might ask:

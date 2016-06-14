@@ -1,48 +1,36 @@
-## Ontology layers 
+This document provides a high-level overview of the core ideas of OGIT. For more technical depth, please refer to the
+[ontology details document](OGIT-ontology-details).
 
-The best way to describe the meta model is to see it as a 5 layer onion to describe the data spaces within OGIT:
+OGIT is an ontology that serves as a reference model for entities in the IT landscape and relationships between
+entities. It is comparable to the [schema.org](https://schema.org) effort that provides schemas for structured data on
+the internet. OGIT differentiates between three types of elements:
 
-![Onion like Meta model](https://github.com/arago/graphIT-ontology/raw/master/Wiki/imgs/Onion.png)
+* _Entities_ represent concepts (nodes in the graph),
+* _Verbs_ are binary relations (edges) between two Entities and describe something an Entity does to or with another,
+* _Attributes_ are binary relations (edges) between an Entity and a scalar value, such as a string or an integer.
+
+All Entities, Verbs and Attributes are uniquely identified by URIs.
+
+The ontology is divided into 5 layers of abstraction, as shown in the following diagram:
+
+![OGIT Onion Model](https://github.com/arago/OGIT/raw/master/Wiki/imgs/Onion.png)
+
+Basically, the innermost layer contains generic concepts, such as _Device_, while the outermost layer contains
+user-specific extensions. This separation exists not only for the sake of clarity of the schema, but also to determine
+who is responsible for changes to certain parts of the ontology. While the innermost layer is governed rigorously,
+anyone can make changes in the outermost layer. The following sections describe the layers in more detail.
 
 ### 1. SGO - Semantic Graph Ontology
 
-The SGO represents the top level of semantic behind OGIT and is maintained by the _Ontology Board_.
+[comment]: # (Ontology Board / SGO Board is neither defined nor are there any contact details provided.)
 
-The boundary where SGO ends and the NTOs starts also determines the responsibility: While the SGO ist maintained by the _Ontology board_, the NTOs are maintained by appointed SMEs.
-
-There are two kinds of data stored on the SGO level:
-
-**Entities**
-
-Describes the kind of data that is stored under this category.
-
-_[Entity record definition](OGIT-ontology-details#entity-definitions)_
-
-**Verbs**
-
-Describes the type of _connection*_ and which other entities can be connected by it. 
-
-_[Verb record definition](OGIT-ontology-details#verb-definitions)_
-
-**Examples**
-
-_Entities:_  
-1.	`Fruit`  
-2.	`Plant`  
-3.	`Ingredient`  
-
-_Verbs of Fruit:_  
-1.	`grown on`:     `Fruit` -> `Plant`  
-2.	`contains`:   	`Fruit` -> `Ingredient`  
-3.	`contains`:	`Plant` -> `Ingredient`  
-
-_*_ _Connections_
-
-_We do not use the term connection on purpose, because we want to ensure that new users coming from a relational approach should not be tempted to simply transfer their table model into semantic networks, but should know that a connection between two entities is something one entity does to or with another. Facebook calls these connections actions. We do not call it actions, because we have actionable knowledge and want to avoid misunderstandings._ 
+The SGO is the most generic level of OGIT and is the only layer maintained by the _Ontology Board_. Concepts that are
+described in the SGO are not specific to one domain, but are broadly usable.
 
 ### 2. NTO - Node Type Ontology
 
-The differentiation between SGO and NTO is made to allow subject matter experts to deal with NTO definitions while strategic experts deal with the definition of the big picture. 
+A NTO contains concepts of a certain domain. The differentiation between SGO and NTO is made to allow subject matter
+experts to deal with NTO definitions while strategic experts deal with the definition of the big picture.
 
 Examples for NTOs:
 
@@ -51,20 +39,25 @@ Examples for NTOs:
 * Cost
 * Service Management
 
-### 3. SNRA, SNBA, SNFA - Specific Node Attributes 
+### 3. SNRA, SNBA, SNFA - Specific Node Attributes
 
-Each of these attribute sections describes attributes available or used with a well defined note type ( _SGO:NTO_ ).  
+Each of these attribute sections describes attributes to be used with a node type that was defined in the SGO or an NTO.
 
-#### 3.1 SNRA - Specific Node Required Attribute
+#### 3.1 SNRA - Specific Node Required Attributes
 
-Each node well defined by SGO and NTO ontologies will have a set of attributes that is specific to this unique type of node. The SNRA defines the minimal required attribute set. 
-
-The SNRA are always included and are mandator, so the syntax will be checked and the tools attached will only work properly if the SNRA definition is followed. 
+Each node well defined by SGO and NTO ontologies will have a set of attributes that is specific to this unique type of
+node. The SNRA defines the minimal required attribute set. The SNRA are always included and are mandatory, so the syntax
+will be checked and tools will only work properly if the SNRA definition is followed.
 
 ### 3.2 SNBA - Specific Node Best Practice Attributes
 
-Each well defined node type can have a number of attributes that have proven useful. If these attribute suggestions are followed, then the reuse and effectiveness of platform resources (e. g. knowledge in automation, architectural benchmarks) are maximized. SNBA could be read as "optional" attributes in GraphIT documentation [entity pages] (https://graphit.co/docs/group__entities.html).
+Each well defined node type can have a number of attributes that have proven useful. If these attribute suggestions are
+followed, then the reuse and effectiveness of platform resources (e.g., knowledge in automation, architectural
+benchmarks) are maximized. SNBA can be understood as “optional” attributes.
 
-### 3.3 SNFA - Specific Node Free Attributes 
+### 3.3 SNFA - Specific Node Free Attributes
 
-The Free attribute space in every node is used by applications, users and organizations to add data structured according to their own needs, concepts and ideas. Data stored here uses the mechanisms of the _Open Graph of IT_ for storage and the clients of the _Open Graph of IT_ as tools, but does not count on any cross user reuse or platform wide distribution of effect, e.g. marketability. This section is also the source for best practices which might move up the chain into the SNBA section. As users use the same or similar attributes in the SNFA sections they will move into the SNBA section to become published and discussed in a platform wide distribution.
+The Free attribute space in every node is used by applications, users and organizations to add data structured according
+to their own needs, concepts and ideas. Data stored here uses the mechanisms of _OGIT_, but is not made available for
+reuse by other users. When similar or equivalent attributes are employed by multiple users, they may be moved up one
+layer into the SNBA section to be published and discussed in a platform wide distribution.
