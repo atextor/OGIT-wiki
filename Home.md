@@ -1,15 +1,11 @@
-Welcome to the graphIT-ontology wiki!
+Welcome to the OGIT wiki!
 
-[Basic Concepts](https://github.com/arago/graphIT-ontology/wiki/Basic-Concepts)
+* [Basic Concepts](wiki/Basic-Concepts.md)
+* [OGIT ontology details](wiki/OGIT-ontology-details.md)
+* [Maintaining the ontology](wiki/Maintaining-the-ontology.md)
+* Get started with an implementation:
+	+ [Using OGIT in Apache Jena Fuseki](wiki/Using-Fuseki.md)
+	+ [Using OGIT with Apache Tinkerpop](wiki/Using-Tinkerpop.md)
+	+ [Using OGIT in Cayley](wiki/Using-Cayley.md)
+* [High level use cases](wiki/High-level-use-cases.md)
 
-[OGIT ontology details](https://github.com/arago/OGIT/wiki/OGIT-ontology-details)
-
-[Maintaining the ontology](https://github.com/arago/OGIT/wiki/Maintaining-the-Ontology)
-
-[Using the ontology](https://github.com/arago/OGIT/wiki/Using-the-Ontology)
-
-[High Level Use Cases](https://github.com/arago/OGIT/wiki/High-Level-Use-cases)
-
-[API Reference](https://github.com/arago/OGIT/wiki/API-Reference)
-
-See more information about surrounding standards at our [Standards Reference Page](https://github.com/arago/OGIT/wiki/Standards-Reference).

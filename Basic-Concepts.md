@@ -3,7 +3,7 @@ This document provides a high-level overview of the core ideas of OGIT. For more
 
 OGIT is an ontology that serves as a reference model for entities in the IT landscape and relationships between
 entities. It is comparable to the [schema.org](https://schema.org) effort that provides schemas for structured data on
-the internet. OGIT differentiates between three types of elements:
+the internet. In OGIT there are three types of elements:
 
 * _Entities_ represent concepts (nodes in the graph),
 * _Verbs_ are binary relations (edges) between two Entities and describe something an Entity does to or with another,
@@ -13,7 +13,7 @@ All Entities, Verbs and Attributes are uniquely identified by URIs.
 
 The ontology is divided into 5 layers of abstraction, as shown in the following diagram:
 
-![OGIT Onion Model](https://github.com/arago/OGIT/raw/master/Wiki/imgs/Onion.png)
+![OGIT Onion Model](Onion.png)
 
 Basically, the innermost layer contains generic concepts, such as _Device_, while the outermost layer contains
 user-specific extensions. This separation exists not only for the sake of clarity of the schema, but also to determine

@@ -2,9 +2,6 @@
 
 Here we take a more technical view of OGIT.
 
-[comment]: # (Maybe there should be note that explains that registration is quick an painless, or this link moved to a less prominent place.)
-Reading this will help you give a deeper understanding of the ontology and make it much easier to read the [ontology documentation](https://graphit.co/docs).
-
 You should read this if you want to contribute to the ontology.
 
 ### Some terminology
@@ -15,23 +12,18 @@ OGIT defines an information schema, while an implementation that makes use of OG
 * _Verbs_ are binary relations (edges) between two Entities and describe something an Entity does to or with another,
 * _Attributes_ are binary relations (edges) between an Entity and a scalar value, such as a string or an integer.
 
-### Relation between and OGIT ontology and OGIT data
-
-[comment]: # (GraphIT is not mentioned before. GraphIT should be understood as ONE implementation that makes use of OGIT and therefore mentions of it should not be interspersed with the actual OGIT documentation)
-
-[comment]: # (TODO)
-The actual data will be stored in GraphIT. GraphIT is based on a graph database and used the OGIT ontology
-to ensure that only valid data gets stored. We have the following relation between graph data and ontology definitions:
-* Each **vertex** in the graph must be a valid instance of an _entity_ type defined by the ontology
-* All vertex **properties** must be valid w.r.t. the _attribute_ definitions from the ontology (what attribute validity means will be explained below)
-* All **edges** in the graph must have labels defined by some _verb_ type in the ontology.
-* All triples defined by graph data must be valid according to the ontology (see below for more details)
-
-Note: to prevent some confusion from now on we will use the terms _attribute_, _entity_, and _verb_ whenever referring to elements from the ontology and _property_, _vertex_, and _edge_ when talking about instance data.
+OGIT does not specify how an implementation to manage instance data must look like, but on the [Start 
+page](wiki/Home.md) you can find some pointers on how to get started with OGIT and different technologies. Although it 
+is no technical requirement, using a graph database or triple store to store instance data is a good idea due to the 
+nature of RDF format. You can then use whatever APIs the technology you choose provides to insert and query data, e.g., 
+REST APIs or SPARQL endpoints.
 
 ### OGIT ontology format description
 
-The ontology is represented in the [Resource Description Format](https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) (RDF), specifically the [Turtle](https://www.w3.org/TR/2014/REC-turtle-20140225/)-Syntax. By convention, each definition of an entity, a verb or an attribute is described in a separate file.
+The ontology is represented in the [Resource Description 
+Format](https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) (RDF), specifically the 
+[Turtle](https://www.w3.org/TR/2014/REC-turtle-20140225/)-Syntax. By convention, each definition of an entity, a verb or 
+an attribute is described in a separate file.
 
 #### Attribute definitions
 
