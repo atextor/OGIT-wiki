@@ -3,10 +3,10 @@
 ### General recommendations
 
 * Consider reusing existing attributes and verbs before adding new ones.
-* Names for _verbs_: plain verbs should be favored compound constructs (e.g., those using an auxiliary verb).
-* There is usually no need to define _verbs_ for both directions. E.g., if you define 'A smurfs B' you won't need not
+* Names for _verbs_: plain verbs should be favored over compound constructs (e.g., those using an auxiliary verb).
+* There is usually no need to define _verbs_ for both directions. E.g., if you define 'A smurfs B' you will not need to
   define 'B isSmurfedBy A', too. (You can always query in both directions).
-* _Verb_ descriptions are usually very general. Any context specific semantics should be explained in the entity
+* _Verb_ descriptions are usually very general. Any context-specific semantics should be explained in the entity
   definitions.
 
 ### Recommendations for NTOs
@@ -14,9 +14,9 @@
 * If you think about modelling a complete area/topic with several entities, verbs and attributes, then this will
   probably be a separate NTO using a common fixed prefix (namespace).
 * All entities will then get that prefix.
-* If you need attributes which have general semantics then re-use them from SGO if already there (e.g., `ogit:name`) or
-  request SGO-extension to add them.
-* If you need attributes which are quite domain specific define them as part of NTO, hence using the same namespace
+* If you need attributes which have general semantics then re-use them from SGO if already present (e.g., `ogit:name`), or
+  request an SGO-extension to add them.
+* If you need attributes which are quite domain-specific, define them as part of NTO, hence using the same namespace
   prefix as for the entities.
 * You may re-use attributes from other NTOs. Sometimes those have exactly the right semantics, e.g.,
   `ogit.gr:validFrom`.
@@ -24,7 +24,7 @@
   must be defined in namespace `ogit` or at least one of its sub namespaces.
 * If you need a verb that has general semantics and is not defined in SGO yet, you should request SGO extension for it
   (even if your current need is restricted to relationships between entities from your NTO).
-* If you need a verb that is very specific for your domain then you should define it within the NTO's namespace (then it
+* If you need a verb that is very specific for your domain, then you should define it within the NTO's namespace (then it
   can define relationships only between entities of that NTO).
 
 ### Reusing definitions from other standards/ontologies.
@@ -54,6 +54,6 @@ the help of the _Ontology Board_. GitHub's pull mechanism will be the appropriat
 3. You want to model a problem domain with more freedom and you are not sure about the general applicability, yet. Then
 the best approach is to define a new namespace `myspace` and define everything in there. <br/> By convention there is one
 restriction: Inside such a new namespace you can't define verbs (relationships) pointing to entities from outside that
-namespace. Such relationships have to requested to be included in the `ogit` namespace.<br/> Using that approach you're
+namespace. Such relationships have to be requested to be included in the `ogit` namespace.<br/> Using this approach you're
 expected to maintain the PURL domain for `myspace` by yourself.
 

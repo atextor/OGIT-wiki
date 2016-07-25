@@ -8,7 +8,7 @@ Here we present some real life use cases based on the OGIT ontology.
 #### Problem description
 
 A user wants to compile various statistics on Tickets: Find out who was the responsible agent, when and what he did,
-which authorizations were required, how long it took solve the problem. Also have a look at the request side - find out
+which authorizations were required, how long it took to solve the problem. Also have a look at the request side - find out
 who was the requester, which applications/components were affected. 
 
 #### Mapping to OGIT data
