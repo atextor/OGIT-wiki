@@ -1,6 +1,6 @@
 # Using OGIT in Cayley
 
-[Cayley](https://github.com/google/cayley) is a self-contained graph database written in Go, that 
+[Cayley](https://github.com/google/cayley) is a self-contained graph database written in Go. It 
 comes with a query language inspired by 
 [Gremlin](http://tinkerpop.incubator.apache.org/gremlin.html) and the ability to import RDF data. As 
 OGIT is described in the RDF Turtle Syntax, we can import it in Cayley and run queries on both the 
@@ -11,25 +11,21 @@ of OGIT’s turtle files into one file in N-Triples-Format. In a Debian-based sy
 it by running `apt-get install raptor2-utils`. Clone the OGIT repository, then in the OGIT directory
 run:
 
-	`rapper -i turtle -o ntriples <(find -name '*.ttl' -exec cat "{}" \;) > ogit.nt`.
+	`rapper -i turtle -o ntriples <(find . -name '*.ttl' -exec cat "{}" \;) > ogit.nt`
 
 2. Install [go](http://golang.org/) if you haven’t already. Download and build Cayley according to 
 [the documentation](https://github.com/google/cayley). 
 
-3. Link the OGIT N-Triples file to Cayley’s data directory:
+3. Start Cayley: (depending on your installation, you may have to specify the access path, e.g. for a homebrew-installation `--assets=/usr/local/opt/cayley/share/cayley/assets`)
 
-	`ln /path/to/ogit.nt data`
+	`cayley http --dbpath=ogit.nt`
 
-4. Start Cayley:
-
-	`./cayley http --dbpath=data/ogit.nt
-
-5. Open the web interface at [http://localhost:64210/](http://localhost:64210/) .
-6. Enter the following query. This will list the names of the Entities defined in OGIT.
+4. Open the web interface at [http://localhost:64210/](http://localhost:64210/) .
+5. Enter the following query. This will list the names of the Entities defined in OGIT.
 
 	`g.V().Has("http://www.w3.org/2000/01/rdf-schema#subClassOf", "http://www.purl.org/ogit/Entity").Out("http://www.w3.org/2000/01/rdf-schema#label").All()`
 
-7. You can also visualize results. Select *Visualize* in the left-hand menu, then enter the 
+6. You can also visualize results. Select *Visualize* in the left-hand menu, then enter the 
    following query and click on *Run Query*. This selects the `Task` entity and displays all 
    relations it has as nodes.
 

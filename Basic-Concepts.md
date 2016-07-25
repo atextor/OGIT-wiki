@@ -29,7 +29,7 @@ described in the SGO are not specific to one domain, but are broadly usable.
 
 ### 2. NTO - Node Type Ontology
 
-A NTO contains concepts of a certain domain. The differentiation between SGO and NTO is made to allow subject matter
+An NTO contains concepts of a certain domain. The differentiation between SGO and NTO is made to allow subject matter
 experts to deal with NTO definitions while strategic experts deal with the definition of the big picture.
 
 Examples for NTOs:
@@ -45,19 +45,19 @@ Each of these attribute sections describes attributes to be used with a node typ
 
 #### 3.1 SNRA - Specific Node Required Attributes
 
-Each node well defined by SGO and NTO ontologies will have a set of attributes that is specific to this unique type of
+Each node well-defined by SGO and NTO ontologies will have a set of attributes that is specific to this unique type of
 node. The SNRA defines the minimal required attribute set. The SNRA are always included and are mandatory, so the syntax
 will be checked and tools will only work properly if the SNRA definition is followed.
 
 ### 3.2 SNBA - Specific Node Best Practice Attributes
 
-Each well defined node type can have a number of attributes that have proven useful. If these attribute suggestions are
+Each well-defined node type can have a number of attributes that have proven useful. If these attribute suggestions are
 followed, then the reuse and effectiveness of platform resources (e.g., knowledge in automation, architectural
 benchmarks) are maximized. SNBA can be understood as “optional” attributes.
 
 ### 3.3 SNFA - Specific Node Free Attributes
 
 The Free attribute space in every node is used by applications, users and organizations to add data structured according
-to their own needs, concepts and ideas. Data stored here uses the mechanisms of _OGIT_, but is not made available for
-reuse by other users. When similar or equivalent attributes are employed by multiple users, they may be moved up one
-layer into the SNBA section to be published and discussed in a platform wide distribution.
+to their own needs, concepts and ideas. Data stored here uses the mechanisms of _OGIT_, but is not easily
+reusable by other users. When similar or equivalent attributes are employed by multiple users, they may be moved up one
+layer into the SNBA section to be published and discussed in a platform-wide distribution.

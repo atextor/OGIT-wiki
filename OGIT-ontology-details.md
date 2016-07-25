@@ -15,7 +15,7 @@ OGIT defines an information schema, while an implementation that makes use of OG
 OGIT does not specify how an implementation to manage instance data must look like, but on the [Start 
 page](wiki/Home.md) you can find some pointers on how to get started with OGIT and different technologies. Although it 
 is no technical requirement, using a graph database or triple store to store instance data is a good idea due to the 
-nature of RDF format. You can then use whatever APIs the technology you choose provides to insert and query data, e.g., 
+nature of RDF format. You can then use whatever APIs the technology of your choice provides to insert and query data, e.g., 
 REST APIs or SPARQL endpoints.
 
 ### OGIT ontology format description
@@ -27,7 +27,7 @@ an attribute is described in a separate file.
 
 #### Attribute definitions
 
-Defining an _attribute_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in [attribute-sample.ttl](/)):
+Defining an _attribute_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in [attribute-sample.ttl](wiki/attribute-sample.ttl)):
 
 ```turtle
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -58,7 +58,7 @@ line specifies more information about the element:
 
 #### Entity definitions
 
-Defining an _entity_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in [entity-sample.ttl](/)):
+Defining an _entity_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in [entity-sample.ttl](wiki/entity-sample.ttl)):
 
 ```turtle
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -93,7 +93,7 @@ The example contains the following details:
 
 #### Verb definitions
 
-Defining an _verb_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in [verb-sample.ttl](/)):
+Defining an _verb_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in [verb-sample.ttl](wiki/verb-sample.ttl)):
 
 ```turtle
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
