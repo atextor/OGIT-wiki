@@ -1,5 +1,5 @@
 This document provides a high-level overview of the core ideas of OGIT. For more technical depth, please refer to the
-[ontology details document](OGIT-ontology-details).
+[ontology details document](OGIT-ontology-details.md).
 
 OGIT is an ontology that serves as a reference model for entities in the IT landscape and relationships between
 entities. It is comparable to the [schema.org](https://schema.org) effort that provides schemas for structured data on
