@@ -18,7 +18,7 @@ run:
 
 3. Link the OGIT N-Triples file to Cayley’s data directory:
 
-	`ln ~/git/meerkat/code/meerkat.yaml-process/OGIT-RDF/ogit.nt data`
+	`ln /path/to/ogit.nt data`
 
 4. Start Cayley:
 
