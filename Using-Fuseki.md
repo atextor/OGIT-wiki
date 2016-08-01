@@ -12,7 +12,7 @@ of OGIT’s turtle files into one file in N-Triples-Format. In a Debian-based sy
 it by running `apt-get install raptor2-utils`. Clone the OGIT repository, then in the OGIT directory
 run:
 
-	`rapper -i turtle -o ntriples <(find -name '*.ttl' -exec cat "{}" \;) > ogit.nt`.
+	`rapper -i turtle -o ntriples <(find . -name '*.ttl' -exec cat "{}" \;) > ogit.nt`
 
 2. Download and extract [Fuseki](https://jena.apache.org/download/index.cgi).
 
