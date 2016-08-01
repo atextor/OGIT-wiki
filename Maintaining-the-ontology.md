@@ -8,11 +8,25 @@
   define 'B isSmurfedBy A', too. (You can always query in both directions).
 * _Verb_ descriptions are usually very general. Any context-specific semantics should be explained in the entity
   definitions.
+* Before you send a pull request, make sure all files are syntactically valid turtle files. You can use the
+  [rapper](http://librdf.org/raptor/rapper.html) command-line utility for that. In a Debian-based system, you can install
+  it by running `apt-get install raptor2-utils`. In your cloned OGIT repository, run the following command:
+
+  `find . -type f -name '*.ttl' -exec rapper -q -i turtle -o rdfxml "{}" \; >/dev/null`
+
+  If there are any syntax errors, rapper will report the offending file name and line number as follows:
+
+  ```
+  rapper: Error - URI file:///home/user/git/OGIT/NTO/ServiceManagement/entities/Incident.ttl:17 - syntax error
+  rapper: Failed to parse file ./NTO/ServiceManagement/entities/Incident.ttl turtle content
+  ```
+
+  Another possibility is to use an editor or IDE that supports turtle syntax validation, such as [XTurtle](http://aksw.org/Projects/Xturtle.html).
+
 
 ### Recommendations for NTOs
-
-* If you think about modelling a complete area/topic with several entities, verbs and attributes, then this will
-  probably be a separate NTO using a common fixed prefix (namespace).
+If you think about modelling a complete area/topic with several entities, verbs and attributes, then this will
+probably be a separate NTO using a common fixed prefix (namespace).
 * All entities will then get that prefix.
 * If you need attributes which have general semantics then re-use them from SGO if already present (e.g., `ogit:name`), or
   request an SGO-extension to add them.
