@@ -57,6 +57,9 @@ line specifies more information about the element:
 |dcterms:description|Assigns a human-readable description to the element. It should describe the attribute succinctly so that a user can make a decision to re-use this attribute in another context or not. This uses the [Dublin Core](http://dublincore.org/) metadata vocabulary.|
 |ogit:validation-type, ogit:validation-parameter|Allow to define an optional attribute value validation. Possible validation-types are 'regex', 'xml' and 'generator'. Empty values will skip any further validation.|
 
+Note that although `rdfs:subProperty` is used to define an element to be an OGIT attribute, no further property
+inheritance is allowed.
+
 #### Entity definitions
 
 Defining an _entity_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in
@@ -92,6 +95,9 @@ The example contains the following details:
 |dcterms:description|Assigns a human-readable description to the element. It should describe the entity succinctly. This uses the [Dublin Core](http://dublincore.org/) metadata vocabulary.|
 |ogit:mandatory-attributes|A list of attributes that must be present for instances of this entity.|
 |ogit:optional-attributes|A list of attributes that may be present for instances of this entity.|
+
+Note that, similar to the definition of Attributes above, although `rdfs:subClassOf` is used to define an element to be
+an OGIT entity, no further inheritance is allowed, i.e., no other `rdfs:subClassOf` assertions may be used.
 
 #### Verb definitions
 
