@@ -12,22 +12,23 @@ OGIT defines an information schema, while an implementation that makes use of OG
 * _Verbs_ are binary relations (edges) between two Entities and describe something an Entity does to or with another,
 * _Attributes_ are binary relations (edges) between an Entity and a scalar value, such as a string or an integer.
 
-OGIT does not specify how an implementation to manage instance data must look like, but on the [Start page](wiki/Home) 
-you can find some pointers on how to get started with OGIT and different technologies. Although it is no technical 
-requirement, using a graph database or triple store to store instance data is a good idea due to the nature of RDF 
-format. You can then use whatever APIs the technology of your choice provides to insert and query data, e.g., REST APIs 
+OGIT does not specify how an implementation to manage instance data must look like, but on the [Start page](Home) you
+can find some pointers on how to get started with OGIT and different technologies. Although it is no technical
+requirement, using a graph database or triple store to store instance data is a good idea due to the nature of RDF
+format. You can then use whatever APIs the technology of your choice provides to insert and query data, e.g., REST APIs
 or SPARQL endpoints.
 
 ### OGIT ontology format description
 
-The ontology is represented in the [Resource Description 
-Format](https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) (RDF), specifically the 
-[Turtle](https://www.w3.org/TR/2014/REC-turtle-20140225/)-Syntax. By convention, each definition of an entity, a verb or 
+The ontology is represented in the [Resource Description
+Format](https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/) (RDF), specifically the
+[Turtle](https://www.w3.org/TR/2014/REC-turtle-20140225/)-Syntax. By convention, each definition of an entity, a verb or
 an attribute is described in a separate file.
 
 #### Attribute definitions
 
-Defining an _attribute_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in [attribute-sample.ttl](wiki/attribute-sample.ttl)):
+Defining an _attribute_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in
+[attribute-sample.ttl](attribute-sample.ttl)):
 
 ```turtle
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -58,7 +59,8 @@ line specifies more information about the element:
 
 #### Entity definitions
 
-Defining an _entity_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in [entity-sample.ttl](wiki/entity-sample.ttl)):
+Defining an _entity_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in
+[entity-sample.ttl](entity-sample.ttl)):
 
 ```turtle
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -93,7 +95,8 @@ The example contains the following details:
 
 #### Verb definitions
 
-Defining an _verb_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in [verb-sample.ttl](wiki/verb-sample.ttl)):
+Defining an _verb_ in the OGIT ontology will require a Turtle fragment like this (the exact format can be found in
+[verb-sample.ttl](verb-sample.ttl)):
 
 ```turtle
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
