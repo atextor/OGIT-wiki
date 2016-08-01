@@ -12,11 +12,11 @@ OGIT defines an information schema, while an implementation that makes use of OG
 * _Verbs_ are binary relations (edges) between two Entities and describe something an Entity does to or with another,
 * _Attributes_ are binary relations (edges) between an Entity and a scalar value, such as a string or an integer.
 
-OGIT does not specify how an implementation to manage instance data must look like, but on the [Start 
-page](wiki/Home.md) you can find some pointers on how to get started with OGIT and different technologies. Although it 
-is no technical requirement, using a graph database or triple store to store instance data is a good idea due to the 
-nature of RDF format. You can then use whatever APIs the technology of your choice provides to insert and query data, e.g., 
-REST APIs or SPARQL endpoints.
+OGIT does not specify how an implementation to manage instance data must look like, but on the [Start page](wiki/Home) 
+you can find some pointers on how to get started with OGIT and different technologies. Although it is no technical 
+requirement, using a graph database or triple store to store instance data is a good idea due to the nature of RDF 
+format. You can then use whatever APIs the technology of your choice provides to insert and query data, e.g., REST APIs 
+or SPARQL endpoints.
 
 ### OGIT ontology format description
 
