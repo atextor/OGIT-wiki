@@ -8,4 +8,4 @@ Welcome to the OGIT wiki!
 	+ [Using OGIT with Apache Tinkerpop](wiki/Using-Tinkerpop)
 	+ [Using OGIT in Cayley](wiki/Using-Cayley)
 * [High level use cases](wiki/High-level-use-cases)
-
+* [Contributing to the ontology](wiki/Contributing)

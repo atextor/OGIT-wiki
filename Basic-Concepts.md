@@ -1,3 +1,23 @@
+# Basic Concepts
+
+## What is the Open Graph of IT (OGIT)?
+
+The goal of the OGIT (Open Graph of IT) Ontology Framework is to
+build an open semantic representation of all IT and its interactions with
+business processes and people for providing a foundation for computational
+evaluation. The resulting knowledge graph allows to interconnect various IT
+entities in the IT Operations and IT Management space. While previous
+approaches like the IBM Common Data Model (CDM) required too much details and
+did not allow any ambiguity and incorrectness, the Open Graph of IT ontology
+allows varying levels of detail and can easily consume real world data with all
+its inaccuracies and redundancies.
+
+The ontology structure is designed for growth both in depth as well as in
+breadth. It encourages re-use and agreement on best practices but it also
+leaves room to use data without the need to a priori agree on a common
+semantics .
+
+## OGIT’s structure
 This document provides a high-level overview of the core ideas of OGIT. For more technical depth, please refer to the
 [ontology details document](OGIT-ontology-details).
 
