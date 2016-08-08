@@ -89,7 +89,7 @@ ontology elements based on something else will have the _source_ information in 
 
 ### Maintaining PURLs
 
-See [here](../../blob/master/NTO/PURL_ID_Registration.md)
+See [here](../../OGIT/blob/master/NTO/PURL_ID_Registration.md)
 
 ### Small, Medium, Large?
 
@@ -98,7 +98,7 @@ suggest/make you might choose a way that gives you more freedom for modelling. H
 responsibility you take for your contributions:
 
 1. You want to use the ontology as is, but you would like to have some extensions (or things in namespace `ogit` or one
-of its sub-namespaces). Then use either GitHub's [issue and/or pull mechanism](../../blob/master/CONTRIBUTING.md). Any
+of its sub-namespaces). Then use either GitHub's [issue and/or pull mechanism](../../OGIT/blob/master/CONTRIBUTING.md). Any
 such change has to be approved by the _Ontology Board_.
 
 2. You want to model a problem domain where you are confident it will be of general use. Then the best approach is to
